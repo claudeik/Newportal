@@ -164,7 +164,8 @@ p, blockquote, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 6%;
+  gap: 28px;
+  padding: 0 4%;
   background: rgba(4, 7, 16, 0.68);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -184,6 +185,10 @@ p, blockquote, li {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 18px;
+  padding-right: 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo-icon {
@@ -216,14 +221,15 @@ p, blockquote, li {
 
 .logo-sub {
   font-family: var(--font-heading);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--emerald);
   display: flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
 }
 
 .logo-sub strong {
@@ -231,19 +237,25 @@ p, blockquote, li {
   font-weight: 700;
 }
 
+.navbar-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: clamp(14px, 1.4vw, 24px);
   list-style: none;
 }
 
 .nav-link {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.87rem;
   font-weight: 500;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.35px;
   transition: var(--transition-fast);
   position: relative;
   padding: 8px 0;
@@ -486,7 +498,7 @@ section {
 
 /* Hero Section */
 #home {
-  padding-top: 135px;
+  padding-top: 155px;
   padding-bottom: 70px;
   z-index: 10;
 }
@@ -1713,9 +1725,14 @@ footer {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1120px) {
   .navbar {
     padding: 0 5%;
+  }
+  .logo-group {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
   }
   .nav-menu {
     display: none;

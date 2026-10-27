@@ -14,7 +14,7 @@ const translations = {
     "nav.services": "Especialidades",
     "nav.cases": "Ecossistema",
     "nav.contact": "Contato",
-    "nav.btclab": "₿ Crypto & BTC Lab",
+    "nav.btclab": "₿ Crypto Lab",
 
     "hero.badge1": "EPYX by WangariCarbon",
     "hero.badge2": "Arquitetura de IA Soberana & Web3",
@@ -186,7 +186,7 @@ const translations = {
     "nav.services": "Especialidades",
     "nav.cases": "Ecosistema",
     "nav.contact": "Contacto",
-    "nav.btclab": "₿ Crypto & BTC Lab",
+    "nav.btclab": "₿ Crypto Lab",
 
     "hero.badge1": "EPYX by WangariCarbon",
     "hero.badge2": "Arquitectura de IA Soberana & Web3",
@@ -358,7 +358,7 @@ const translations = {
     "nav.services": "Specialties",
     "nav.cases": "Ecosystem",
     "nav.contact": "Contact",
-    "nav.btclab": "₿ Crypto & BTC Lab",
+    "nav.btclab": "₿ Crypto Lab",
 
     "hero.badge1": "EPYX by WangariCarbon",
     "hero.badge2": "Sovereign AI & Web3 Architecture",
