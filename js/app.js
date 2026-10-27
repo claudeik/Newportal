@@ -26,6 +26,7 @@ const translations = {
     "hero.pill4": "IA Soberana Zero-Trust & On-Premise",
     "hero.pill5": "MDM Lista Mestre (ERP+PDV+S2P) & Data Lake Medallion",
     "hero.pill6": "DataGenesis · Inteligência Cadastral & AI Gateway (INPI)",
+    "hero.pill7": "Orchestrator · Backend SaaS para Construção de Fintechs (INPI)",
     "hero.cta.simulate": "Simular Squad Agêntica",
     "hero.cta.contact": "Agendar Diagnóstico de Arquitetura",
 
@@ -44,7 +45,7 @@ const translations = {
     "telemetry.stream3": "Cluster LLM Soberano [AES-256 / TEE]",
 
     "pillars.subtitle": "Foco Estratégico de Nova Geração",
-    "pillars.title": "Os 6 Pilares de Engenharia EPYX by WangariCarbon",
+    "pillars.title": "Os 7 Pilares de Engenharia EPYX by WangariCarbon",
     "pillars.desc": "Unimos inteligência artificial autônoma, infraestrutura descentralizada de alta performance e engenharia corporativa rigorosa para criar plataformas que operam na fronteira tecnológica.",
 
     "pillars.p1.badge": "PILAR 01 · AGENTIC WEB3",
@@ -83,6 +84,16 @@ const translations = {
     "pillars.p6.t3.title": "● AI Gateway (risk-features-1.0)",
     "pillars.p6.t3.desc": "Tradução determinística para 24 features em 7 blocos (identidade, qualidade, contatos, endereço, rede móvel, compliance e confiança) com linhagem por feature, Keycloak OIDC (RS256) e opt-out imediato RF-15.",
 
+    "pillars.p7.badge": "PILAR 07 · ORCHESTRATOR FINTECH SAAS (REGISTRO INPI)",
+    "pillars.p7.title": "Orchestrator — Backend SaaS Headless para Construção de Fintechs, Crédito, Risco e Prova",
+    "pillars.p7.desc": "Infraestrutura SaaS proprietária (código 100% próprio, sem Camunda/CIB seven, registrada no INPI) para lançar e escalar operações de Fintech, FIDCs e plataformas de crédito embarcado. Combina motor BPMN/DMN próprio, ledger encadeado e assinado estilo blockchain privada, motor de crédito Champion/Challenger com modo sombra, servidor MCP e integração nativa com ERPs e BaaS regulado.",
+    "pillars.p7.t1.title": "● Motor BPMN/DMN Próprio & Ledger Encadeado",
+    "pillars.p7.t1.desc": "Fluxos prontos (onboarding_kyb, compliance_kyc, enriquecimento, decisao_credito), blocos assinados HMAC-SHA256 com âncora de lastro (B10) e cofre de dossiê cifrado com crypto-shredding LGPD (art. 16 e 20).",
+    "pillars.p7.t2.title": "● Motor de Risco B12, Degrau & Modo Sombra",
+    "pillars.p7.t2.desc": "Regras DMN primeiro e score versionado depois; chave de degrau (sombra → teste → produção parcial → produção) com par de decisão (id_par IORQ × motor), alçada humana e teto de custo por instância.",
+    "pillars.p7.t3.title": "● Fronteira MCP (21 Tools), ERPs & BaaS Headless",
+    "pillars.p7.t3.desc": "Servidor JSON-RPC 2.0 (/mcp) plugado ao DataGenesis (26 APIs) e ERA CRM/OMNI, adaptadores canônicos ERP (Net OS, MK, Voalle, Hubsoft) para leitura de carteira/MRR e instrução de liquidação BaaS sem custódia.",
+
     "methodology.subtitle": "Metodologia Core",
     "methodology.title": "Spec-First, Vibe Coding & Governança de IA Soberana",
     "methodology.desc": "Não escrevemos código às cegas. Projetamos especificações formais rigorosas onde arquitetos sêniores e enxames de agentes especializados constroem, refatoram e auditam sistemas complexos em paralelo.",
@@ -101,6 +112,7 @@ const translations = {
     "simulator.project.agentic": "Hiperautomação Blockchain & IA Agêntica",
     "simulator.project.pos1": "MDM ERP+PDV+S2P & Medallion (POS1)",
     "simulator.project.datagenesis": "DataGenesis · AI Gateway & Risk Features",
+    "simulator.project.orchestrator": "Orchestrator · Backend SaaS Fintech & Ledger",
     "simulator.project.trading": "Motor de Trading & Treinamento Cripto",
     "simulator.project.refactor": "Refatoração Corporativa Next-Gen",
     "simulator.project.sovereign": "Cluster de IA Soberana Zero-Trust",
@@ -122,6 +134,7 @@ const translations = {
     "estimator.domain.opt4": "Infraestrutura de IA Soberana & Segurança Zero-Trust",
     "estimator.domain.opt5": "Integração Lista Mestre (ERP+PDV+S2P) & Data Lake Medallion",
     "estimator.domain.opt6": "DataGenesis — Inteligência Cadastral, Data Hub (26 APIs) & AI Gateway",
+    "estimator.domain.opt7": "Orchestrator — Backend SaaS para Construção de Fintechs (BPMN, Risco & Ledger)",
     "estimator.scale.label": "Volume de Operações / Inferências Diárias",
     "estimator.autonomy.label": "Nível de Hiperautomação & Agentes Autônomos",
     "estimator.security.label": "Modelo de Soberania & Isolamento de Dados",
@@ -169,11 +182,14 @@ const translations = {
     "cases.c5.desc": "Plataforma integradora de Cadastro Mestre (Lista Mestre de fornecedores, itens e conversões), KYP contínuo, Agente Fiscal e CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis e Crivo estruturados em Data Lakehouse Medallion (Bronze, Silver e Gold).",
     "cases.c6.tag": "Inteligência Cadastral · Registro INPI",
     "cases.c6.desc": "Plataforma proprietária de Inteligência Cadastral Auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, adaptador para 26 APIs do Data Hub Intelligence (estrutural + SIM Swap móvel) e AI Gateway (risk-features-1.0) com 24 features e linhagem completa para motores de risco, crédito e KYP.",
+    "cases.c7.tag": "Fintech SaaS Backend · BPMN, Risco & Ledger (INPI)",
+    "cases.c7.desc": "Motor SaaS headless para construção acelerada de Fintechs, operações de crédito B2B/B2C, FIDCs e plataformas de Embedded Finance (WaveHub Capital). Reúne motor BPMN/DMN próprio sem dependências legadas, ledger encadeado assinado (prova de lastro B10), motor de risco B12 com modo sombra (IORQ × motor), servidor MCP (21 ferramentas), integrador multi-ERP (Net OS, MK, Voalle, Hubsoft) e disparo para BaaS regulado sem custódia.",
     "cases.link.explore": "Explorar Arquitetura",
     "cases.link.btclab": "Abrir Simulador Cripto",
     "cases.link.live": "Ver Preview ao Vivo",
     "cases.link.pos1": "Acessar Console POS1 ao Vivo",
     "cases.link.datagenesis": "Inspecionar Arquitetura DataGenesis",
+    "cases.link.orchestrator": "Explorar Repositório & Swagger Orchestrator",
 
     "contact.subtitle": "Inicie Sua Evolução Tecnológica",
     "contact.title": "Construa ou Refatore Sua Plataforma com Nossa Squad",
@@ -198,6 +214,7 @@ const translations = {
     "contact.form.pillar.opt5": "Tokenização RWA, Pagamentos & Finanças Embarcadas",
     "contact.form.pillar.opt6": "Integração Lista Mestre (ERP+PDV+S2P) & Data Lake Medallion",
     "contact.form.pillar.opt7": "DataGenesis — Inteligência Cadastral, Data Hub & AI Gateway",
+    "contact.form.pillar.opt8": "Orchestrator — Backend SaaS para Construção de Fintechs (BPMN, Risco & BaaS)",
     "contact.form.message": "Escopo Técnico, Desafios de Escala ou Objetivos",
     "contact.form.message.ph": "Descreva a plataforma que deseja construir ou refatorar, volumes esperados, requisitos de soberania de dados ou integrações blockchain...",
     "contact.form.submit": "Transmitir Especificação de Projeto",
@@ -232,6 +249,7 @@ const translations = {
     "hero.pill4": "IA Soberana Zero-Trust & On-Premise",
     "hero.pill5": "MDM Lista Maestra (ERP+PDV+S2P) & Data Lake Medallion",
     "hero.pill6": "DataGenesis · Inteligencia Registral & AI Gateway (INPI)",
+    "hero.pill7": "Orchestrator · Backend SaaS para Construcción de Fintechs (INPI)",
     "hero.cta.simulate": "Simular Squad Agéntica",
     "hero.cta.contact": "Agendar Diagnóstico de Arquitectura",
 
@@ -250,7 +268,7 @@ const translations = {
     "telemetry.stream3": "Cluster LLM Soberano [AES-256 / TEE]",
 
     "pillars.subtitle": "Enfoque Estratégico de Nueva Generación",
-    "pillars.title": "Los 6 Pilares de Ingeniería EPYX by WangariCarbon",
+    "pillars.title": "Los 7 Pilares de Ingeniería EPYX by WangariCarbon",
     "pillars.desc": "Unimos inteligencia artificial autónoma, infraestructura descentralizada de alto rendimiento e ingeniería corporativa rigurosa para crear plataformas que operan en la frontera tecnológica.",
 
     "pillars.p1.badge": "PILAR 01 · AGENTIC WEB3",
@@ -289,6 +307,16 @@ const translations = {
     "pillars.p6.t3.title": "● AI Gateway (risk-features-1.0)",
     "pillars.p6.t3.desc": "Traducción determinística a 24 features en 7 bloques (identidad, calidad, contactos, dirección, red móvil, compliance y confianza) con linaje por feature, Keycloak OIDC (RS256) y opt-out inmediato RF-15.",
 
+    "pillars.p7.badge": "PILAR 07 · ORCHESTRATOR FINTECH SAAS (REGISTRO INPI)",
+    "pillars.p7.title": "Orchestrator — Backend SaaS Headless para Construcción de Fintechs, Crédito, Riesgo y Prueba",
+    "pillars.p7.desc": "Infraestructura SaaS propietaria (código 100% propio, sin Camunda/CIB seven, registrada en INPI) para lanzar y escalar operaciones Fintech, FIDCs y plataformas de crédito embebido. Combina motor BPMN/DMN propio, ledger encadenado y firmado estilo blockchain privada, motor de crédito Champion/Challenger con modo sombra, servidor MCP e integración nativa con ERPs y BaaS regulado.",
+    "pillars.p7.t1.title": "● Motor BPMN/DMN Propio & Ledger Encadenado",
+    "pillars.p7.t1.desc": "Flujos listos (onboarding_kyb, compliance_kyc, enriquecimento, decisao_credito), bloques firmados HMAC-SHA256 con ancla de respaldo (B10) y bóveda de dosier cifrada con crypto-shredding LGPD (art. 16 y 20).",
+    "pillars.p7.t2.title": "● Motor de Riesgo B12, Escalón & Modo Sombra",
+    "pillars.p7.t2.desc": "Reglas DMN primero y score versionado después; llave de escalón (sombra → prueba → producción parcial → producción) con par de decisión (id_par IORQ × motor), comité humano y tope de costo por instancia.",
+    "pillars.p7.t3.title": "● Frontera MCP (21 Tools), ERPs & BaaS Headless",
+    "pillars.p7.t3.desc": "Servidor JSON-RPC 2.0 (/mcp) conectado a DataGenesis (26 APIs) y ERA CRM/OMNI, adaptadores canónicos ERP (Net OS, MK, Voalle, Hubsoft) para lectura de cartera/MRR e instrucción de liquidación BaaS sin custodia.",
+
     "methodology.subtitle": "Metodología Core",
     "methodology.title": "Spec-First, Vibe Coding & Gobernanza de IA Soberana",
     "methodology.desc": "No escribimos código a ciegas. Diseñamos especificaciones formales rigurosas donde arquitectos sénior y enjambres de agentes especializados construyen, refactorizan y auditan sistemas complejos en paralelo.",
@@ -307,6 +335,7 @@ const translations = {
     "simulator.project.agentic": "Hiperautomatización Blockchain & IA Agéntica",
     "simulator.project.pos1": "MDM ERP+PDV+S2P & Medallion (POS1)",
     "simulator.project.datagenesis": "DataGenesis · AI Gateway & Risk Features",
+    "simulator.project.orchestrator": "Orchestrator · Backend SaaS Fintech & Ledger",
     "simulator.project.trading": "Motor de Trading & Entrenamiento Cripto",
     "simulator.project.refactor": "Refactorización Corporativa Next-Gen",
     "simulator.project.sovereign": "Cluster de IA Soberana Zero-Trust",
@@ -328,6 +357,7 @@ const translations = {
     "estimator.domain.opt4": "Infraestructura de IA Soberana & Seguridad Zero-Trust",
     "estimator.domain.opt5": "Integración Lista Maestra (ERP+PDV+S2P) & Data Lake Medallion",
     "estimator.domain.opt6": "DataGenesis — Inteligencia Registral, Data Hub (26 APIs) & AI Gateway",
+    "estimator.domain.opt7": "Orchestrator — Backend SaaS para Construcción de Fintechs (BPMN, Riesgo & Ledger)",
     "estimator.scale.label": "Volumen de Operaciones / Inferencias Diarias",
     "estimator.autonomy.label": "Nivel de Hiperautomatización & Agentes Autónomos",
     "estimator.security.label": "Modelo de Soberanía & Aislamiento de Datos",
@@ -375,11 +405,14 @@ const translations = {
     "cases.c5.desc": "Plataforma integradora de Maestro de Datos (Lista Maestra de proveedores, ítems y conversiones), KYP continuo, Agente Fiscal y CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis y Crivo en Data Lakehouse Medallion (Bronze, Silver y Gold).",
     "cases.c6.tag": "Inteligencia Registral · Registro INPI",
     "cases.c6.desc": "Plataforma propietaria de Inteligencia Registral Auditable (CPF/CNPJ) con motor determinístico qualidade-1.0, adaptador para 26 APIs de Data Hub Intelligence (estructural + SIM Swap móvil) y AI Gateway (risk-features-1.0) con 24 features y linaje completo para motores de riesgo, crédito y KYP.",
+    "cases.c7.tag": "Fintech SaaS Backend · BPMN, Riesgo & Ledger (INPI)",
+    "cases.c7.desc": "Motor SaaS headless para construcción acelerada de Fintechs, operaciones de crédito B2B/B2C, FIDCs y plataformas de Embedded Finance (WaveHub Capital). Reúne motor BPMN/DMN propio sin dependencias legadas, ledger encadenado firmado (prueba de respaldo B10), motor de riesgo B12 con modo sombra (IORQ × motor), servidor MCP (21 herramientas), integrador multi-ERP (Net OS, MK, Voalle, Hubsoft) y disparo a BaaS regulado sin custodia.",
     "cases.link.explore": "Explorar Arquitectura",
     "cases.link.btclab": "Abrir Simulador Cripto",
     "cases.link.live": "Ver Preview en Vivo",
     "cases.link.pos1": "Acceder a Consola POS1 en Vivo",
     "cases.link.datagenesis": "Inspeccionar Arquitectura DataGenesis",
+    "cases.link.orchestrator": "Explorar Repositorio & Swagger Orchestrator",
 
     "contact.subtitle": "Inicie Su Evolución Tecnológica",
     "contact.title": "Construya o Refactorice Su Plataforma con Nuestra Squad",
@@ -404,6 +437,7 @@ const translations = {
     "contact.form.pillar.opt5": "Tokenización RWA, Pagos & Finanzas Embebidas",
     "contact.form.pillar.opt6": "Integración Lista Maestra (ERP+PDV+S2P) & Data Lake Medallion",
     "contact.form.pillar.opt7": "DataGenesis — Inteligencia Registral, Data Hub & AI Gateway",
+    "contact.form.pillar.opt8": "Orchestrator — Backend SaaS para Construcción de Fintechs (BPMN, Riesgo & BaaS)",
     "contact.form.message": "Alcance Técnico, Desafíos de Escala u Objetivos",
     "contact.form.message.ph": "Describa la plataforma que desea construir o refactorizar, volúmenes esperados, requisitos de soberanía de datos o integraciones blockchain...",
     "contact.form.submit": "Transmitir Especificación de Proyecto",
@@ -438,6 +472,7 @@ const translations = {
     "hero.pill4": "Zero-Trust Sovereign AI & On-Premise",
     "hero.pill5": "MDM Master List (ERP+POS+S2P) & Medallion Data Lake",
     "hero.pill6": "DataGenesis · Registry Intelligence & AI Gateway (INPI)",
+    "hero.pill7": "Orchestrator · SaaS Backend for Fintech Construction (INPI)",
     "hero.cta.simulate": "Simulate Agentic Squad",
     "hero.cta.contact": "Schedule Architecture Briefing",
 
@@ -456,7 +491,7 @@ const translations = {
     "telemetry.stream3": "Sovereign LLM Cluster [AES-256 / TEE]",
 
     "pillars.subtitle": "Next-Generation Strategic Focus",
-    "pillars.title": "The 6 Engineering Pillars of EPYX by WangariCarbon",
+    "pillars.title": "The 7 Engineering Pillars of EPYX by WangariCarbon",
     "pillars.desc": "We unite autonomous artificial intelligence, high-throughput decentralized infrastructure, and rigorous enterprise engineering to build platforms operating at the technological frontier.",
 
     "pillars.p1.badge": "PILLAR 01 · AGENTIC WEB3",
@@ -495,6 +530,16 @@ const translations = {
     "pillars.p6.t3.title": "● AI Gateway (risk-features-1.0)",
     "pillars.p6.t3.desc": "Deterministic translation into 24 features across 7 blocks (identity, quality, contacts, address, mobile network, compliance, confidence) with per-feature lineage, Keycloak OIDC (RS256), and instant RF-15 opt-out.",
 
+    "pillars.p7.badge": "PILLAR 07 · ORCHESTRATOR FINTECH SAAS (INPI REGISTERED)",
+    "pillars.p7.title": "Orchestrator — Headless SaaS Backend for Fintech Construction, Credit, Risk & Cryptographic Proof",
+    "pillars.p7.desc": "Proprietary SaaS infrastructure (100% custom engine without Camunda/CIB seven, INPI registered) to launch and scale Fintechs, credit funds (FIDCs), and embedded lending platforms. Combines a custom BPMN/DMN engine, private-blockchain-style chained signed ledger, Champion/Challenger risk engine with shadow mode, MCP server, and native ERP and regulated BaaS connectors.",
+    "pillars.p7.t1.title": "● Custom BPMN/DMN Engine & Chained Ledger",
+    "pillars.p7.t1.desc": "Ready-to-run flows (onboarding_kyb, compliance_kyc, enriquecimento, decisao_credito), HMAC-SHA256 signed blocks with collateral anchoring (B10), and encrypted dossier vault with LGPD crypto-shredding.",
+    "pillars.p7.t2.title": "● B12 Risk Engine, Step Key & Shadow Mode",
+    "pillars.p7.t2.desc": "DMN rules first and versioned score second; step switch (shadow → test → partial prod → prod) recording paired decisions (id_par IORQ × engine), human committee tasks, and per-instance cost caps.",
+    "pillars.p7.t3.title": "● MCP Boundary (21 Tools), ERPs & Headless BaaS",
+    "pillars.p7.t3.desc": "JSON-RPC 2.0 (/mcp) server wired to DataGenesis (26 APIs) and ERA CRM/OMNI, canonical ERP adapters (Net OS, MK, Voalle, Hubsoft) for portfolio/MRR features, and non-custodial BaaS payout instructions.",
+
     "methodology.subtitle": "Core Methodology",
     "methodology.title": "Spec-First, Vibe Coding & Sovereign AI Governance",
     "methodology.desc": "We never write code blindly. We design rigorous formal specifications where senior architects and specialized agent swarms build, refactor, and audit complex systems in parallel.",
@@ -513,6 +558,7 @@ const translations = {
     "simulator.project.agentic": "Blockchain Hyperautomation & Agentic AI",
     "simulator.project.pos1": "MDM ERP+POS+S2P & Medallion (POS1)",
     "simulator.project.datagenesis": "DataGenesis · AI Gateway & Risk Features",
+    "simulator.project.orchestrator": "Orchestrator · Fintech SaaS Backend & Ledger",
     "simulator.project.trading": "Crypto Trading Engine & Training Academy",
     "simulator.project.refactor": "Enterprise Next-Gen Stack Refactoring",
     "simulator.project.sovereign": "Zero-Trust Sovereign AI Cluster",
@@ -534,6 +580,7 @@ const translations = {
     "estimator.domain.opt4": "Sovereign AI Infrastructure & Zero-Trust Security",
     "estimator.domain.opt5": "Master List Integration (ERP+POS+S2P) & Medallion Data Lake",
     "estimator.domain.opt6": "DataGenesis — Registry Intelligence, Data Hub (26 APIs) & AI Gateway",
+    "estimator.domain.opt7": "Orchestrator — SaaS Backend for Fintech Construction (BPMN, Risk & Ledger)",
     "estimator.scale.label": "Daily Operations / Inferences Volume",
     "estimator.autonomy.label": "Hyperautomation & Autonomous Agent Level",
     "estimator.security.label": "Data Sovereignty & Isolation Model",
@@ -581,11 +628,14 @@ const translations = {
     "cases.c5.desc": "Master Data Integrator Console (suppliers, items, unit conversions), continuous KYP, Fiscal Agent, and Explained COGS. Natively connects Teknisa (ERP), Nimbi (S2P), EPOC (POS), DataGenesis, and Crivo across a Medallion Data Lakehouse (Bronze, Silver, Gold).",
     "cases.c6.tag": "Registry Intelligence · INPI Registered",
     "cases.c6.desc": "Proprietary Auditable Registry Intelligence Platform (CPF/CNPJ) featuring the deterministic qualidade-1.0 engine, 26 Data Hub Intelligence APIs (structural + mobile SIM Swap), and AI Gateway (risk-features-1.0) with 24 lineage-backed features for risk, credit, and KYP engines.",
+    "cases.c7.tag": "Fintech SaaS Backend · BPMN, Risk & Ledger (INPI)",
+    "cases.c7.desc": "Headless SaaS backend for building Fintechs, B2B/B2C credit operations, FIDCs, and Embedded Finance platforms (WaveHub Capital). Unites a custom BPMN/DMN engine, signed chained ledger (B10 collateral proof), B12 risk engine with shadow mode (IORQ × engine), MCP server (21 tools), multi-ERP canonical integrator (Net OS, MK, Voalle, Hubsoft), and non-custodial regulated BaaS settlement.",
     "cases.link.explore": "Explore Architecture",
     "cases.link.btclab": "Open Crypto Simulator",
     "cases.link.live": "Live Preview",
     "cases.link.pos1": "Open Live POS1 Console",
     "cases.link.datagenesis": "Inspect DataGenesis Architecture",
+    "cases.link.orchestrator": "Explore Orchestrator Repo & Swagger",
 
     "contact.subtitle": "Initiate Your Technological Evolution",
     "contact.title": "Build or Refactor Your Platform with Our Squad",
@@ -610,6 +660,7 @@ const translations = {
     "contact.form.pillar.opt5": "RWA Tokenization, Payments & Embedded Finance",
     "contact.form.pillar.opt6": "Master List Integration (ERP+POS+S2P) & Medallion Data Lake",
     "contact.form.pillar.opt7": "DataGenesis — Registry Intelligence, Data Hub & AI Gateway",
+    "contact.form.pillar.opt8": "Orchestrator — SaaS Backend for Fintech Construction (BPMN, Risk & BaaS)",
     "contact.form.message": "Technical Scope, Scale Challenges or Objectives",
     "contact.form.message.ph": "Describe the platform you want to build or refactor, expected throughput, data sovereignty requirements, or blockchain integrations...",
     "contact.form.submit": "Transmit Project Specification",
@@ -1389,6 +1440,97 @@ def gerar_risk_features_v1(consulta_canonica: dict, sinais_hub: list[dict]) -> d
         },
         "caveats": qualidade.ressalvas,
     }`
+  },
+
+  orchestrator: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Orchestrator v1.1 (Backend SaaS Headless para Fintechs · INPI)...",
+        "SPECIFICATION: Carregando fluxos BPMN/DMN (onboarding_kyb, compliance_kyc, decisao_credito)...",
+        "ARCHITECT: Verificando fronteira MCP (JSON-RPC 2.0 · 21 tools) e guarda anti-SSRF: [OK]",
+        "DEPLOYING: Iniciando instância decisao_credito e gravando intenção no Ledger Encadeado HMAC...",
+        "ANTIGRAVITY: Consultando DataGenesis (26 APIs via MCP dg_consultar) e carteira ERP (Net OS/Voalle): [OK]",
+        "CLAUDE CODE: Executando Motor de Risco B12 (regras DMN -> score versionado -> par sombra IORQ id_par): [COMPILING]",
+        "CURSOR: Registrando lastro B10 no Ledger assinado e cifrando dossiê com crypto-shredding LGPD: [OK]",
+        "VALIDATOR: Cadeia do Ledger verificada e 63 testes automatizados (pytest) aprovados: [OK]",
+        "COMPLETED: Crédito aprovado, contrato ancorado e instrução enviada ao BaaS regulado (sem custódia).",
+        "SYSTEM: Orquestração Fintech concluída em 24ms."
+      ],
+      es: [
+        "STATUS: Inicializando Orchestrator v1.1 (Backend SaaS Headless para Fintechs · INPI)...",
+        "SPECIFICATION: Cargando flujos BPMN/DMN (onboarding_kyb, compliance_kyc, decisao_credito)...",
+        "ARCHITECT: Verificando frontera MCP (JSON-RPC 2.0 · 21 tools) y guardia anti-SSRF: [OK]",
+        "DEPLOYING: Iniciando instancia decisao_credito y grabando intención en Ledger Encadenado HMAC...",
+        "ANTIGRAVITY: Consultando DataGenesis (26 APIs vía MCP dg_consultar) y cartera ERP (Net OS/Voalle): [OK]",
+        "CLAUDE CODE: Ejecutando Motor de Riesgo B12 (reglas DMN -> score versionado -> par sombra IORQ id_par): [COMPILING]",
+        "CURSOR: Registrando respaldo B10 en Ledger firmado y cifrando dosier con crypto-shredding LGPD: [OK]",
+        "VALIDATOR: Cadena del Ledger verificada y 63 pruebas automatizadas (pytest) aprobadas: [OK]",
+        "COMPLETED: Crédito aprobado, contrato anclado e instrucción enviada al BaaS regulado (sin custodia).",
+        "SYSTEM: Orquestación Fintech finalizada en 24ms."
+      ],
+      en: [
+        "STATUS: Initializing Orchestrator v1.1 (Headless Fintech SaaS Backend · INPI)...",
+        "SPECIFICATION: Loading BPMN/DMN flows (onboarding_kyb, compliance_kyc, decisao_credito)...",
+        "ARCHITECT: Verifying MCP boundary (JSON-RPC 2.0 · 21 tools) and anti-SSRF network guard: [OK]",
+        "DEPLOYING: Starting decisao_credito instance and appending intent to HMAC Chained Ledger...",
+        "ANTIGRAVITY: Querying DataGenesis (26 APIs via MCP dg_consultar) & canonical ERP portfolio (Net OS/Voalle): [OK]",
+        "CLAUDE CODE: Running B12 Risk Engine (DMN rules -> versioned score -> shadow pair IORQ id_par): [COMPILING]",
+        "CURSOR: Anchoring B10 collateral hash in signed Ledger & encrypting dossier with LGPD crypto-shredding: [OK]",
+        "VALIDATOR: Ledger hash chain verified and 63 automated pytest suites passed: [OK]",
+        "COMPLETED: Credit underwritten, collateral anchored, and non-custodial payout sent to regulated BaaS.",
+        "SYSTEM: Fintech orchestration finalized in 24ms."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Objetivo: Orquestrar uma operação completa de Fintech (KYB, enriquecimento, análise de carteira ERP, decisão de crédito em modo sombra/produção e lastro B10) usando o Orchestrator SaaS." },
+        { sender: "Antigravity", message: "Motor BPMN próprio iniciou a instância: consumimos o DataGenesis via MCP (dg_consultar) do insumo mais barato ao mais caro, respeitando o teto de custo por instância." },
+        { sender: "Claude Code", message: "O Integrador ERP normalizou os lotes da carteira (MRR, adimplência e concentração) e o Motor de Risco B12 avaliou as tabelas DMN antes do score, gravando o par sombra (id_par IORQ × motor próprio)." },
+        { sender: "Cursor", message: "Cada passo gerou blocos intenção → resultado assinados com HMAC-SHA256 no Ledger encadeado. Dados pessoais ficaram isolados no Cofre com suporte a crypto-shredding (LGPD art. 16)." },
+        { sender: "Validator", message: "Verificador de integridade do Ledger OK, segregação de funções (modelador ≠ aprovador) ativa e instrução de liquidação disparada para o BaaS." }
+      ],
+      es: [
+        { sender: "Architect", message: "Objetivo: Orquestar una operación completa de Fintech (KYB, enriquecimiento, análisis de cartera ERP, decisión de crédito en modo sombra/producción y respaldo B10) usando Orchestrator SaaS." },
+        { sender: "Antigravity", message: "El motor BPMN propio iniciou la instancia: consumimos DataGenesis vía MCP (dg_consultar) del insumo más económico al más costoso, respetando el tope de costo por instancia." },
+        { sender: "Claude Code", message: "El Integrador ERP normalizó los lotes de cartera (MRR, morosidad y concentración) y el Motor de Riesgo B12 evaluó las tablas DMN antes del score, grabando el par sombra (id_par IORQ × motor propio)." },
+        { sender: "Cursor", message: "Cada paso generó bloques intención → resultado firmados con HMAC-SHA256 en el Ledger encadenado. Los datos personales quedaron aislados en la Bóveda con crypto-shredding (LGPD art. 16)." },
+        { sender: "Validator", message: "Verificador de integridad del Ledger OK, segregación de funciones (modelador ≠ aprobador) activa e instrucción de pago enviada al BaaS." }
+      ],
+      en: [
+        { sender: "Architect", message: "Goal: Orchestrate a full Fintech lending lifecycle (KYB, enrichment, ERP portfolio ingestion, shadow/production credit decisioning, and B10 collateral proof) on the Orchestrator SaaS backend." },
+        { sender: "Antigravity", message: "Custom BPMN engine started the instance: queried DataGenesis over MCP (dg_consultar) ordered from lowest to highest cost while enforcing per-instance cost caps." },
+        { sender: "Claude Code", message: "Canonical ERP Integrator extracted portfolio features (MRR, delinquency, concentration) and B12 Risk Engine evaluated DMN rules prior to versioned scoring, recording the shadow pair (id_par IORQ × engine)." },
+        { sender: "Cursor", message: "Every node appended HMAC-SHA256 signed intent → result blocks to the Chained Ledger, while PII remained encrypted in the Dossier Vault with LGPD art. 16 crypto-shredding." },
+        { sender: "Validator", message: "Ledger chain integrity verified, maker-checker segregation enforced, and non-custodial payout instruction dispatched to the BaaS rail." }
+      ]
+    },
+    code: `# backend/app/services/processos.py — Orchestrator Fintech SaaS (Registro INPI · EPYX)
+from app.domain.engine import MotorBPMNProprio
+from app.domain.risco import MotorCreditoRiscoB12
+from app.domain.ledger import LedgerEncadeadoHMAC
+from app.domain.dossie import CofreDossieCryptoShredding
+
+class OrchestratorFintechSaaS:
+    def executar_decisao_credito_fintech(self, id_instancia: str, cnpj: str, produto: str, valor: float):
+        # 1. Protege PII no Cofre (Crypto-Shredding LGPD art. 16) e registra apenas HMAC no Ledger
+        doc_hmac = CofreDossieCryptoShredding.proteger_proponente(id_instancia, cnpj)
+        LedgerEncadeadoHMAC.gravar_bloco(id_instancia, "instancia_iniciada", {"doc_hmac": doc_hmac})
+
+        # 2. Funil MCP (DataGenesis 26 APIs + Carteira Canônica ERP: Net OS / MK / Voalle / Hubsoft)
+        sinais_dg = MotorBPMNProprio.chamar_mcp("dg_consultar", documento=cnpj, finalidade="concessao_credito")
+        carteira_erp = MotorBPMNProprio.chamar_mcp("erp_resumo_carteira", documento=cnpj)
+
+        # 3. Motor de Risco B12 (DMN primeiro -> Score versionado -> Chave de Degrau Sombra/Produção)
+        par_decisao = MotorCreditoRiscoB12.decidir_com_par_sombra(
+            sinais=sinais_dg, carteira=carteira_erp, produto=produto, valor=valor
+        )
+        LedgerEncadeadoHMAC.gravar_bloco(id_instancia, "decisao_registrada", {
+            "id_par": par_decisao.id_par,
+            "degrau": par_decisao.degrau_vigente,
+            "desfecho_ativo": par_decisao.decisao_ativa.desfecho,
+            "desfecho_sombra": par_decisao.decisao_sombra.desfecho,
+        })
+        return par_decisao`
   }
 };
 
@@ -1601,6 +1743,11 @@ const stackRecommendations = {
     pt: "DataGenesis Core (FastAPI Python 3.12 + Motor Determinístico qualidade-1.0) + Data Hub Intelligence Adapter (26 APIs: Estrutural + SIM Swap Móvel) + AI Gateway (risk-features-1.0 com 24 features e linhagem) + Federação Keycloak OIDC (RS256/JWKS) + Auditoria HMAC-SHA256 Zero-PII.",
     es: "DataGenesis Core (FastAPI Python 3.12 + Motor Determinístico qualidade-1.0) + Data Hub Intelligence Adapter (26 APIs: Estructural + SIM Swap Móvil) + AI Gateway (risk-features-1.0 con 24 features y linaje) + Federación Keycloak OIDC (RS256/JWKS) + Auditoría HMAC-SHA256 Cero-PII.",
     en: "DataGenesis Core (FastAPI Python 3.12 + Deterministic qualidade-1.0 Engine) + Data Hub Intelligence Adapter (26 APIs: Structural + Mobile SIM Swap) + AI Gateway (risk-features-1.0 with 24 features & lineage) + Keycloak OIDC Federation (RS256/JWKS) + Zero-PII HMAC-SHA256 Audit Trail."
+  },
+  orchestrator: {
+    pt: "Orchestrator Fintech SaaS (Motor BPMN/DMN Próprio em Python + FastAPI 39 Rotas OpenAPI 3.1) + Ledger Encadeado Assinado HMAC-SHA256 & Cofre Crypto-Shredding LGPD + Motor de Risco B12 (Modo Sombra Champion/Challenger) + Servidor MCP JSON-RPC 2.0 (21 Tools: DataGenesis + ERA CRM + 4 ERPs + BaaS).",
+    es: "Orchestrator Fintech SaaS (Motor BPMN/DMN Propio en Python + FastAPI 39 Rutas OpenAPI 3.1) + Ledger Encadenado Firmado HMAC-SHA256 & Bóveda Crypto-Shredding LGPD + Motor de Riesgo B12 (Modo Sombra Champion/Challenger) + Servidor MCP JSON-RPC 2.0 (21 Tools: DataGenesis + ERA CRM + 4 ERPs + BaaS).",
+    en: "Orchestrator Fintech SaaS (Custom Python BPMN/DMN Engine + FastAPI 39 OpenAPI 3.1 Routes) + HMAC-SHA256 Signed Chained Ledger & LGPD Crypto-Shredding Vault + B12 Risk Engine (Champion/Challenger Shadow Mode) + JSON-RPC 2.0 MCP Server (21 Tools: DataGenesis + ERA CRM + 4 ERPs + BaaS)."
   }
 };
 

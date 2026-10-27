@@ -744,6 +744,10 @@ section {
   border-top-color: var(--gold-primary);
   grid-column: 1 / -1;
 }
+.pillar-card.pillar-7 {
+  border-top-color: var(--emerald);
+  grid-column: 1 / -1;
+}
 
 .pillar-top {
   display: flex;
@@ -793,6 +797,12 @@ section {
   background: rgba(197, 160, 89, 0.12);
   border-color: rgba(197, 160, 89, 0.35);
   color: var(--gold-primary);
+}
+
+.pillar-card.pillar-7 .pillar-icon-wrap {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: var(--emerald);
 }
 
 .medallion-tiers {
@@ -1464,6 +1474,17 @@ section {
   border-color: var(--gold-primary);
   color: var(--gold-light);
   background: rgba(197, 160, 89, 0.12);
+}
+
+.case-card.orchestrator {
+  border-top: 2px solid var(--emerald);
+  grid-column: 1 / -1;
+}
+
+.case-card.orchestrator .case-tag {
+  border-color: var(--emerald);
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
 }
 
 .case-card p {
