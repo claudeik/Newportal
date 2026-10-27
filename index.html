@@ -659,107 +659,162 @@
       </div>
 
       <div class="cases-grid">
-        <div class="glass-card case-card wagari">
+        <div class="glass-card case-card wagari" data-drawer-platform="wagari">
           <div class="case-header">
             <span class="case-name">Wangari Carbon RWA</span>
             <span class="case-tag" data-i18n="cases.c1.tag">RWA Blockchain &amp; Sustentabilidade</span>
           </div>
-          <p data-i18n="cases.c1.desc">Plataforma descentralizada para certificação, rastreamento IoT e comercialização de créditos de carbono e ativos ambientais tokenizados com auditoria imutável e liquidez global.</p>
+          <p data-i18n="cases.c1.desc">Tokenização e comercialização de créditos de carbono e ativos ambientais com rastreamento IoT e liquidez global.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">ERC-3643 RWA</span>
             <span class="case-metric-pill">Oráculos IoT &amp; Satélite</span>
             <span class="case-metric-pill">Auditoria On-Chain</span>
           </div>
-          <a href="#simulator" class="case-link">
-            <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+          <div class="case-actions">
+            <button type="button" class="case-btn-detail" data-drawer-trigger="wagari">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="9"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="11" y2="17"/>
+              </svg>
+              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
+            </button>
+            <a href="#simulator" class="case-link" data-sim-target="carbon">
+              <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="glass-card case-card urus">
+        <div class="glass-card case-card urus" data-drawer-platform="urus">
           <div class="case-header">
             <span class="case-name">Urus Sovereign Stack</span>
             <span class="case-tag" data-i18n="cases.c2.tag">Refatoração &amp; IA Soberana</span>
           </div>
-          <p data-i18n="cases.c2.desc">Suíte de engenharia Spec-First que orquestra enxames de agentes para refatoração de sistemas corporativos legados, geração de código tipado e deploy em clusters de IA Soberana.</p>
+          <p data-i18n="cases.c2.desc">Refatoração autônoma de legados críticos para Rust, Go e Kafka com paridade formal e clusters de IA Soberana.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Spec-First AST</span>
             <span class="case-metric-pill">Rust / Go / Kafka</span>
             <span class="case-metric-pill">Zero-Trust TEE</span>
           </div>
-          <a href="#estimator" class="case-link">
-            <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+          <div class="case-actions">
+            <button type="button" class="case-btn-detail" data-drawer-trigger="urus">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="9"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="11" y2="17"/>
+              </svg>
+              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
+            </button>
+            <a href="#estimator" class="case-link">
+              <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="glass-card case-card pos1">
+        <div class="glass-card case-card pos1" data-drawer-platform="pos1">
           <div class="case-header">
             <span class="case-name">POS1 — Console Integrador MDM &amp; Medallion</span>
             <span class="case-tag" data-i18n="cases.c3.tag">ERP + PDV + S2P · Data Lake Medallion</span>
           </div>
-          <p data-i18n="cases.c3.desc">Plataforma integradora de Cadastro Mestre (Lista Mestre de fornecedores, itens e conversões), KYP contínuo, Agente Fiscal e CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis e Crivo estruturados em Data Lakehouse Medallion (Bronze, Silver e Gold).</p>
+          <p data-i18n="cases.c3.desc">Integração de Lista Mestre (ERP + PDV + S2P) e Data Lake Medallion com Agente Fiscal e CMV Explicado em tempo real.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Teknisa · Nimbi · EPOC · Crivo</span>
             <span class="case-metric-pill">Medallion (Bronze · Silver · Gold)</span>
             <span class="case-metric-pill">KYP Contínuo &amp; Agente Fiscal</span>
             <span class="case-metric-pill">CMV Explicado &amp; Fila de Exceções</span>
           </div>
-          <a href="https://new-pos-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-link">
-            <span data-i18n="cases.link.pos1">Acessar Console POS1 ao Vivo</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+          <div class="case-actions">
+            <button type="button" class="case-btn-detail" data-drawer-trigger="pos1">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="9"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="11" y2="17"/>
+              </svg>
+              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
+            </button>
+            <a href="https://new-pos-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-link">
+              <span data-i18n="cases.link.pos1">Acessar Console POS1 ao Vivo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="glass-card case-card datagenesis">
+        <div class="glass-card case-card datagenesis" data-drawer-platform="datagenesis">
           <div class="case-header">
             <span class="case-name">DataGenesis — Data Hub &amp; AI Gateway</span>
             <span class="case-tag" data-i18n="cases.c4.tag">Inteligência Cadastral · Registro INPI</span>
           </div>
-          <p data-i18n="cases.c4.desc">Plataforma proprietária de Inteligência Cadastral Auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, adaptador para 26 APIs do Data Hub Intelligence (estrutural + SIM Swap móvel) e AI Gateway (risk-features-1.0) com 24 features e linhagem completa para motores de risco, crédito e KYP.</p>
+          <p data-i18n="cases.c4.desc">Inteligência cadastral auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, 26 APIs do Data Hub e AI Gateway.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Motor qualidade-1.0 · 83 Testes</span>
             <span class="case-metric-pill">Data Hub (26 APIs + SIM Swap)</span>
             <span class="case-metric-pill">AI Gateway risk-features-1.0</span>
             <span class="case-metric-pill">HMAC-SHA256 &amp; Keycloak OIDC</span>
           </div>
-          <a href="https://github.com/Wangaricarbon/Datagen2" target="_blank" rel="noopener noreferrer" class="case-link">
-            <span data-i18n="cases.link.datagenesis">Inspecionar Arquitetura DataGenesis</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+          <div class="case-actions">
+            <button type="button" class="case-btn-detail" data-drawer-trigger="datagenesis">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="9"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="11" y2="17"/>
+              </svg>
+              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
+            </button>
+            <a href="https://github.com/Wangaricarbon/Datagen2" target="_blank" rel="noopener noreferrer" class="case-link">
+              <span data-i18n="cases.link.datagenesis">Inspecionar Arquitetura DataGenesis</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="glass-card case-card orchestrator">
+        <div class="glass-card case-card orchestrator" data-drawer-platform="orchestrator">
           <div class="case-header">
             <span class="case-name">Orchestrator — Backend SaaS para Construção de Fintechs</span>
             <span class="case-tag" data-i18n="cases.c5.tag">Fintech SaaS Backend · BPMN, Risco &amp; Ledger (INPI)</span>
           </div>
-          <p data-i18n="cases.c5.desc">Motor SaaS headless para construção acelerada de Fintechs, operações de crédito B2B/B2C, FIDCs e plataformas de Embedded Finance (WaveHub Capital). Reúne motor BPMN/DMN próprio sem dependências legadas, ledger encadeado assinado (prova de lastro B10), motor de risco B12 com modo sombra (IORQ × motor), servidor MCP (21 ferramentas), integrador multi-ERP (Net OS, MK, Voalle, Hubsoft) e disparo para BaaS regulado sem custódia.</p>
+          <p data-i18n="cases.c5.desc">Backend SaaS headless para Fintechs e crédito com motor BPMN/DMN próprio, ledger encadeado HMAC e risco em modo sombra.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Motor BPMN/DMN Próprio · 63 Testes</span>
             <span class="case-metric-pill">Ledger Encadeado HMAC &amp; Lastro B10</span>
             <span class="case-metric-pill">Motor Risco B12 (Sombra → Produção)</span>
             <span class="case-metric-pill">MCP (21 Tools) · 4 ERPs · BaaS Headless</span>
           </div>
-          <a href="https://github.com/Wangaricarbon/Orchestrator" target="_blank" rel="noopener noreferrer" class="case-link">
-            <span data-i18n="cases.link.orchestrator">Explorar Repositório &amp; Swagger Orchestrator</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+          <div class="case-actions">
+            <button type="button" class="case-btn-detail" data-drawer-trigger="orchestrator">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="9"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="11" y2="17"/>
+              </svg>
+              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
+            </button>
+            <a href="https://github.com/Wangaricarbon/Orchestrator" target="_blank" rel="noopener noreferrer" class="case-link">
+              <span data-i18n="cases.link.orchestrator">Explorar Repositório &amp; Swagger Orchestrator</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -872,5 +927,46 @@
   <!-- Scripts -->
   <script src="js/liquid.js"></script>
   <script src="js/app.js"></script>
+
+  <!-- Platform Technical Specification Slide-Over Drawer (<dialog>) -->
+  <dialog id="platform-drawer" class="platform-drawer" closedby="any" aria-labelledby="drawer-title" aria-modal="true">
+    <div class="drawer-header">
+      <div class="drawer-header-left">
+        <span id="drawer-badge" class="drawer-badge">PLATAFORMA</span>
+        <h3 id="drawer-title" class="drawer-title">Especificação da Plataforma</h3>
+        <p id="drawer-tagline" class="drawer-tagline">Resumo executivo de engenharia</p>
+      </div>
+      <form method="dialog" class="drawer-close-form">
+        <button type="submit" class="drawer-close-btn" aria-label="Fechar ficha técnica">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div id="drawer-content" class="drawer-body">
+      <!-- Injected dynamically by openPlatformDrawer() -->
+    </div>
+
+    <div class="drawer-footer">
+      <a id="drawer-primary-link" href="#" target="_blank" rel="noopener noreferrer" class="drawer-btn-primary">
+        <span id="drawer-primary-text">Acessar Console / Repositório</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+      <button type="button" id="drawer-sim-btn" class="drawer-btn-secondary">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3" />
+        </svg>
+        <span id="drawer-sim-text">Testar no Simulador IA</span>
+      </button>
+    </div>
+  </dialog>
+
 </body>
 </html>

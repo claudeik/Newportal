@@ -147,15 +147,15 @@ const translations = {
     "cases.title": "Plataformas Concebidas para Escala Global",
     "cases.desc": "Conheça os produtos e infraestruturas em produção desenvolvidos sob a assinatura tecnológica EPYX by WangariCarbon.",
     "cases.c1.tag": "RWA Blockchain & Sustentabilidade",
-    "cases.c1.desc": "Plataforma descentralizada para certificação, rastreamento IoT e comercialização de créditos de carbono e ativos ambientais tokenizados com auditoria imutável e liquidez global.",
+    "cases.c1.desc": "Tokenização e comercialização de créditos de carbono e ativos ambientais com rastreamento IoT e liquidez global.",
     "cases.c2.tag": "Refatoração & IA Soberana",
-    "cases.c2.desc": "Suíte de engenharia Spec-First que orquestra enxames de agentes para refatoração de sistemas corporativos legados, geração de código tipado e deploy em clusters de IA Soberana.",
+    "cases.c2.desc": "Refatoração autônoma de legados críticos para Rust, Go e Kafka com paridade formal e clusters de IA Soberana.",
     "cases.c3.tag": "ERP + PDV + S2P · Data Lake Medallion",
-    "cases.c3.desc": "Plataforma integradora de Cadastro Mestre (Lista Mestre de fornecedores, itens e conversões), KYP contínuo, Agente Fiscal e CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis e Crivo estruturados em Data Lakehouse Medallion (Bronze, Silver e Gold).",
+    "cases.c3.desc": "Integração de Lista Mestre (ERP + PDV + S2P) e Data Lake Medallion com Agente Fiscal e CMV Explicado em tempo real.",
     "cases.c4.tag": "Inteligência Cadastral · Registro INPI",
-    "cases.c4.desc": "Plataforma proprietária de Inteligência Cadastral Auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, adaptador para 26 APIs do Data Hub Intelligence (estrutural + SIM Swap móvel) e AI Gateway (risk-features-1.0) com 24 features e linhagem completa para motores de risco, crédito e KYP.",
+    "cases.c4.desc": "Inteligência cadastral auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, 26 APIs do Data Hub e AI Gateway.",
     "cases.c5.tag": "Fintech SaaS Backend · BPMN, Risco & Ledger (INPI)",
-    "cases.c5.desc": "Motor SaaS headless para construção acelerada de Fintechs, operações de crédito B2B/B2C, FIDCs e plataformas de Embedded Finance (WaveHub Capital). Reúne motor BPMN/DMN próprio sem dependências legadas, ledger encadeado assinado (prova de lastro B10), motor de risco B12 com modo sombra (IORQ × motor), servidor MCP (21 ferramentas), integrador multi-ERP (Net OS, MK, Voalle, Hubsoft) e disparo para BaaS regulado sem custódia.",
+    "cases.c5.desc": "Backend SaaS headless para Fintechs e crédito com motor BPMN/DMN próprio, ledger encadeado HMAC e risco em modo sombra.",
     "cases.link.explore": "Explorar Arquitetura",
     "cases.link.pos1": "Acessar Console POS1 ao Vivo",
     "cases.link.datagenesis": "Inspecionar Arquitetura DataGenesis",
@@ -190,7 +190,8 @@ const translations = {
     "contact.form.success": "Briefing registrado com sucesso no protocolo EPYX by WangariCarbon! Nossa equipe de arquitetos entrará em contato em breve.",
     "footer.rights": "© 2026 EPYX by WangariCarbon. Todos os direitos reservados. Engenharia de IA Soberana, Blockchain & Sistemas Críticos.",
     "footer.link.security": "IA Soberana & Segurança",
-    "footer.link.spec": "Metodologia Spec-First"
+    "footer.link.spec": "Metodologia Spec-First",
+    "cases.btn.details": "Ficha Técnica & Arquitetura"
 },
 
   es: {
@@ -336,15 +337,15 @@ const translations = {
     "cases.title": "Plataformas Concebidas para Escala Global",
     "cases.desc": "Conozca los productos e infraestructuras en producción desarrollados bajo la firma tecnológica EPYX by WangariCarbon.",
     "cases.c1.tag": "RWA Blockchain & Sostenibilidad",
-    "cases.c1.desc": "Plataforma descentralizada para certificación, rastreo IoT y comercialización de créditos de carbono y activos ambientales tokenizados con auditoría inmutable y liquidez global.",
+    "cases.c1.desc": "Tokenización y comercialización de créditos de carbono y activos ambientales con rastreo IoT y liquidez global.",
     "cases.c2.tag": "Refactorización & IA Soberana",
-    "cases.c2.desc": "Suite de ingeniería Spec-First que orquesta enjambres de agentes para la refactorización de sistemas corporativos legados, generación de código tipado y despliegue en clusters de IA Soberana.",
+    "cases.c2.desc": "Refactorización autónoma de legados críticos a Rust, Go y Kafka con paridad formal y clusters de IA Soberana.",
     "cases.c3.tag": "ERP + TPV + S2P · Data Lake Medallion",
-    "cases.c3.desc": "Plataforma integradora de Catastro Maestro (Lista Maestra de proveedores, artículos y conversiones), KYP continuo, Agente Fiscal y CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (TPV), DataGenesis y Crivo estructurados en Data Lakehouse Medallion (Bronze, Silver y Gold).",
+    "cases.c3.desc": "Integración de Lista Maestra (ERP + TPV + S2P) y Data Lake Medallion con Agente Fiscal y CMV Explicado en tiempo real.",
     "cases.c4.tag": "Inteligencia Catastral · Registro INPI",
-    "cases.c4.desc": "Plataforma propietaria de Inteligencia Catastral Auditable (CPF/CNPJ) con motor determinista qualidade-1.0, adaptador para 26 APIs de Data Hub Intelligence (estructural + SIM Swap móvil) y AI Gateway (risk-features-1.0) con 24 variables y linaje completo para motores de riesgo, crédito y KYP.",
+    "cases.c4.desc": "Inteligencia catastral auditable (CPF/CNPJ) con motor determinista qualidade-1.0, 26 APIs de Data Hub y AI Gateway.",
     "cases.c5.tag": "Fintech SaaS Backend · BPMN, Riesgo & Ledger (INPI)",
-    "cases.c5.desc": "Motor SaaS headless para construcción acelerada de Fintechs, operaciones de crédito B2B/B2C, fondos de crédito y plataformas de finanzas embebidas (WaveHub Capital). Reúne motor BPMN/DMN propio sin dependencias legadas, ledger encadenado firmado (prueba de respaldo B10), motor de riesgo B12 con modo sombra (IORQ × motor), servidor MCP (21 herramientas), integrador multi-ERP (Net OS, MK, Voalle, Hubsoft) y disparo a BaaS regulado sin custodia.",
+    "cases.c5.desc": "Backend SaaS headless para Fintechs y crédito con motor BPMN/DMN propio, ledger encadenado HMAC y riesgo en modo sombra.",
     "cases.link.explore": "Explorar Arquitectura",
     "cases.link.pos1": "Acceder a Consola POS1 en Vivo",
     "cases.link.datagenesis": "Inspeccionar Arquitectura DataGenesis",
@@ -379,7 +380,8 @@ const translations = {
     "contact.form.success": "¡Briefing registrado con éxito en el protocolo EPYX by WangariCarbon! Nuestro equipo de arquitectos se pondrá en contacto pronto.",
     "footer.rights": "© 2026 EPYX by WangariCarbon. Todos los derechos reservados. Ingeniería de IA Soberana, Blockchain & Sistemas Críticos.",
     "footer.link.security": "IA Soberana & Seguridad",
-    "footer.link.spec": "Metodología Spec-First"
+    "footer.link.spec": "Metodología Spec-First",
+    "cases.btn.details": "Ficha Técnica & Arquitectura"
 },
 
   en: {
@@ -525,15 +527,15 @@ const translations = {
     "cases.title": "Platforms Conceived for Global Scale",
     "cases.desc": "Discover production products and infrastructures developed under the EPYX by WangariCarbon technological signature.",
     "cases.c1.tag": "RWA Blockchain & Sustainability",
-    "cases.c1.desc": "Decentralized platform for IoT certification, tracking, and exchange of carbon credits and tokenized environmental assets with immutable auditing and global liquidity.",
+    "cases.c1.desc": "Tokenization and exchange of carbon credits and environmental assets with IoT tracking and global liquidity.",
     "cases.c2.tag": "Refactoring & Sovereign AI",
-    "cases.c2.desc": "Spec-First engineering suite orchestrating swarms of agents to refactor legacy corporate systems, generate typed code, and deploy to Sovereign AI clusters.",
+    "cases.c2.desc": "Autonomous refactoring of critical legacy systems to Rust, Go and Kafka with formal parity and Sovereign AI clusters.",
     "cases.c3.tag": "ERP + POS + S2P · Medallion Data Lake",
-    "cases.c3.desc": "Integrator platform for Master Data (suppliers, items, unit conversions), continuous KYP, Tax Agent, and Explained COGS. Natively connects Teknisa (ERP), Nimbi (S2P), EPOC (POS), DataGenesis, and Crivo into a Medallion Lakehouse (Bronze, Silver, Gold).",
+    "cases.c3.desc": "Master Data integration (ERP + POS + S2P) and Medallion Data Lake with AI Tax Agent and real-time Explained COGS.",
     "cases.c4.tag": "Registry Intelligence · INPI Registered",
-    "cases.c4.desc": "Proprietary auditable registry intelligence platform (CPF/CNPJ) with deterministic qualidade-1.0 scoring, adapter for 26 Data Hub Intelligence APIs (structural + SIM Swap), and AI Gateway (risk-features-1.0) with 24 features for credit and KYP engines.",
+    "cases.c4.desc": "Auditable registry intelligence (CPF/CNPJ) with deterministic qualidade-1.0 engine, 26 Data Hub APIs, and AI Gateway.",
     "cases.c5.tag": "Fintech SaaS Backend · BPMN, Risk & Ledger (INPI)",
-    "cases.c5.desc": "Headless SaaS engine for accelerated Fintech building, B2B/B2C credit operations, credit funds, and embedded finance platforms (WaveHub Capital). Integrates proprietary BPMN/DMN engine, signed chained ledger (B10 backing proof), B12 risk engine with shadow mode (IORQ × engine), MCP server (21 tools), multi-ERP connectors, and non-custodial BaaS payout instructions.",
+    "cases.c5.desc": "Headless SaaS backend for Fintechs and credit with proprietary BPMN/DMN engine, HMAC chained ledger, and shadow risk mode.",
     "cases.link.explore": "Explore Architecture",
     "cases.link.pos1": "Access Live POS1 Console",
     "cases.link.datagenesis": "Inspect DataGenesis Architecture",
@@ -568,7 +570,8 @@ const translations = {
     "contact.form.success": "Briefing successfully registered on EPYX by WangariCarbon protocol! Our architecture team will be in touch shortly.",
     "footer.rights": "© 2026 EPYX by WangariCarbon. All rights reserved. Sovereign AI, Blockchain & Critical Systems Engineering.",
     "footer.link.security": "Sovereign AI & Security",
-    "footer.link.spec": "Spec-First Methodology"
+    "footer.link.spec": "Spec-First Methodology",
+    "cases.btn.details": "Technical Specs & Architecture"
 }
 };
 
@@ -1253,6 +1256,9 @@ let selectedProject = 'agentic';
 let isSimRunning = false;
 
 function setLanguage(lang) {
+  if (activeDrawerPlatform && typeof openPlatformDrawer === "function") {
+    openPlatformDrawer(activeDrawerPlatform);
+  }
   if (!translations[lang]) return;
   currentLanguage = lang;
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
@@ -1723,3 +1729,497 @@ document.addEventListener('DOMContentLoaded', () => {
     runSimulation(selectedProject);
   }, 500);
 });
+
+
+/* ==========================================================================
+   Platform Details Specification Repository for Slide-Over Drawer
+   ========================================================================== */
+const platformDetails = {
+  wagari: {
+    badge: {
+      pt: "RWA BLOCKCHAIN & SUSTENTABILIDADE",
+      es: "RWA BLOCKCHAIN & SOSTENIBILIDAD",
+      en: "RWA BLOCKCHAIN & SUSTAINABILITY"
+    },
+    title: {
+      pt: "Wangari Carbon RWA",
+      es: "Wangari Carbon RWA",
+      en: "Wangari Carbon RWA"
+    },
+    tagline: {
+      pt: "Tokenização de créditos de carbono e ativos ambientais de alta integridade com rastreabilidade IoT e auditoria on-chain.",
+      es: "Tokenización de créditos de carbono y activos ambientales de alta integridad con trazabilidad IoT y auditoría on-chain.",
+      en: "Tokenization of high-integrity carbon credits and environmental assets with IoT tracking and on-chain auditing."
+    },
+    challenge: {
+      pt: "Mercados voluntários de carbono sofrem com opacidade, risco de duplicidade (double-counting), taxas intermediárias abusivas e falta de liquidez global para projetos verdes.",
+      es: "Los mercados voluntarios de carbono sufren de opacidad, riesgo de doble conteo, altas comisiones de intermediarios y falta de liquidez global para proyectos verdes.",
+      en: "Voluntary carbon markets suffer from opacity, double-counting risks, high intermediary fees, and lack of global liquidity for green projects."
+    },
+    solution: {
+      pt: "Smart contracts permissionados (ERC-3643/1155), oráculos IoT Chainlink e ancoragem Merkle Root de imagens multiespectrais de satélite garantindo rastreio contínuo e queima auditável.",
+      es: "Smart contracts permisionados (ERC-3643/1155), oráculos IoT Chainlink y anclaje Merkle Root de imágenes multiespectrales de satélite que garantizan rastreo continuo y quema auditable.",
+      en: "Permissioned smart contracts (ERC-3643/1155), Chainlink IoT oracles, and Merkle Root multispectral satellite imagery ensuring continuous tracking and auditable burn."
+    },
+    specs: {
+      pt: [
+        { title: "Padrão de Token", desc: "ERC-3643 (RWA com whitelisting de investidores) e ERC-1155 para lotes fracionados" },
+        { title: "Oráculos & IoT", desc: "Sensores de solo LoRaWAN integrados a nós oráculos descentralizados" },
+        { title: "Sensoriamento Remoto", desc: "Verificação via satélite com Merkle Tree e provas de não-desmatamento" },
+        { title: "Aposentadoria de Créditos", desc: "Certificado criptográfico NFT emitido após burn definitivo on-chain" }
+      ],
+      es: [
+        { title: "Estándar de Token", desc: "ERC-3643 (RWA con whitelisting de inversores) y ERC-1155 para lotes fraccionados" },
+        { title: "Oráculos e IoT", desc: "Sensores de suelo LoRaWAN integrados con nodos oráculos descentralizados" },
+        { title: "Teledetección", desc: "Verificación satelital con Merkle Tree y pruebas de no deforestación" },
+        { title: "Retiro de Créditos", desc: "Certificado criptográfico NFT emitido tras el burn definitivo on-chain" }
+      ],
+      en: [
+        { title: "Token Standard", desc: "ERC-3643 (Permissioned RWA with investor whitelisting) and ERC-1155 for fractional batches" },
+        { title: "Oracles & IoT", desc: "LoRaWAN ground sensors integrated into decentralized oracle nodes" },
+        { title: "Remote Sensing", desc: "Satellite verification with Merkle Tree and non-deforestation proofs" },
+        { title: "Credit Retirement", desc: "Cryptographic NFT certificate issued upon permanent on-chain burn" }
+      ]
+    },
+    chips: ["ERC-3643", "ERC-1155", "Chainlink Oracles", "LoRaWAN IoT", "Verra / Gold Standard APIs", "Ethereum / Polygon", "Merkle Proofs"],
+    security: {
+      pt: "Auditoria formal estática de contratos inteligentes, cofre multi-assinatura (Multi-Sig Safe) e compliance ESG rigoroso.",
+      es: "Auditoría formal estática de smart contracts, bóveda multifirma (Multi-Sig Safe) y riguroso cumplimiento ESG.",
+      en: "Static formal smart contract auditing, Multi-Sig Safe treasury vault, and rigorous ESG regulatory compliance."
+    },
+    primaryAction: {
+      label: { pt: "Simular Squad RWA", es: "Simular Squad RWA", en: "Simulate RWA Squad" },
+      url: "#simulator",
+      project: "carbon"
+    }
+  },
+
+  urus: {
+    badge: {
+      pt: "REFATORAÇÃO & IA SOBERANA",
+      es: "REFACTORIZACIÓN & IA SOBERANA",
+      en: "REFACTORING & SOVEREIGN AI"
+    },
+    title: {
+      pt: "Urus Sovereign Stack",
+      es: "Urus Sovereign Stack",
+      en: "Urus Sovereign Stack"
+    },
+    tagline: {
+      pt: "Engenharia reversa Spec-First para refatoração de monólitos legados para Rust, Go e Kafka sob clusters de IA Soberana.",
+      es: "Ingeniería inversa Spec-First para refactorizar monolitos legados a Rust, Go y Kafka bajo clusters de IA Soberana.",
+      en: "Spec-First reverse engineering to refactor legacy monoliths to Rust, Go and Kafka under Sovereign AI clusters."
+    },
+    challenge: {
+      pt: "Monólitos legados (Java, COBOL, .NET) com acoplamento crítico, custos exponenciais de nuvem e incapacidade de inovar com soberania de dados.",
+      es: "Monolitos legados (Java, COBOL, .NET) con acoplamiento crítico, costes exponenciales de nube e incapacidad de innovar con soberanía de datos.",
+      en: "Critical legacy monoliths (Java, COBOL, .NET) with severe coupling, runaway cloud costs, and inability to innovate with data sovereignty."
+    },
+    solution: {
+      pt: "Enxame multi-agente que mapeia AST, extrai contratos OpenAPI/Protobuf, gera código tipado zero-copy e valida paridade funcional via Shadow Traffic.",
+      es: "Enjambre multi-agente que mapea AST, extrae contratos OpenAPI/Protobuf, genera código tipado zero-copy y valida paridad funcional vía Shadow Traffic.",
+      en: "Multi-agent swarm mapping AST, extracting OpenAPI/Protobuf contracts, generating typed zero-copy code and proving parity via Shadow Traffic."
+    },
+    specs: {
+      pt: [
+        { title: "Metodologia Spec-First", desc: "Especificações rigorosas OpenAPI 3.1, schemas Protobuf e testes de contrato automatizados" },
+        { title: "Modern Stacks", desc: "Microsserviços em Rust (Axum/Actix) e Go com Event Mesh Apache Kafka" },
+        { title: "Paridade Garantida", desc: "100.00% de equivalência validada em 1.2M de requisições espelhadas via Envoy Proxy" },
+        { title: "Ganhos de Escala", desc: "Redução de 74% de memória e latência P99 reduzida de 840ms para 11ms" }
+      ],
+      es: [
+        { title: "Metodología Spec-First", desc: "Especificaciones OpenAPI 3.1 rigurosas, Protobuf y pruebas de contrato automatizadas" },
+        { title: "Stacks Modernas", desc: "Microservicios en Rust (Axum/Actix) y Go con Event Mesh Apache Kafka" },
+        { title: "Paridad Garantizada", desc: "100.00% de equivalencia validada en 1.2M de peticiones en espejo vía Envoy Proxy" },
+        { title: "Ganancias de Escala", desc: "Reducción del 74% de memoria y latencia P99 reducida de 840ms a 11ms" }
+      ],
+      en: [
+        { title: "Spec-First Methodology", desc: "Rigorous OpenAPI 3.1 specifications, Protobuf schemas, and automated contract tests" },
+        { title: "Modern Stacks", desc: "Rust (Axum/Actix) and Go microservices with Apache Kafka Event Mesh" },
+        { title: "Guaranteed Parity", desc: "100.00% equivalence verified over 1.2M mirrored requests via Envoy Proxy" },
+        { title: "Scale Gains", desc: "74% memory reduction and P99 latency dropped from 840ms to 11ms" }
+      ]
+    },
+    chips: ["Rust / Actix", "Go", "Apache Kafka", "Envoy Proxy", "NVIDIA TEE Enclaves", "OpenTelemetry", "Kubernetes Bare-Metal"],
+    security: {
+      pt: "Enclaves de computação confidencial (TEE), criptografia AES-256 em repouso e em trânsito, e isolamento total sem saída externa para modelos públicos.",
+      es: "Enclaves de computación confidencial (TEE), cifrado AES-256 en reposo y en tránsito, y aislamiento total sin salida externa para modelos públicos.",
+      en: "Confidential Computing Enclaves (TEE), AES-256 encryption at rest and in transit, and complete air-gapped isolation from public models."
+    },
+    primaryAction: {
+      label: { pt: "Calcular no Estimador", es: "Calcular en el Estimador", en: "Calculate in Estimator" },
+      url: "#estimator"
+    }
+  },
+
+  pos1: {
+    badge: {
+      pt: "ERP + PDV + S2P · DATA LAKE MEDALLION",
+      es: "ERP + TPV + S2P · DATA LAKE MEDALLION",
+      en: "ERP + POS + S2P · MEDALLION DATA LAKE"
+    },
+    title: {
+      pt: "POS1 — Console Integrador MDM & Medallion",
+      es: "POS1 — Consola Integradora MDM & Medallion",
+      en: "POS1 — MDM & Medallion Integrator Console"
+    },
+    tagline: {
+      pt: "Plataforma integradora de Lista Mestre, KYP contínuo, Agente Fiscal e CMV Explicado em tempo real.",
+      es: "Plataforma integradora de Lista Maestra, KYP continuo, Agente Fiscal y CMV Explicado en tiempo real.",
+      en: "Integrator platform for Master Data, continuous KYP, AI Tax Agent, and real-time Explained COGS."
+    },
+    challenge: {
+      pt: "Divergência crítica entre cotações/pedidos no S2P, notas de entrada no ERP e vendas no PDV, gerando CMV distorcido, perdas de estoque e autuações fiscais.",
+      es: "Divergencia crítica entre cotizaciones en S2P, facturas de entrada en ERP y ventas en TPV, causando CMV distorsionado, pérdidas y desajustes fiscales.",
+      en: "Critical discrepancies between S2P quotes, ERP inventory receipts, and POS checkout events, causing distorted COGS, shrinkage, and tax penalties."
+    },
+    solution: {
+      pt: "Data Lakehouse Medallion (Bronze, Silver, Gold) sincronizando Teknisa, Nimbi e EPOC com Agente Fiscal autônomo, harmonização de unidades e CMV analítico.",
+      es: "Data Lakehouse Medallion (Bronze, Silver, Gold) sincronizando Teknisa, Nimbi y EPOC con Agente Fiscal autónomo, armonización de unidades y CMV analítico.",
+      en: "Medallion Data Lakehouse (Bronze, Silver, Gold) syncing Teknisa, Nimbi, and EPOC with autonomous Tax Agent, unit harmonization, and analytical COGS."
+    },
+    specs: {
+      pt: [
+        { title: "Camada Bronze (Raw)", desc: "Ingestão contínua em streaming de PDVs (EPOC), pedidos S2P (Nimbi), NF-e e tabelas ERP" },
+        { title: "Camada Silver (MDM)", desc: "Deduplicação de SKUs, fatores de conversão (CX/FD/KG/UN) e Agente Fiscal para NCM/CFOP" },
+        { title: "Camada Gold (Analytics)", desc: "CMV Explicado analítico por prato/unidade, score KYP de parceiros e fila com SLA" },
+        { title: "Conectores Nativos", desc: "Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis (Bureau) e Crivo (Scoring)" }
+      ],
+      es: [
+        { title: "Capa Bronze (Raw)", desc: "Ingestión continua en streaming de TPVs (EPOC), pedidos S2P (Nimbi), NF-e y tablas ERP" },
+        { title: "Capa Silver (MDM)", desc: "Deduplicación de SKUs, factores de conversión (CX/FD/KG/UN) y Agente Fiscal para impuestos" },
+        { title: "Capa Gold (Analytics)", desc: "CMV Explicado analítico por plato/unidad, score KYP de socios y cola de excepciones con SLA" },
+        { title: "Conectores Nativos", desc: "Teknisa (ERP), Nimbi (S2P), EPOC (TPV), DataGenesis (Bureau) y Crivo (Scoring)" }
+      ],
+      en: [
+        { title: "Bronze Layer (Raw)", desc: "Continuous streaming ingestion of POS events (EPOC), S2P purchase orders (Nimbi), and ERP tables" },
+        { title: "Silver Layer (MDM)", desc: "SKU deduplication, unit conversion ratios (Box/Bundle/KG/Unit), and AI Tax Agent for NCM/CFOP" },
+        { title: "Gold Layer (Analytics)", desc: "Analytical Explained COGS per item/store, partner KYP risk score, and SLA exception queue" },
+        { title: "Native Connectors", desc: "Teknisa (ERP), Nimbi (S2P), EPOC (POS), DataGenesis (Bureau), and Crivo (Risk Scoring)" }
+      ]
+    },
+    chips: ["Teknisa ERP", "Nimbi S2P", "EPOC PDV", "Data Lakehouse Medallion", "Agente Fiscal IA", "CMV Explicado", "DuckDB / Iceberg", "Keycloak OIDC"],
+    security: {
+      pt: "Trilha imutável de auditoria fiscal e contábil, RBAC granular por filial/matriz e conformidade LGPD estrita.",
+      es: "Pista inmutable de auditoría fiscal y contable, RBAC granular por filial/matriz y estricto cumplimiento LGPD.",
+      en: "Immutable tax and accounting audit trail, granular multi-branch RBAC, and strict LGPD compliance."
+    },
+    primaryAction: {
+      label: { pt: "Acessar Console POS1 ao Vivo", es: "Acceder a Consola POS1 en Vivo", en: "Access Live POS1 Console" },
+      url: "https://new-pos-1.vercel.app/"
+    }
+  },
+
+  datagenesis: {
+    badge: {
+      pt: "INTELIGÊNCIA CADASTRAL · REGISTRO INPI",
+      es: "INTELIGENCIA CATASTRAL · REGISTRO INPI",
+      en: "REGISTRY INTELLIGENCE · INPI REGISTERED"
+    },
+    title: {
+      pt: "DataGenesis — Data Hub & AI Gateway",
+      es: "DataGenesis — Data Hub & AI Gateway",
+      en: "DataGenesis — Data Hub & AI Gateway"
+    },
+    tagline: {
+      pt: "Plataforma proprietária de inteligência cadastral auditável (CPF/CNPJ) com índice de qualidade determinístico e AI Gateway.",
+      es: "Plataforma propietaria de inteligencia catastral auditable (CPF/CNPJ) con índice determinista de calidad y AI Gateway.",
+      en: "Proprietary auditable registry intelligence platform (CPF/CNPJ) with deterministic quality scoring and AI Gateway."
+    },
+    challenge: {
+      pt: "Bases cadastrais contaminadas com fraudes de identidade via SIM Swap, bureaus legados lentos e ausência de linhagem reproduzível para modelos preditivos de risco.",
+      es: "Bases catastrales contaminadas con fraudes de identidad vía SIM Swap, bureaus legados lentos y falta de linaje reproducible para modelos predictivos de riesgo.",
+      en: "Customer registries contaminated by SIM Swap identity fraud, slow legacy bureaus with stale records, and lack of reproducible feature lineage for risk models."
+    },
+    solution: {
+      pt: "Motor determinístico qualidade-1.0 (83 testes), Data Hub com 26 APIs governadas (estruturais + telecom) e AI Gateway com 24 features e linhagem auditável.",
+      es: "Motor determinista qualidade-1.0 (83 pruebas), Data Hub con 26 APIs gobernadas (estructurales + telecom) y AI Gateway con 24 variables y linaje auditable.",
+      en: "Deterministic qualidade-1.0 engine (83 tests), Data Hub with 26 governed APIs (structural + telecom), and AI Gateway generating 24 auditable features."
+    },
+    specs: {
+      pt: [
+        { title: "Motor qualidade-1.0", desc: "Associação (40 pts) + Completude (40 pts) + Atualidade (20 pts), teto 60 s/ validação, single-flight" },
+        { title: "Data Hub (26 APIs)", desc: "11 APIs de Núcleo Estrutural + 15 de Inteligência Móvel (SIM Swap, tempo de posse de linha)" },
+        { title: "AI Gateway (risk-features)", desc: "24 features em 7 blocos (identidade, contatos, rede móvel, compliance e confiança)" },
+        { title: "Governança & LGPD", desc: "Opt-out imediato RF-15, zero PII em telemetria, HMAC-SHA256 e Keycloak RS256" }
+      ],
+      es: [
+        { title: "Motor qualidade-1.0", desc: "Asociación (40 pts) + Completitud (40 pts) + Actualidad (20 pts), techo 60 sin validación, single-flight" },
+        { title: "Data Hub (26 APIs)", desc: "11 APIs de Núcleo Estructural + 15 de Inteligencia Móvil (SIM Swap, tiempo de posesión de línea)" },
+        { title: "AI Gateway (risk-features)", desc: "24 variables en 7 bloques (identidad, contactos, red móvil, compliance y confianza)" },
+        { title: "Gobernanza & LGPD", desc: "Opt-out inmediato RF-15, cero PII en telemetría, HMAC-SHA256 y Keycloak RS256" }
+      ],
+      en: [
+        { title: "qualidade-1.0 Engine", desc: "Association (40 pts) + Completeness (40 pts) + Freshness (20 pts), 60-pt cap without validation, single-flight" },
+        { title: "Data Hub (26 APIs)", desc: "11 Structural Core APIs + 15 Mobile Intelligence APIs (SIM Swap, verified tenure, and compliance)" },
+        { title: "AI Gateway (risk-features)", desc: "24 features across 7 blocks (identity, contacts, telco network, compliance, and trust)" },
+        { title: "Governance & Privacy", desc: "Immediate RF-15 opt-out, zero PII in telemetry logs, HMAC-SHA256, and Keycloak RS256" }
+      ]
+    },
+    chips: ["Registro INPI", "qualidade-1.0 (83 testes)", "SIM Swap API", "AI Gateway 24 Features", "HMAC-SHA256", "Keycloak OIDC", "LGPD RF-15"],
+    security: {
+      pt: "Propriedade intelectual registrada no INPI, cálculo determinístico sem alucinações de LLM e assinatura criptográfica por lote.",
+      es: "Propiedad intelectual registrada en INPI, cálculo determinista sin alucinaciones de LLM y firma criptográfica por lote.",
+      en: "Intellectual property registered at INPI, deterministic calculation free of LLM hallucinations, and batch cryptographic signatures."
+    },
+    primaryAction: {
+      label: { pt: "Inspecionar Repositório DataGenesis", es: "Inspeccionar Repositorio DataGenesis", en: "Inspect DataGenesis Repo" },
+      url: "https://github.com/Wangaricarbon/Datagen2"
+    }
+  },
+
+  orchestrator: {
+    badge: {
+      pt: "FINTECH SAAS BACKEND · BPMN, RISCO & LEDGER (INPI)",
+      es: "FINTECH SAAS BACKEND · BPMN, RIESGO & LEDGER (INPI)",
+      en: "FINTECH SAAS BACKEND · BPMN, RISK & LEDGER (INPI)"
+    },
+    title: {
+      pt: "Orchestrator — Backend SaaS para Fintechs",
+      es: "Orchestrator — Backend SaaS para Fintechs",
+      en: "Orchestrator — Fintech SaaS Backend"
+    },
+    tagline: {
+      pt: "Motor SaaS headless proprietário para operações de crédito, FIDCs e Embedded Finance com BPMN próprio e ledger encadeado.",
+      es: "Motor SaaS headless propietario para operaciones de crédito, fondos FIDC y finanzas embebidas con BPMN propio y ledger encadenado.",
+      en: "Proprietary headless SaaS engine for credit operations, private credit funds, and embedded finance with custom BPMN and chained ledger."
+    },
+    challenge: {
+      pt: "Altos custos de licença e rigidez de motores legados (Camunda), falta de prova de lastro auditável para FIDCs e risco operacional em esteiras de crédito.",
+      es: "Altos costes de licencia y rigidez de motores legados (Camunda), falta de respaldo auditable para fondos FIDC y riesgo operacional en crédito.",
+      en: "Prohibitive license costs and heavy footprint of legacy BPMN tools (Camunda), lack of immutable asset backing proof for credit funds, and operational risk."
+    },
+    solution: {
+      pt: "Motor BPMN/DMN 100% próprio, ledger encadeado assinado (prova B10), motor de risco B12 com modo sombra (IORQ × motor) e fronteira MCP de 21 ferramentas.",
+      es: "Motor BPMN/DMN 100% propio, ledger encadenado firmado (prueba B10), motor de riesgo B12 con modo sombra (IORQ × motor) y frontera MCP de 21 herramientas.",
+      en: "100% custom BPMN/DMN engine, HMAC-SHA256 signed chained ledger (B10 proof), B12 risk engine with shadow mode (IORQ × engine), and 21-tool MCP frontier."
+    },
+    specs: {
+      pt: [
+        { title: "Motor BPMN/DMN Próprio", desc: "Zero dependência legada (sem Camunda/CIB seven). 63 testes unitários e de integração" },
+        { title: "Ledger Encadeado HMAC", desc: "Blocos assinados com âncora de lastro B10 e cofre com crypto-shredding LGPD (art. 16/20)" },
+        { title: "Motor de Risco B12", desc: "Degrau operacional: Sombra → Teste → Produção parcial → Produção. Par de decisão IORQ" },
+        { title: "Fronteira MCP & ERPs", desc: "21 ferramentas JSON-RPC 2.0, conectores telecom (Net OS, MK, Voalle, Hubsoft) e BaaS" }
+      ],
+      es: [
+        { title: "Motor BPMN/DMN Propio", desc: "Cero dependencias legadas (sin Camunda/CIB seven). 63 pruebas unitarias y de integración" },
+        { title: "Ledger Encadenado HMAC", desc: "Bloques firmados con ancla de respaldo B10 y bóveda con crypto-shredding LGPD (art. 16/20)" },
+        { title: "Motor de Riesgo B12", desc: "Paso operacional: Sombra → Pruebas → Producción parcial → Producción. Par de decisión IORQ" },
+        { title: "Frontera MCP y ERPs", desc: "21 herramientas JSON-RPC 2.0, conectores telecom (Net OS, MK, Voalle, Hubsoft) y BaaS" }
+      ],
+      en: [
+        { title: "Custom BPMN/DMN Engine", desc: "Zero legacy dependencies (no Camunda/CIB seven). 63 unit and integration tests" },
+        { title: "HMAC Chained Ledger", desc: "Signed blocks with B10 asset backing anchor and vault with privacy crypto-shredding" },
+        { title: "B12 Risk Engine", desc: "Gradual staging: Shadow → Test → Partial Production → Full Production. IORQ decision pair" },
+        { title: "MCP Frontier & ERPs", desc: "21 JSON-RPC 2.0 tools, telecom ERP connectors (Net OS, MK, Voalle, Hubsoft) and BaaS" }
+      ]
+    },
+    chips: ["Registro INPI", "BPMN/DMN Próprio (63 testes)", "Ledger HMAC Prova B10", "Motor Risco B12 Sombra", "MCP (21 Tools)", "ERPs Telecom", "BaaS Headless"],
+    security: {
+      pt: "Registro de software no INPI, segregação criptográfica de tenant e cofre com destruição segura de chaves para compliance LGPD.",
+      es: "Registro de software en INPI, segregación criptográfica de inquilinos y bóveda con destrucción segura de claves para LGPD.",
+      en: "Software registered at INPI, cryptographic multi-tenant segregation, and vault key crypto-shredding for privacy compliance."
+    },
+    primaryAction: {
+      label: { pt: "Explorar Repositório & Swagger", es: "Explorar Repositorio & Swagger", en: "Explore Repo & Swagger" },
+      url: "https://github.com/Wangaricarbon/Orchestrator"
+    }
+  }
+};
+
+/* ==========================================================================
+   Platform Slide-Over Drawer Controller
+   ========================================================================== */
+let activeDrawerPlatform = null;
+
+function openPlatformDrawer(platformKey) {
+  const data = platformDetails[platformKey];
+  if (!data) return;
+
+  activeDrawerPlatform = platformKey;
+  const lang = currentLanguage || 'pt';
+  const drawerEl = document.getElementById('platform-drawer');
+  if (!drawerEl) return;
+
+  const badgeEl = document.getElementById('drawer-badge');
+  const titleEl = document.getElementById('drawer-title');
+  const taglineEl = document.getElementById('drawer-tagline');
+  const bodyEl = document.getElementById('drawer-content');
+  const primaryLinkEl = document.getElementById('drawer-primary-link');
+  const primaryTextEl = document.getElementById('drawer-primary-text');
+  const simBtnEl = document.getElementById('drawer-sim-btn');
+  const simTextEl = document.getElementById('drawer-sim-text');
+
+  if (badgeEl) badgeEl.textContent = data.badge[lang] || data.badge.pt;
+  if (titleEl) titleEl.textContent = data.title[lang] || data.title.pt;
+  if (taglineEl) taglineEl.textContent = data.tagline[lang] || data.tagline.pt;
+
+  const challengeTitle = lang === 'en' ? 'Core Challenge' : (lang === 'es' ? 'Desafío Principal' : 'Desafio Crítico');
+  const solutionTitle = lang === 'en' ? 'Engineered Solution' : (lang === 'es' ? 'Solución de Ingeniería' : 'Solução de Engenharia');
+  const specsTitle = lang === 'en' ? 'Architecture & Technical Specifications' : (lang === 'es' ? 'Arquitectura y Especificaciones Técnicas' : 'Arquitetura & Especificações Técnicas');
+  const ecosystemTitle = lang === 'en' ? 'Protocols, Connectors & Ecosystem' : (lang === 'es' ? 'Protocolos, Conectores y Ecosistema' : 'Protocolos, Conectores & Ecossistema');
+  const securityTitle = lang === 'en' ? 'Governance, Security & INPI Registration' : (lang === 'es' ? 'Gobernanza, Seguridad y Registro INPI' : 'Governança, Segurança & Registro INPI');
+
+  const specsList = data.specs[lang] || data.specs.pt;
+  const specsHtml = specsList.map(s => `
+    <div class="drawer-spec-card">
+      <div class="drawer-spec-card-title">${s.title}</div>
+      <div class="drawer-spec-card-desc">${s.desc}</div>
+    </div>
+  `).join('');
+
+  const chipsHtml = data.chips.map(c => `<span class="drawer-chip highlight">${c}</span>`).join('');
+
+  if (bodyEl) {
+    bodyEl.innerHTML = `
+      <div class="drawer-section">
+        <div class="drawer-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          ${lang === 'en' ? 'Problem & Solution Overview' : (lang === 'es' ? 'Visión General del Problema y Solución' : 'Visão Geral do Problema e Solução')}
+        </div>
+        <div class="drawer-prob-sol">
+          <div class="drawer-callout challenge">
+            <strong>${challengeTitle}</strong>
+            ${data.challenge[lang] || data.challenge.pt}
+          </div>
+          <div class="drawer-callout solution">
+            <strong>${solutionTitle}</strong>
+            ${data.solution[lang] || data.solution.pt}
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-section">
+        <div class="drawer-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          ${specsTitle}
+        </div>
+        <div class="drawer-specs-grid">
+          ${specsHtml}
+        </div>
+      </div>
+
+      <div class="drawer-section">
+        <div class="drawer-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          ${ecosystemTitle}
+        </div>
+        <div class="drawer-chips">
+          ${chipsHtml}
+        </div>
+      </div>
+
+      <div class="drawer-section">
+        <div class="drawer-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          ${securityTitle}
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+          ${data.security[lang] || data.security.pt}
+        </p>
+      </div>
+    `;
+  }
+
+  // Configure Primary Action Button
+  if (primaryLinkEl && primaryTextEl) {
+    primaryTextEl.textContent = data.primaryAction.label[lang] || data.primaryAction.label.pt;
+    primaryLinkEl.href = data.primaryAction.url;
+    if (data.primaryAction.url.startsWith('#')) {
+      primaryLinkEl.removeAttribute('target');
+      primaryLinkEl.onclick = (e) => {
+        drawerEl.close();
+      };
+    } else {
+      primaryLinkEl.setAttribute('target', '_blank');
+      primaryLinkEl.setAttribute('rel', 'noopener noreferrer');
+      primaryLinkEl.onclick = null;
+    }
+  }
+
+  // Configure Simulator Action Button
+  if (simBtnEl && simTextEl) {
+    const simLabel = lang === 'en' ? 'Simulate in AI Console' : (lang === 'es' ? 'Simular en Consola IA' : 'Testar no Simulador IA');
+    simTextEl.textContent = simLabel;
+    simBtnEl.onclick = () => {
+      drawerEl.close();
+      const simSection = document.getElementById('simulator');
+      if (simSection) {
+        simSection.scrollIntoView({ behavior: 'smooth' });
+        // Select matching simulator project
+        const projectKey = data.primaryAction.project || (platformKey === 'wagari' ? 'carbon' : platformKey);
+        const simBtn = document.querySelector(`.project-btn[data-project="${projectKey}"]`);
+        if (simBtn) {
+          setTimeout(() => {
+            simBtn.click();
+            const runBtn = document.querySelector('.sim-btn-run');
+            if (runBtn) runBtn.click();
+          }, 450);
+        }
+      }
+    };
+  }
+
+  drawerEl.showModal();
+}
+
+function initPlatformDrawer() {
+  const drawerEl = document.getElementById('platform-drawer');
+  if (!drawerEl) return;
+
+  // Click outside to dismiss fallback for browsers lacking native closedby="any"
+  if (!('closedBy' in HTMLDialogElement.prototype)) {
+    const outside = (e, dialog) => {
+      const r = dialog.getBoundingClientRect();
+      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    };
+    let pressedOutside = false;
+    drawerEl.addEventListener('pointerdown', (e) => {
+      pressedOutside = outside(e, drawerEl);
+    });
+    drawerEl.addEventListener('pointerup', (e) => {
+      if (pressedOutside && outside(e, drawerEl)) {
+        drawerEl.close();
+      }
+    });
+  }
+
+  // Wire up detail buttons and card clicks
+  document.querySelectorAll('[data-drawer-trigger]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const platform = btn.getAttribute('data-drawer-trigger');
+      if (platform) openPlatformDrawer(platform);
+    });
+  });
+
+  // Clicking on card opens drawer (unless clicked on a link or button)
+  document.querySelectorAll('.case-card[data-drawer-platform]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      const platform = card.getAttribute('data-drawer-platform');
+      if (platform) openPlatformDrawer(platform);
+    });
+  });
+
+  drawerEl.addEventListener('close', () => {
+    activeDrawerPlatform = null;
+  });
+}
+
+// Ensure drawer updates on language change
+const originalSetLanguage = window.setLanguage || null;
