@@ -717,10 +717,10 @@ section {
   color: var(--emerald);
 }
 
-/* Strategic Pillars Section (4 Core Pillars) */
+/* Strategic Pillars Section (6 Core Pillars) */
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -1249,7 +1249,7 @@ section {
   line-height: 1.6;
 }
 
-/* Interactive Sovereign & Trading Architecture Estimator */
+/* Interactive Sovereign & Fintech Architecture Estimator */
 .estimator-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -1442,18 +1442,6 @@ section {
   border-color: var(--gold-primary);
   color: var(--gold-primary);
   background: rgba(197, 160, 89, 0.08);
-}
-
-.case-card.nexus .case-tag {
-  border-color: var(--purple);
-  color: #c084fc;
-  background: rgba(168, 85, 247, 0.08);
-}
-
-.case-card.agro .case-tag {
-  border-color: var(--amber);
-  color: var(--amber);
-  background: rgba(245, 158, 11, 0.08);
 }
 
 .case-card.pos1 {
