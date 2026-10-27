@@ -659,29 +659,71 @@
       </div>
 
       <div class="cases-grid">
-        <div class="glass-card case-card wagari" data-drawer-platform="wagari">
+        <!-- Case 1: Wangari Carbon RWA -->
+        <div class="glass-card case-card wagari" id="case-card-wagari">
           <div class="case-header">
             <span class="case-name">Wangari Carbon RWA</span>
             <span class="case-tag" data-i18n="cases.c1.tag">RWA Blockchain &amp; Sustentabilidade</span>
           </div>
-          <p data-i18n="cases.c1.desc">Tokenização e comercialização de créditos de carbono e ativos ambientais com rastreamento IoT e liquidez global.</p>
+          <p class="case-summary" data-i18n="cases.c1.desc">Tokenização e comercialização de créditos de carbono e ativos ambientais com rastreamento IoT e liquidez global.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">ERC-3643 RWA</span>
             <span class="case-metric-pill">Oráculos IoT &amp; Satélite</span>
             <span class="case-metric-pill">Auditoria On-Chain</span>
           </div>
+
+          <!-- Inline Expandable Accordion Panel -->
+          <div class="case-details-panel" id="case-panel-wagari" aria-hidden="true">
+            <div class="case-details-inner">
+              <div class="case-callout-grid">
+                <div class="case-callout challenge">
+                  <strong data-i18n="cases.detail.challenge">Desafio Crítico:</strong>
+                  <span data-i18n="cases.c1.challenge">Mercados voluntários de carbono sofrem com risco de duplicidade (double-counting), taxas abusivas e opacidade na validação física.</span>
+                </div>
+                <div class="case-callout solution">
+                  <strong data-i18n="cases.detail.solution">Solução EPYX:</strong>
+                  <span data-i18n="cases.c1.solution">Smart contracts permissionados com ancoragem Merkle Root de imagens multiespectrais de satélite e sensores IoT de solo.</span>
+                </div>
+              </div>
+
+              <div class="case-specs-mini-grid">
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c1.s1.lbl">Padrão de Token</div>
+                  <div class="spec-value" data-i18n="cases.c1.s1.val">ERC-3643 (RWA com whitelisting de investidores) e ERC-1155 fracionado</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c1.s2.lbl">Oráculos &amp; IoT</div>
+                  <div class="spec-value" data-i18n="cases.c1.s2.val">Redes descentralizadas Chainlink conectadas a sensores de solo LoRaWAN</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c1.s3.lbl">Sensoriamento Remoto</div>
+                  <div class="spec-value" data-i18n="cases.c1.s3.val">Análise multiespectral via satélite e provas ZK de não-desmatamento</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c1.s4.lbl">Aposentadoria de Créditos</div>
+                  <div class="spec-value" data-i18n="cases.c1.s4.val">Burn definitivo on-chain com emissão de certificado criptográfico imutável</div>
+                </div>
+              </div>
+
+              <div class="case-chips-row">
+                <span class="case-chip">ERC-3643</span>
+                <span class="case-chip">Chainlink Oracles</span>
+                <span class="case-chip">LoRaWAN IoT</span>
+                <span class="case-chip">Verra / Gold Standard</span>
+                <span class="case-chip">Ethereum / Polygon</span>
+              </div>
+            </div>
+          </div>
+
           <div class="case-actions">
-            <button type="button" class="case-btn-detail" data-drawer-trigger="wagari">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <line x1="9" y1="9" x2="15" y2="9"/>
-                <line x1="9" y1="13" x2="15" y2="13"/>
-                <line x1="9" y1="17" x2="11" y2="17"/>
+            <button type="button" class="case-expand-btn" aria-expanded="false" aria-controls="case-panel-wagari" data-target-case="wagari">
+              <span class="expand-text" data-i18n="cases.btn.more">Ver Especificações Técnicas</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
             </button>
             <a href="#simulator" class="case-link" data-sim-target="carbon">
-              <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
+              <span data-i18n="cases.link.explore">Simular Squad IA</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -690,29 +732,72 @@
           </div>
         </div>
 
-        <div class="glass-card case-card urus" data-drawer-platform="urus">
+        <!-- Case 2: Urus Sovereign Stack -->
+        <div class="glass-card case-card urus" id="case-card-urus">
           <div class="case-header">
             <span class="case-name">Urus Sovereign Stack</span>
             <span class="case-tag" data-i18n="cases.c2.tag">Refatoração &amp; IA Soberana</span>
           </div>
-          <p data-i18n="cases.c2.desc">Refatoração autônoma de legados críticos para Rust, Go e Kafka com paridade formal e clusters de IA Soberana.</p>
+          <p class="case-summary" data-i18n="cases.c2.desc">Refatoração autônoma de legados críticos para Rust, Go e Kafka com paridade formal e clusters de IA Soberana.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Spec-First AST</span>
             <span class="case-metric-pill">Rust / Go / Kafka</span>
             <span class="case-metric-pill">Zero-Trust TEE</span>
           </div>
+
+          <!-- Inline Expandable Accordion Panel -->
+          <div class="case-details-panel" id="case-panel-urus" aria-hidden="true">
+            <div class="case-details-inner">
+              <div class="case-callout-grid">
+                <div class="case-callout challenge">
+                  <strong data-i18n="cases.detail.challenge">Desafio Crítico:</strong>
+                  <span data-i18n="cases.c2.challenge">Monólitos legados (Java/COBOL/.NET) com acoplamento crítico, alto custo de nuvem e incapacidade de inovar.</span>
+                </div>
+                <div class="case-callout solution">
+                  <strong data-i18n="cases.detail.solution">Solução EPYX:</strong>
+                  <span data-i18n="cases.c2.solution">Enxame multi-agente que mapeia AST, extrai contratos OpenAPI/Protobuf e valida paridade funcional via Shadow Traffic.</span>
+                </div>
+              </div>
+
+              <div class="case-specs-mini-grid">
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c2.s1.lbl">Metodologia Spec-First</div>
+                  <div class="spec-value" data-i18n="cases.c2.s1.val">Especificações rigorosas OpenAPI 3.1, schemas Protobuf e testes de contrato</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c2.s2.lbl">Stacks Modernas</div>
+                  <div class="spec-value" data-i18n="cases.c2.s2.val">Microsserviços em Rust (Axum/Actix) e Go com Event Mesh Apache Kafka</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c2.s3.lbl">Paridade Garantida</div>
+                  <div class="spec-value" data-i18n="cases.c2.s3.val">100.00% em 1.2M de requisições espelhadas via Envoy Proxy em tráfego sombra</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c2.s4.lbl">Ganhos de Escala</div>
+                  <div class="spec-value" data-i18n="cases.c2.s4.val">Redução de 74% de memória e latência P99 reduzida de 840ms para 11ms</div>
+                </div>
+              </div>
+
+              <div class="case-chips-row">
+                <span class="case-chip">Rust / Axum</span>
+                <span class="case-chip">Go</span>
+                <span class="case-chip">Apache Kafka</span>
+                <span class="case-chip">Envoy Proxy</span>
+                <span class="case-chip">NVIDIA TEE Enclaves</span>
+                <span class="case-chip">Kubernetes</span>
+              </div>
+            </div>
+          </div>
+
           <div class="case-actions">
-            <button type="button" class="case-btn-detail" data-drawer-trigger="urus">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <line x1="9" y1="9" x2="15" y2="9"/>
-                <line x1="9" y1="13" x2="15" y2="13"/>
-                <line x1="9" y1="17" x2="11" y2="17"/>
+            <button type="button" class="case-expand-btn" aria-expanded="false" aria-controls="case-panel-urus" data-target-case="urus">
+              <span class="expand-text" data-i18n="cases.btn.more">Ver Especificações Técnicas</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
             </button>
             <a href="#estimator" class="case-link">
-              <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
+              <span data-i18n="cases.link.explore">Calcular no Estimador</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -721,27 +806,70 @@
           </div>
         </div>
 
-        <div class="glass-card case-card pos1" data-drawer-platform="pos1">
+        <!-- Case 3: POS1 MDM & Medallion -->
+        <div class="glass-card case-card pos1" id="case-card-pos1">
           <div class="case-header">
             <span class="case-name">POS1 — Console Integrador MDM &amp; Medallion</span>
             <span class="case-tag" data-i18n="cases.c3.tag">ERP + PDV + S2P · Data Lake Medallion</span>
           </div>
-          <p data-i18n="cases.c3.desc">Integração de Lista Mestre (ERP + PDV + S2P) e Data Lake Medallion com Agente Fiscal e CMV Explicado em tempo real.</p>
+          <p class="case-summary" data-i18n="cases.c3.desc">Integração de Lista Mestre (ERP + PDV + S2P) e Data Lake Medallion com Agente Fiscal e CMV Explicado em tempo real.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Teknisa · Nimbi · EPOC · Crivo</span>
             <span class="case-metric-pill">Medallion (Bronze · Silver · Gold)</span>
             <span class="case-metric-pill">KYP Contínuo &amp; Agente Fiscal</span>
             <span class="case-metric-pill">CMV Explicado &amp; Fila de Exceções</span>
           </div>
+
+          <!-- Inline Expandable Accordion Panel -->
+          <div class="case-details-panel" id="case-panel-pos1" aria-hidden="true">
+            <div class="case-details-inner">
+              <div class="case-callout-grid">
+                <div class="case-callout challenge">
+                  <strong data-i18n="cases.detail.challenge">Desafio Crítico:</strong>
+                  <span data-i18n="cases.c3.challenge">Divergência entre cotações/pedidos no S2P, notas de entrada no ERP e vendas no PDV, gerando CMV distorcido e perdas.</span>
+                </div>
+                <div class="case-callout solution">
+                  <strong data-i18n="cases.detail.solution">Solução EPYX:</strong>
+                  <span data-i18n="cases.c3.solution">Data Lakehouse Medallion integrando Teknisa, Nimbi e EPOC com Agente Fiscal autônomo, conversões de unidade e CMV analítico.</span>
+                </div>
+              </div>
+
+              <div class="case-specs-mini-grid">
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c3.s1.lbl">Camada Bronze (Raw)</div>
+                  <div class="spec-value" data-i18n="cases.c3.s1.val">Ingestão contínua em streaming de PDVs (EPOC), pedidos S2P (Nimbi), NF-e e ERP</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c3.s2.lbl">Camada Silver (MDM)</div>
+                  <div class="spec-value" data-i18n="cases.c3.s2.val">Deduplicação de SKUs, fatores de conversão (CX/FD/KG/UN) e Agente Fiscal NCM/CFOP</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c3.s3.lbl">Camada Gold (Analytics)</div>
+                  <div class="spec-value" data-i18n="cases.c3.s3.val">CMV Explicado analítico por item/loja, score KYP de fornecedores e fila com SLA</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c3.s4.lbl">Conectores Nativos</div>
+                  <div class="spec-value" data-i18n="cases.c3.s4.val">Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis (Bureau) e Crivo (Scoring)</div>
+                </div>
+              </div>
+
+              <div class="case-chips-row">
+                <span class="case-chip">Teknisa ERP</span>
+                <span class="case-chip">Nimbi S2P</span>
+                <span class="case-chip">EPOC PDV</span>
+                <span class="case-chip">Agente Fiscal IA</span>
+                <span class="case-chip">DuckDB / Iceberg</span>
+                <span class="case-chip">Keycloak OIDC</span>
+              </div>
+            </div>
+          </div>
+
           <div class="case-actions">
-            <button type="button" class="case-btn-detail" data-drawer-trigger="pos1">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <line x1="9" y1="9" x2="15" y2="9"/>
-                <line x1="9" y1="13" x2="15" y2="13"/>
-                <line x1="9" y1="17" x2="11" y2="17"/>
+            <button type="button" class="case-expand-btn" aria-expanded="false" aria-controls="case-panel-pos1" data-target-case="pos1">
+              <span class="expand-text" data-i18n="cases.btn.more">Ver Especificações Técnicas</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
             </button>
             <a href="https://new-pos-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-link">
               <span data-i18n="cases.link.pos1">Acessar Console POS1 ao Vivo</span>
@@ -753,27 +881,70 @@
           </div>
         </div>
 
-        <div class="glass-card case-card datagenesis" data-drawer-platform="datagenesis">
+        <!-- Case 4: DataGenesis -->
+        <div class="glass-card case-card datagenesis" id="case-card-datagenesis">
           <div class="case-header">
             <span class="case-name">DataGenesis — Data Hub &amp; AI Gateway</span>
             <span class="case-tag" data-i18n="cases.c4.tag">Inteligência Cadastral · Registro INPI</span>
           </div>
-          <p data-i18n="cases.c4.desc">Inteligência cadastral auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, 26 APIs do Data Hub e AI Gateway.</p>
+          <p class="case-summary" data-i18n="cases.c4.desc">Inteligência cadastral auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, 26 APIs do Data Hub e AI Gateway.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Motor qualidade-1.0 · 83 Testes</span>
             <span class="case-metric-pill">Data Hub (26 APIs + SIM Swap)</span>
             <span class="case-metric-pill">AI Gateway risk-features-1.0</span>
             <span class="case-metric-pill">HMAC-SHA256 &amp; Keycloak OIDC</span>
           </div>
+
+          <!-- Inline Expandable Accordion Panel -->
+          <div class="case-details-panel" id="case-panel-datagenesis" aria-hidden="true">
+            <div class="case-details-inner">
+              <div class="case-callout-grid">
+                <div class="case-callout challenge">
+                  <strong data-i18n="cases.detail.challenge">Desafio Crítico:</strong>
+                  <span data-i18n="cases.c4.challenge">Bases cadastrais contaminadas com fraudes via SIM Swap, bureaus lentos e sem linhagem reproduzível para risco.</span>
+                </div>
+                <div class="case-callout solution">
+                  <strong data-i18n="cases.detail.solution">Solução EPYX:</strong>
+                  <span data-i18n="cases.c4.solution">Motor determinístico qualidade-1.0 (83 testes), Data Hub com 26 APIs governadas e AI Gateway com 24 features de risco.</span>
+                </div>
+              </div>
+
+              <div class="case-specs-mini-grid">
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c4.s1.lbl">Motor qualidade-1.0</div>
+                  <div class="spec-value" data-i18n="cases.c4.s1.val">Associação (40 pts) + Formato (40 pts) + Atualidade (20 pts), teto 60 s/ validação</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c4.s2.lbl">Data Hub (26 APIs)</div>
+                  <div class="spec-value" data-i18n="cases.c4.s2.val">11 APIs de Núcleo Estrutural + 15 de Inteligência Móvel (SIM Swap e posse de linha)</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c4.s3.lbl">AI Gateway (risk-features)</div>
+                  <div class="spec-value" data-i18n="cases.c4.s3.val">24 features em 7 blocos (identidade, contatos, rede móvel, compliance e confiança)</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c4.s4.lbl">Governança &amp; LGPD</div>
+                  <div class="spec-value" data-i18n="cases.c4.s4.val">Opt-out imediato RF-15, zero PII em telemetria, HMAC-SHA256 e Keycloak RS256</div>
+                </div>
+              </div>
+
+              <div class="case-chips-row">
+                <span class="case-chip">Registro INPI</span>
+                <span class="case-chip">qualidade-1.0</span>
+                <span class="case-chip">SIM Swap API</span>
+                <span class="case-chip">24 Risk Features</span>
+                <span class="case-chip">HMAC-SHA256</span>
+                <span class="case-chip">Keycloak OIDC</span>
+              </div>
+            </div>
+          </div>
+
           <div class="case-actions">
-            <button type="button" class="case-btn-detail" data-drawer-trigger="datagenesis">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <line x1="9" y1="9" x2="15" y2="9"/>
-                <line x1="9" y1="13" x2="15" y2="13"/>
-                <line x1="9" y1="17" x2="11" y2="17"/>
+            <button type="button" class="case-expand-btn" aria-expanded="false" aria-controls="case-panel-datagenesis" data-target-case="datagenesis">
+              <span class="expand-text" data-i18n="cases.btn.more">Ver Especificações Técnicas</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
             </button>
             <a href="https://github.com/Wangaricarbon/Datagen2" target="_blank" rel="noopener noreferrer" class="case-link">
               <span data-i18n="cases.link.datagenesis">Inspecionar Arquitetura DataGenesis</span>
@@ -785,27 +956,71 @@
           </div>
         </div>
 
-        <div class="glass-card case-card orchestrator" data-drawer-platform="orchestrator">
+        <!-- Case 5: Orchestrator -->
+        <div class="glass-card case-card orchestrator" id="case-card-orchestrator">
           <div class="case-header">
             <span class="case-name">Orchestrator — Backend SaaS para Construção de Fintechs</span>
             <span class="case-tag" data-i18n="cases.c5.tag">Fintech SaaS Backend · BPMN, Risco &amp; Ledger (INPI)</span>
           </div>
-          <p data-i18n="cases.c5.desc">Backend SaaS headless para Fintechs e crédito com motor BPMN/DMN próprio, ledger encadeado HMAC e risco em modo sombra.</p>
+          <p class="case-summary" data-i18n="cases.c5.desc">Backend SaaS headless para Fintechs e crédito com motor BPMN/DMN próprio, ledger encadeado HMAC e risco em modo sombra.</p>
           <div class="case-metrics">
             <span class="case-metric-pill">Motor BPMN/DMN Próprio · 63 Testes</span>
             <span class="case-metric-pill">Ledger Encadeado HMAC &amp; Lastro B10</span>
             <span class="case-metric-pill">Motor Risco B12 (Sombra → Produção)</span>
             <span class="case-metric-pill">MCP (21 Tools) · 4 ERPs · BaaS Headless</span>
           </div>
+
+          <!-- Inline Expandable Accordion Panel -->
+          <div class="case-details-panel" id="case-panel-orchestrator" aria-hidden="true">
+            <div class="case-details-inner">
+              <div class="case-callout-grid">
+                <div class="case-callout challenge">
+                  <strong data-i18n="cases.detail.challenge">Desafio Crítico:</strong>
+                  <span data-i18n="cases.c5.challenge">Custos proibitivos de motores BPMN legados (Camunda), falta de prova de lastro para FIDCs e esteiras de crédito rígidas.</span>
+                </div>
+                <div class="case-callout solution">
+                  <strong data-i18n="cases.detail.solution">Solução EPYX:</strong>
+                  <span data-i18n="cases.c5.solution">Motor BPMN/DMN próprio sem dependências legadas, ledger encadeado HMAC (prova B10) e motor B12 com chave sombra.</span>
+                </div>
+              </div>
+
+              <div class="case-specs-mini-grid">
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c5.s1.lbl">Motor BPMN/DMN Próprio</div>
+                  <div class="spec-value" data-i18n="cases.c5.s1.val">Zero Camunda/CIB seven. Fluxos: KYB, KYC, enriquecimento e crédito (63 testes)</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c5.s2.lbl">Ledger Encadeado HMAC</div>
+                  <div class="spec-value" data-i18n="cases.c5.s2.val">Blocos assinados com âncora de lastro B10 e cofre com crypto-shredding LGPD</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c5.s3.lbl">Motor de Risco B12</div>
+                  <div class="spec-value" data-i18n="cases.c5.s3.val">Degrau operacional: Sombra → Teste → Produção parcial → Produção. Par IORQ</div>
+                </div>
+                <div class="case-spec-item">
+                  <div class="spec-label" data-i18n="cases.c5.s4.lbl">Fronteira MCP &amp; ERPs</div>
+                  <div class="spec-value" data-i18n="cases.c5.s4.val">21 ferramentas JSON-RPC 2.0, conectores telecom (Net OS, MK, Voalle, Hubsoft) e BaaS</div>
+                </div>
+              </div>
+
+              <div class="case-chips-row">
+                <span class="case-chip">Registro INPI</span>
+                <span class="case-chip">BPMN/DMN Próprio</span>
+                <span class="case-chip">Ledger HMAC B10</span>
+                <span class="case-chip">Motor Risco B12 Sombra</span>
+                <span class="case-chip">MCP (21 Tools)</span>
+                <span class="case-chip">ERPs Telecom</span>
+                <span class="case-chip">BaaS Headless</span>
+              </div>
+            </div>
+          </div>
+
           <div class="case-actions">
-            <button type="button" class="case-btn-detail" data-drawer-trigger="orchestrator">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <line x1="9" y1="9" x2="15" y2="9"/>
-                <line x1="9" y1="13" x2="15" y2="13"/>
-                <line x1="9" y1="17" x2="11" y2="17"/>
+            <button type="button" class="case-expand-btn" aria-expanded="false" aria-controls="case-panel-orchestrator" data-target-case="orchestrator">
+              <span class="expand-text" data-i18n="cases.btn.more">Ver Especificações Técnicas</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-              <span data-i18n="cases.btn.details">Ficha Técnica &amp; Arquitetura</span>
             </button>
             <a href="https://github.com/Wangaricarbon/Orchestrator" target="_blank" rel="noopener noreferrer" class="case-link">
               <span data-i18n="cases.link.orchestrator">Explorar Repositório &amp; Swagger Orchestrator</span>
@@ -928,45 +1143,7 @@
   <script src="js/liquid.js"></script>
   <script src="js/app.js"></script>
 
-  <!-- Platform Technical Specification Slide-Over Drawer (<dialog>) -->
-  <dialog id="platform-drawer" class="platform-drawer" closedby="any" aria-labelledby="drawer-title" aria-modal="true">
-    <div class="drawer-header">
-      <div class="drawer-header-left">
-        <span id="drawer-badge" class="drawer-badge">PLATAFORMA</span>
-        <h3 id="drawer-title" class="drawer-title">Especificação da Plataforma</h3>
-        <p id="drawer-tagline" class="drawer-tagline">Resumo executivo de engenharia</p>
-      </div>
-      <form method="dialog" class="drawer-close-form">
-        <button type="submit" class="drawer-close-btn" aria-label="Fechar ficha técnica">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </form>
-    </div>
-
-    <div id="drawer-content" class="drawer-body">
-      <!-- Injected dynamically by openPlatformDrawer() -->
-    </div>
-
-    <div class="drawer-footer">
-      <a id="drawer-primary-link" href="#" target="_blank" rel="noopener noreferrer" class="drawer-btn-primary">
-        <span id="drawer-primary-text">Acessar Console / Repositório</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-          <polyline points="15 3 21 3 21 9"></polyline>
-          <line x1="10" y1="14" x2="21" y2="3"></line>
-        </svg>
-      </a>
-      <button type="button" id="drawer-sim-btn" class="drawer-btn-secondary">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <polygon points="5 3 19 12 5 21 5 3" />
-        </svg>
-        <span id="drawer-sim-text">Testar no Simulador IA</span>
-      </button>
-    </div>
-  </dialog>
+  
 
 </body>
 </html>
