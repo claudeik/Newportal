@@ -736,6 +736,14 @@ section {
 .pillar-card.pillar-2 { border-top-color: var(--blue-light); }
 .pillar-card.pillar-3 { border-top-color: var(--purple); }
 .pillar-card.pillar-4 { border-top-color: var(--emerald); }
+.pillar-card.pillar-5 {
+  border-top-color: var(--cyan);
+  grid-column: 1 / -1;
+}
+.pillar-card.pillar-6 {
+  border-top-color: var(--gold-primary);
+  grid-column: 1 / -1;
+}
 
 .pillar-top {
   display: flex;
@@ -773,6 +781,58 @@ section {
   background: rgba(16, 185, 129, 0.1);
   border-color: rgba(16, 185, 129, 0.28);
   color: var(--emerald);
+}
+
+.pillar-card.pillar-5 .pillar-icon-wrap {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  color: var(--cyan);
+}
+
+.pillar-card.pillar-6 .pillar-icon-wrap {
+  background: rgba(197, 160, 89, 0.12);
+  border-color: rgba(197, 160, 89, 0.35);
+  color: var(--gold-primary);
+}
+
+.medallion-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.medallion-tier {
+  background: rgba(2, 4, 10, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.medallion-tier.bronze { border-left: 3px solid #d97706; }
+.medallion-tier.silver { border-left: 3px solid #94a3b8; }
+.medallion-tier.gold   { border-left: 3px solid var(--gold-primary); }
+
+.medallion-tier-title {
+  font-family: var(--font-code);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-main);
+}
+
+.medallion-tier.bronze .medallion-tier-title { color: #fbbf24; }
+.medallion-tier.silver .medallion-tier-title { color: #e2e8f0; }
+.medallion-tier.gold   .medallion-tier-title { color: var(--gold-light); }
+
+.medallion-tier-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 .pillar-icon-wrap svg {
@@ -1386,6 +1446,26 @@ section {
   background: rgba(245, 158, 11, 0.08);
 }
 
+.case-card.pos1 {
+  border-top: 2px solid var(--cyan);
+}
+
+.case-card.pos1 .case-tag {
+  border-color: var(--cyan);
+  color: #22d3ee;
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.case-card.datagenesis {
+  border-top: 2px solid var(--gold-primary);
+}
+
+.case-card.datagenesis .case-tag {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  background: rgba(197, 160, 89, 0.12);
+}
+
 .case-card p {
   color: var(--text-muted);
   font-size: 0.96rem;
@@ -1757,7 +1837,8 @@ footer {
   }
   .pillars-grid,
   .cases-grid,
-  .contact-layout {
+  .contact-layout,
+  .medallion-tiers {
     grid-template-columns: 1fr;
   }
   .simulator-workspace {

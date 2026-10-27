@@ -24,6 +24,8 @@ const translations = {
     "hero.pill2": "Trading Algorítmico & Simuladores Cripto",
     "hero.pill3": "Refatoração Corporativa Spec-First",
     "hero.pill4": "IA Soberana Zero-Trust & On-Premise",
+    "hero.pill5": "MDM Lista Mestre (ERP+PDV+S2P) & Data Lake Medallion",
+    "hero.pill6": "DataGenesis · Inteligência Cadastral & AI Gateway (INPI)",
     "hero.cta.simulate": "Simular Squad Agêntica",
     "hero.cta.contact": "Agendar Diagnóstico de Arquitetura",
 
@@ -42,7 +44,7 @@ const translations = {
     "telemetry.stream3": "Cluster LLM Soberano [AES-256 / TEE]",
 
     "pillars.subtitle": "Foco Estratégico de Nova Geração",
-    "pillars.title": "Os 4 Pilares de Engenharia EPYX by WangariCarbon",
+    "pillars.title": "Os 6 Pilares de Engenharia EPYX by WangariCarbon",
     "pillars.desc": "Unimos inteligência artificial autônoma, infraestrutura descentralizada de alta performance e engenharia corporativa rigorosa para criar plataformas que operam na fronteira tecnológica.",
 
     "pillars.p1.badge": "PILAR 01 · AGENTIC WEB3",
@@ -61,6 +63,26 @@ const translations = {
     "pillars.p4.title": "Escalabilidade Elástica e Segurança com IA Soberana",
     "pillars.p4.desc": "Implantações de modelos fundacionais e agentes proprietários dentro do perímetro de segurança da sua organização (On-Premise, Bare-Metal GPUs ou VPC Isolada). Zero vazamento de propriedade intelectual, enclaves seguros (TEE), criptografia ponta a ponta e conformidade total com LGPD, GDPR e BACEN.",
 
+    "pillars.p5.badge": "PILAR 05 · MDM & MEDALLION LAKEHOUSE",
+    "pillars.p5.title": "Sistemas de Integração de Lista Mestre (ERP + PDV + S2P) com Data Lake em Arquitetura Medallion",
+    "pillars.p5.desc": "Unificamos o Cadastro Mestre (MDM de fornecedores, itens, unidades de conversão e regras fiscais) sincronizando plataformas de Source-to-Pay (como Nimbi), ERPs de backoffice (como Teknisa), frentes de caixa PDV (como EPOC) e motores de compliance/KYP (Crivo e DataGenesis) sobre um Data Lakehouse em Arquitetura Medallion governado por agentes de IA.",
+    "pillars.p5.bronze.title": "● Camada Bronze (Raw Ingestion)",
+    "pillars.p5.bronze.desc": "Ingestão contínua de eventos brutos de PDVs (EPOC), cotações/pedidos S2P (Nimbi), notas de entrada XML/NF-e, tabelas ERP (Teknisa) e bureaus de KYP (Crivo/DataGenesis).",
+    "pillars.p5.silver.title": "● Camada Silver (MDM & Agente Fiscal)",
+    "pillars.p5.silver.desc": "Saneamento agêntico da Lista Mestre, deduplicação de fornecedores e SKUs, fatores de conversão de unidades (CX/FD/KG/UN) e validação automática de NCM, CFOP e alíquotas.",
+    "pillars.p5.gold.title": "● Camada Gold (CMV Explicado & KYP)",
+    "pillars.p5.gold.desc": "Visão executiva auditável de CMV Explicado ponta a ponta, monitoramento contínuo de risco de parceiros (KYP), fila inteligente de exceções com SLA e trilha de auditoria.",
+
+    "pillars.p6.badge": "PILAR 06 · DATAGENESIS & AI GATEWAY (REGISTRO INPI)",
+    "pillars.p6.title": "DataGenesis — Plataforma de Inteligência Cadastral, Qualidade Auditável & Data Hub Intelligence",
+    "pillars.p6.desc": "Componente proprietário da EPYX by WangariCarbon para consulta cadastral auditável (CPF e CNPJ) com índice determinístico de qualidade dos dados (qualidade-1.0), integrado às 26 APIs do Data Hub Intelligence e ao AI Gateway (risk-features-1.0) para alimentar motores de risco, crédito e KYP contínuo sob governança estrita LGPD.",
+    "pillars.p6.t1.title": "● Motor qualidade-1.0 & Orquestrador",
+    "pillars.p6.t1.desc": "Cálculo puro e reproduzível por grupo: Associação ao documento (40 pts) + Completude/formato (40 pts) + Atualidade (20 pts), teto 60 s/ validação, single-flight, HMAC-SHA256 e zero PII em logs.",
+    "pillars.p6.t2.title": "● Data Hub Intelligence (26 APIs)",
+    "pillars.p6.t2.desc": "Catálogo governado de 11 APIs de Núcleo Estrutural Comportamental + 15 de Inteligência Corporativa Móvel (SIM Swap, tempo de posse verificado e compliance societário) com controle de finalidade e quota.",
+    "pillars.p6.t3.title": "● AI Gateway (risk-features-1.0)",
+    "pillars.p6.t3.desc": "Tradução determinística para 24 features em 7 blocos (identidade, qualidade, contatos, endereço, rede móvel, compliance e confiança) com linhagem por feature, Keycloak OIDC (RS256) e opt-out imediato RF-15.",
+
     "methodology.subtitle": "Metodologia Core",
     "methodology.title": "Spec-First, Vibe Coding & Governança de IA Soberana",
     "methodology.desc": "Não escrevemos código às cegas. Projetamos especificações formais rigorosas onde arquitetos sêniores e enxames de agentes especializados constroem, refatoram e auditam sistemas complexos em paralelo.",
@@ -77,6 +99,8 @@ const translations = {
     "simulator.title": "Simulador de Squad Agêntica & Blockchain",
     "simulator.label": "Selecione uma arquitetura para inspecionar os agentes construindo e auditando em tempo real:",
     "simulator.project.agentic": "Hiperautomação Blockchain & IA Agêntica",
+    "simulator.project.pos1": "MDM ERP+PDV+S2P & Medallion (POS1)",
+    "simulator.project.datagenesis": "DataGenesis · AI Gateway & Risk Features",
     "simulator.project.trading": "Motor de Trading & Treinamento Cripto",
     "simulator.project.refactor": "Refatoração Corporativa Next-Gen",
     "simulator.project.sovereign": "Cluster de IA Soberana Zero-Trust",
@@ -96,6 +120,8 @@ const translations = {
     "estimator.domain.opt2": "Plataforma de Trading Algorítmico & Treinamento Cripto",
     "estimator.domain.opt3": "Refatoração de Sistema Corporativo para Stack de Última Geração",
     "estimator.domain.opt4": "Infraestrutura de IA Soberana & Segurança Zero-Trust",
+    "estimator.domain.opt5": "Integração Lista Mestre (ERP+PDV+S2P) & Data Lake Medallion",
+    "estimator.domain.opt6": "DataGenesis — Inteligência Cadastral, Data Hub (26 APIs) & AI Gateway",
     "estimator.scale.label": "Volume de Operações / Inferências Diárias",
     "estimator.autonomy.label": "Nível de Hiperautomação & Agentes Autônomos",
     "estimator.security.label": "Modelo de Soberania & Isolamento de Dados",
@@ -139,9 +165,15 @@ const translations = {
     "cases.c3.desc": "Ecossistema integrado de execução quantitativa em criptoativos e plataforma de treinamento imersivo com simulador de derivativos, colateral em BTC e copiloto de análise on-chain.",
     "cases.c4.tag": "Agro Embedded Finance & DeFi",
     "cases.c4.desc": "Arquitetura financeira embarcada integrando motores de scoring satelital NDVI, carteiras multi-moeda, hedge de commodities e emissão de CPRs digitais em blockchain.",
+    "cases.c5.tag": "ERP + PDV + S2P · Data Lake Medallion",
+    "cases.c5.desc": "Plataforma integradora de Cadastro Mestre (Lista Mestre de fornecedores, itens e conversões), KYP contínuo, Agente Fiscal e CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis e Crivo estruturados em Data Lakehouse Medallion (Bronze, Silver e Gold).",
+    "cases.c6.tag": "Inteligência Cadastral · Registro INPI",
+    "cases.c6.desc": "Plataforma proprietária de Inteligência Cadastral Auditável (CPF/CNPJ) com motor determinístico qualidade-1.0, adaptador para 26 APIs do Data Hub Intelligence (estrutural + SIM Swap móvel) e AI Gateway (risk-features-1.0) com 24 features e linhagem completa para motores de risco, crédito e KYP.",
     "cases.link.explore": "Explorar Arquitetura",
     "cases.link.btclab": "Abrir Simulador Cripto",
     "cases.link.live": "Ver Preview ao Vivo",
+    "cases.link.pos1": "Acessar Console POS1 ao Vivo",
+    "cases.link.datagenesis": "Inspecionar Arquitetura DataGenesis",
 
     "contact.subtitle": "Inicie Sua Evolução Tecnológica",
     "contact.title": "Construa ou Refatore Sua Plataforma com Nossa Squad",
@@ -164,6 +196,8 @@ const translations = {
     "contact.form.pillar.opt3": "Refatoração de Plataforma Corporativa (Next-Gen Stack)",
     "contact.form.pillar.opt4": "Implantação de IA Soberana, Escalabilidade & Segurança",
     "contact.form.pillar.opt5": "Tokenização RWA, Pagamentos & Finanças Embarcadas",
+    "contact.form.pillar.opt6": "Integração Lista Mestre (ERP+PDV+S2P) & Data Lake Medallion",
+    "contact.form.pillar.opt7": "DataGenesis — Inteligência Cadastral, Data Hub & AI Gateway",
     "contact.form.message": "Escopo Técnico, Desafios de Escala ou Objetivos",
     "contact.form.message.ph": "Descreva a plataforma que deseja construir ou refatorar, volumes esperados, requisitos de soberania de dados ou integrações blockchain...",
     "contact.form.submit": "Transmitir Especificação de Projeto",
@@ -196,6 +230,8 @@ const translations = {
     "hero.pill2": "Trading Algorítmico & Simuladores Cripto",
     "hero.pill3": "Refactorización Corporativa Spec-First",
     "hero.pill4": "IA Soberana Zero-Trust & On-Premise",
+    "hero.pill5": "MDM Lista Maestra (ERP+PDV+S2P) & Data Lake Medallion",
+    "hero.pill6": "DataGenesis · Inteligencia Registral & AI Gateway (INPI)",
     "hero.cta.simulate": "Simular Squad Agéntica",
     "hero.cta.contact": "Agendar Diagnóstico de Arquitectura",
 
@@ -214,7 +250,7 @@ const translations = {
     "telemetry.stream3": "Cluster LLM Soberano [AES-256 / TEE]",
 
     "pillars.subtitle": "Enfoque Estratégico de Nueva Generación",
-    "pillars.title": "Los 4 Pilares de Ingeniería EPYX by WangariCarbon",
+    "pillars.title": "Los 6 Pilares de Ingeniería EPYX by WangariCarbon",
     "pillars.desc": "Unimos inteligencia artificial autónoma, infraestructura descentralizada de alto rendimiento e ingeniería corporativa rigurosa para crear plataformas que operan en la frontera tecnológica.",
 
     "pillars.p1.badge": "PILAR 01 · AGENTIC WEB3",
@@ -233,6 +269,26 @@ const translations = {
     "pillars.p4.title": "Escalabilidad Elástica y Seguridad con IA Soberana",
     "pillars.p4.desc": "Despliegues de modelos fundacionales y agentes propietarios dentro del perímetro de seguridad de su organización (On-Premise, Bare-Metal GPUs o VPC Aislada). Cero fuga de propiedad intelectual, enclaves seguros (TEE), cifrado extremo a extremo y cumplimiento total normativo.",
 
+    "pillars.p5.badge": "PILAR 05 · MDM & MEDALLION LAKEHOUSE",
+    "pillars.p5.title": "Sistemas de Integración de Lista Maestra (ERP + PDV + S2P) con Data Lake en Arquitectura Medallion",
+    "pillars.p5.desc": "Unificamos el Maestro de Datos (MDM de proveedores, ítems, unidades de conversión y reglas fiscales) sincronizando plataformas Source-to-Pay (Nimbi), ERPs de backoffice (Teknisa), puntos de venta PDV (EPOC) y motores de compliance/KYP (Crivo y DataGenesis) sobre un Data Lakehouse en Arquitectura Medallion gobernado por agentes de IA.",
+    "pillars.p5.bronze.title": "● Capa Bronze (Raw Ingestion)",
+    "pillars.p5.bronze.desc": "Ingesta continua de eventos crudos de PDVs (EPOC), cotizaciones/pedidos S2P (Nimbi), facturas XML/NF-e, tablas ERP (Teknisa) y burós de KYP (Crivo/DataGenesis).",
+    "pillars.p5.silver.title": "● Capa Silver (MDM & Agente Fiscal)",
+    "pillars.p5.silver.desc": "Saneamiento agéntico de la Lista Maestra, deduplicación de proveedores y SKUs, factores de conversión (CX/FD/KG/UN) y validación automática de NCM, CFOP y alícuotas.",
+    "pillars.p5.gold.title": "● Capa Gold (CMV Explicado & KYP)",
+    "pillars.p5.gold.desc": "Visión ejecutiva auditable de Costo de Mercancía Vendida (CMV Explicado) de extremo a extremo, monitoreo continuo de riesgo KYP y cola de excepciones con SLA.",
+
+    "pillars.p6.badge": "PILAR 06 · DATAGENESIS & AI GATEWAY (REGISTRO INPI)",
+    "pillars.p6.title": "DataGenesis — Plataforma de Inteligencia Registral, Calidad Auditable & Data Hub Intelligence",
+    "pillars.p6.desc": "Componente propietario de EPYX by WangariCarbon para consulta registral auditable (CPF y CNPJ) con índice determinístico de calidad de datos (qualidade-1.0), integrado a las 26 APIs de Data Hub Intelligence y al AI Gateway (risk-features-1.0) para alimentar motores de riesgo, crédito y KYP continuo bajo estricta gobernanza de privacidad.",
+    "pillars.p6.t1.title": "● Motor qualidade-1.0 & Orquestador",
+    "pillars.p6.t1.desc": "Cálculo puro y reproducible por grupo: Asociación al documento (40 pts) + Completitud/formato (40 pts) + Actualidad (20 pts), tope 60 sin validación, single-flight, HMAC-SHA256 y cero PII en logs.",
+    "pillars.p6.t2.title": "● Data Hub Intelligence (26 APIs)",
+    "pillars.p6.t2.desc": "Catálogo gobernado de 11 APIs de Núcleo Estructural Comportamental + 15 de Inteligencia Corporativa Móvil (SIM Swap, antigüedad móvil verificada y compliance societario) con control de finalidad y cuota.",
+    "pillars.p6.t3.title": "● AI Gateway (risk-features-1.0)",
+    "pillars.p6.t3.desc": "Traducción determinística a 24 features en 7 bloques (identidad, calidad, contactos, dirección, red móvil, compliance y confianza) con linaje por feature, Keycloak OIDC (RS256) y opt-out inmediato RF-15.",
+
     "methodology.subtitle": "Metodología Core",
     "methodology.title": "Spec-First, Vibe Coding & Gobernanza de IA Soberana",
     "methodology.desc": "No escribimos código a ciegas. Diseñamos especificaciones formales rigurosas donde arquitectos sénior y enjambres de agentes especializados construyen, refactorizan y auditan sistemas complejos en paralelo.",
@@ -249,6 +305,8 @@ const translations = {
     "simulator.title": "Simulador de Squad Agéntica & Blockchain",
     "simulator.label": "Seleccione una arquitectura para inspeccionar a los agentes construyendo y auditando en tiempo real:",
     "simulator.project.agentic": "Hiperautomatización Blockchain & IA Agéntica",
+    "simulator.project.pos1": "MDM ERP+PDV+S2P & Medallion (POS1)",
+    "simulator.project.datagenesis": "DataGenesis · AI Gateway & Risk Features",
     "simulator.project.trading": "Motor de Trading & Entrenamiento Cripto",
     "simulator.project.refactor": "Refactorización Corporativa Next-Gen",
     "simulator.project.sovereign": "Cluster de IA Soberana Zero-Trust",
@@ -268,6 +326,8 @@ const translations = {
     "estimator.domain.opt2": "Plataforma de Trading Algorítmico & Entrenamiento Cripto",
     "estimator.domain.opt3": "Refactorización de Sistema Corporativo a Stack de Última Generación",
     "estimator.domain.opt4": "Infraestructura de IA Soberana & Seguridad Zero-Trust",
+    "estimator.domain.opt5": "Integración Lista Maestra (ERP+PDV+S2P) & Data Lake Medallion",
+    "estimator.domain.opt6": "DataGenesis — Inteligencia Registral, Data Hub (26 APIs) & AI Gateway",
     "estimator.scale.label": "Volumen de Operaciones / Inferencias Diarias",
     "estimator.autonomy.label": "Nivel de Hiperautomatización & Agentes Autónomos",
     "estimator.security.label": "Modelo de Soberanía & Aislamiento de Datos",
@@ -311,9 +371,15 @@ const translations = {
     "cases.c3.desc": "Ecosistema integrado de ejecución cuantitativa en criptoactivos y plataforma de entrenamiento inmersivo con simulador de derivados, colateral BTC y copiloto on-chain.",
     "cases.c4.tag": "Agro Embedded Finance & DeFi",
     "cases.c4.desc": "Arquitectura financiera embebida integrando motores de scoring satelital NDVI, billeteras multimoneda, cobertura de commodities y emisión de CPRs digitales.",
+    "cases.c5.tag": "ERP + PDV + S2P · Data Lake Medallion",
+    "cases.c5.desc": "Plataforma integradora de Maestro de Datos (Lista Maestra de proveedores, ítems y conversiones), KYP continuo, Agente Fiscal y CMV Explicado. Conecta nativamente Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis y Crivo en Data Lakehouse Medallion (Bronze, Silver y Gold).",
+    "cases.c6.tag": "Inteligencia Registral · Registro INPI",
+    "cases.c6.desc": "Plataforma propietaria de Inteligencia Registral Auditable (CPF/CNPJ) con motor determinístico qualidade-1.0, adaptador para 26 APIs de Data Hub Intelligence (estructural + SIM Swap móvil) y AI Gateway (risk-features-1.0) con 24 features y linaje completo para motores de riesgo, crédito y KYP.",
     "cases.link.explore": "Explorar Arquitectura",
     "cases.link.btclab": "Abrir Simulador Cripto",
     "cases.link.live": "Ver Preview en Vivo",
+    "cases.link.pos1": "Acceder a Consola POS1 en Vivo",
+    "cases.link.datagenesis": "Inspeccionar Arquitectura DataGenesis",
 
     "contact.subtitle": "Inicie Su Evolución Tecnológica",
     "contact.title": "Construya o Refactorice Su Plataforma con Nuestra Squad",
@@ -336,6 +402,8 @@ const translations = {
     "contact.form.pillar.opt3": "Refactorización de Plataforma Corporativa (Next-Gen Stack)",
     "contact.form.pillar.opt4": "Despliegue de IA Soberana, Escalabilidad & Seguridad",
     "contact.form.pillar.opt5": "Tokenización RWA, Pagos & Finanzas Embebidas",
+    "contact.form.pillar.opt6": "Integración Lista Maestra (ERP+PDV+S2P) & Data Lake Medallion",
+    "contact.form.pillar.opt7": "DataGenesis — Inteligencia Registral, Data Hub & AI Gateway",
     "contact.form.message": "Alcance Técnico, Desafíos de Escala u Objetivos",
     "contact.form.message.ph": "Describa la plataforma que desea construir o refactorizar, volúmenes esperados, requisitos de soberanía de datos o integraciones blockchain...",
     "contact.form.submit": "Transmitir Especificación de Proyecto",
@@ -368,6 +436,8 @@ const translations = {
     "hero.pill2": "Algorithmic Trading & Crypto Simulators",
     "hero.pill3": "Spec-First Enterprise Refactoring",
     "hero.pill4": "Zero-Trust Sovereign AI & On-Premise",
+    "hero.pill5": "MDM Master List (ERP+POS+S2P) & Medallion Data Lake",
+    "hero.pill6": "DataGenesis · Registry Intelligence & AI Gateway (INPI)",
     "hero.cta.simulate": "Simulate Agentic Squad",
     "hero.cta.contact": "Schedule Architecture Briefing",
 
@@ -386,7 +456,7 @@ const translations = {
     "telemetry.stream3": "Sovereign LLM Cluster [AES-256 / TEE]",
 
     "pillars.subtitle": "Next-Generation Strategic Focus",
-    "pillars.title": "The 4 Engineering Pillars of EPYX by WangariCarbon",
+    "pillars.title": "The 6 Engineering Pillars of EPYX by WangariCarbon",
     "pillars.desc": "We unite autonomous artificial intelligence, high-throughput decentralized infrastructure, and rigorous enterprise engineering to build platforms operating at the technological frontier.",
 
     "pillars.p1.badge": "PILLAR 01 · AGENTIC WEB3",
@@ -405,6 +475,26 @@ const translations = {
     "pillars.p4.title": "Elastic Scalability & Security with Sovereign AI",
     "pillars.p4.desc": "Deployments of foundational models and proprietary agents strictly inside your organization's security perimeter (On-Premise, Bare-Metal GPUs, or Isolated VPC). Zero intellectual property leakage, Trusted Execution Environments (TEEs), end-to-end encryption, and full regulatory compliance.",
 
+    "pillars.p5.badge": "PILLAR 05 · MDM & MEDALLION LAKEHOUSE",
+    "pillars.p5.title": "Master Data Integration Systems (ERP + POS + S2P) with Medallion Architecture Data Lake",
+    "pillars.p5.desc": "We unify Master Data Management (MDM of suppliers, items, unit conversions, and tax rules) synchronizing Source-to-Pay platforms (Nimbi), backoffice ERPs (Teknisa), Point-of-Sale terminals (EPOC), and KYP/compliance engines (Crivo and DataGenesis) over an AI-governed Medallion Data Lakehouse.",
+    "pillars.p5.bronze.title": "● Bronze Layer (Raw Ingestion)",
+    "pillars.p5.bronze.desc": "Continuous ingestion of raw POS events (EPOC), S2P quotes/orders (Nimbi), inbound XML/NF-e invoices, ERP tables (Teknisa), and KYP bureaus (Crivo/DataGenesis).",
+    "pillars.p5.silver.title": "● Silver Layer (MDM & Fiscal Agent)",
+    "pillars.p5.silver.desc": "Agentic Master List cleansing, supplier & SKU deduplication, unit conversion harmonization (BOX/PACK/KG/UN), and automated NCM, CFOP, and tax rate validation.",
+    "pillars.p5.gold.title": "● Gold Layer (Explained COGS & Continuous KYP)",
+    "pillars.p5.gold.desc": "Auditable executive view of end-to-end Explained COGS (CMV), continuous partner risk monitoring (KYP), SLA exception queues, and immutable audit trails.",
+
+    "pillars.p6.badge": "PILLAR 06 · DATAGENESIS & AI GATEWAY (INPI REGISTERED)",
+    "pillars.p6.title": "DataGenesis — Registry Intelligence, Auditable Quality & Data Hub Intelligence Platform",
+    "pillars.p6.desc": "Proprietary EPYX by WangariCarbon component for auditable CPF/CNPJ registry lookup with a deterministic data quality index (qualidade-1.0), integrated with 26 Data Hub Intelligence APIs and the AI Gateway (risk-features-1.0) to power risk, credit, and continuous KYP engines under strict privacy governance.",
+    "pillars.p6.t1.title": "● qualidade-1.0 Engine & Orchestrator",
+    "pillars.p6.t1.desc": "Pure reproducible scoring per group: Document association (40 pts) + Completeness/format (40 pts) + Freshness (20 pts), 60-pt cap without validation, single-flight, HMAC-SHA256, and zero PII in logs.",
+    "pillars.p6.t2.title": "● Data Hub Intelligence (26 APIs)",
+    "pillars.p6.t2.desc": "Governed catalog of 11 Behavioral Structural Core APIs + 15 Corporate Mobile Intelligence APIs (SIM Swap, verified mobile tenure, and corporate compliance) with strict purpose and quota enforcement.",
+    "pillars.p6.t3.title": "● AI Gateway (risk-features-1.0)",
+    "pillars.p6.t3.desc": "Deterministic translation into 24 features across 7 blocks (identity, quality, contacts, address, mobile network, compliance, confidence) with per-feature lineage, Keycloak OIDC (RS256), and instant RF-15 opt-out.",
+
     "methodology.subtitle": "Core Methodology",
     "methodology.title": "Spec-First, Vibe Coding & Sovereign AI Governance",
     "methodology.desc": "We never write code blindly. We design rigorous formal specifications where senior architects and specialized agent swarms build, refactor, and audit complex systems in parallel.",
@@ -421,6 +511,8 @@ const translations = {
     "simulator.title": "Agentic AI & Blockchain Squad Simulator",
     "simulator.label": "Select an architecture scenario to watch autonomous agents build and audit in real time:",
     "simulator.project.agentic": "Blockchain Hyperautomation & Agentic AI",
+    "simulator.project.pos1": "MDM ERP+POS+S2P & Medallion (POS1)",
+    "simulator.project.datagenesis": "DataGenesis · AI Gateway & Risk Features",
     "simulator.project.trading": "Crypto Trading Engine & Training Academy",
     "simulator.project.refactor": "Enterprise Next-Gen Stack Refactoring",
     "simulator.project.sovereign": "Zero-Trust Sovereign AI Cluster",
@@ -440,6 +532,8 @@ const translations = {
     "estimator.domain.opt2": "Algorithmic Crypto Trading & Training Platform",
     "estimator.domain.opt3": "Enterprise Platform Refactoring to Next-Gen Stack",
     "estimator.domain.opt4": "Sovereign AI Infrastructure & Zero-Trust Security",
+    "estimator.domain.opt5": "Master List Integration (ERP+POS+S2P) & Medallion Data Lake",
+    "estimator.domain.opt6": "DataGenesis — Registry Intelligence, Data Hub (26 APIs) & AI Gateway",
     "estimator.scale.label": "Daily Operations / Inferences Volume",
     "estimator.autonomy.label": "Hyperautomation & Autonomous Agent Level",
     "estimator.security.label": "Data Sovereignty & Isolation Model",
@@ -483,9 +577,15 @@ const translations = {
     "cases.c3.desc": "Integrated quantitative crypto execution ecosystem and immersive training platform featuring derivatives simulation, BTC collateral vaults, and an on-chain AI copilot.",
     "cases.c4.tag": "Agro Embedded Finance & DeFi",
     "cases.c4.desc": "Embedded financial architecture integrating satellite NDVI scoring engines, multi-currency wallets, commodity hedging, and blockchain digital CPR issuance.",
+    "cases.c5.tag": "ERP + POS + S2P · Medallion Data Lake",
+    "cases.c5.desc": "Master Data Integrator Console (suppliers, items, unit conversions), continuous KYP, Fiscal Agent, and Explained COGS. Natively connects Teknisa (ERP), Nimbi (S2P), EPOC (POS), DataGenesis, and Crivo across a Medallion Data Lakehouse (Bronze, Silver, Gold).",
+    "cases.c6.tag": "Registry Intelligence · INPI Registered",
+    "cases.c6.desc": "Proprietary Auditable Registry Intelligence Platform (CPF/CNPJ) featuring the deterministic qualidade-1.0 engine, 26 Data Hub Intelligence APIs (structural + mobile SIM Swap), and AI Gateway (risk-features-1.0) with 24 lineage-backed features for risk, credit, and KYP engines.",
     "cases.link.explore": "Explore Architecture",
     "cases.link.btclab": "Open Crypto Simulator",
     "cases.link.live": "Live Preview",
+    "cases.link.pos1": "Open Live POS1 Console",
+    "cases.link.datagenesis": "Inspect DataGenesis Architecture",
 
     "contact.subtitle": "Initiate Your Technological Evolution",
     "contact.title": "Build or Refactor Your Platform with Our Squad",
@@ -508,6 +608,8 @@ const translations = {
     "contact.form.pillar.opt3": "Enterprise Platform Refactoring (Next-Gen Stack)",
     "contact.form.pillar.opt4": "Sovereign AI Deployment, Scalability & Security",
     "contact.form.pillar.opt5": "RWA Tokenization, Payments & Embedded Finance",
+    "contact.form.pillar.opt6": "Master List Integration (ERP+POS+S2P) & Medallion Data Lake",
+    "contact.form.pillar.opt7": "DataGenesis — Registry Intelligence, Data Hub & AI Gateway",
     "contact.form.message": "Technical Scope, Scale Challenges or Objectives",
     "contact.form.message.ph": "Describe the platform you want to build or refactor, expected throughput, data sovereignty requirements, or blockchain integrations...",
     "contact.form.submit": "Transmit Project Specification",
@@ -1094,6 +1196,199 @@ export class AgroEmbeddedFinanceEngine {
     });
   }
 }`
+  },
+
+  pos1: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Console Integrador POS1 (MDM + Data Lake Medallion)...",
+        "SPECIFICATION: Carregando contratos Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis & Crivo...",
+        "ARCHITECT: Estruturando camadas Bronze (Raw), Silver (MDM & Fiscal) e Gold (CMV Explicado): [OK]",
+        "DEPLOYING: Ativando agentes de saneamento cadastral, KYP contínuo e Agente Fiscal...",
+        "ANTIGRAVITY: Ingerindo eventos de PDV (EPOC), pedidos S2P (Nimbi) e XMLs NF-e na camada Bronze: [OK]",
+        "CLAUDE CODE: Harmonizando Lista Mestre (fornecedores, SKUs, conversões CX/FD/KG/UN) na camada Silver: [COMPILING]",
+        "CURSOR: Validando NCM/CFOP/ICMS-ST via Agente Fiscal e monitorando faixas de KYP (Crivo/DataGenesis): [OK]",
+        "VALIDATOR: Auditando árvore de CMV Explicado na camada Gold e fila de exceções com SLA: [OK]",
+        "COMPLETED: Pipeline Medallion POS1 (ERP + PDV + S2P) sincronizado e auditado.",
+        "SYSTEM: Consolidação finalizada em 3.85s."
+      ],
+      es: [
+        "STATUS: Inicializando Consola Integradora POS1 (MDM + Data Lake Medallion)...",
+        "SPECIFICATION: Cargando contratos Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis & Crivo...",
+        "ARCHITECT: Estructurando capas Bronze (Raw), Silver (MDM & Fiscal) y Gold (CMV Explicado): [OK]",
+        "DEPLOYING: Activando agentes de saneamiento maestro, KYP continuo y Agente Fiscal...",
+        "ANTIGRAVITY: Ingiriendo eventos de PDV (EPOC), pedidos S2P (Nimbi) y XMLs NF-e en capa Bronze: [OK]",
+        "CLAUDE CODE: Armonizando Lista Maestra (proveedores, SKUs, conversiones CX/FD/KG/UN) en capa Silver: [COMPILING]",
+        "CURSOR: Validando NCM/CFOP/impuestos vía Agente Fiscal y monitoreando riesgo KYP (Crivo/DataGenesis): [OK]",
+        "VALIDATOR: Auditando árbol de CMV Explicado en capa Gold y cola de excepciones con SLA: [OK]",
+        "COMPLETED: Pipeline Medallion POS1 (ERP + PDV + S2P) sincronizado y auditado.",
+        "SYSTEM: Consolidación finalizada en 3.85s."
+      ],
+      en: [
+        "STATUS: Initializing POS1 Integrator Console (MDM + Medallion Data Lake)...",
+        "SPECIFICATION: Loading Teknisa (ERP), Nimbi (S2P), EPOC (POS), DataGenesis & Crivo contracts...",
+        "ARCHITECT: Structuring Bronze (Raw), Silver (MDM & Fiscal), and Gold (Explained COGS) layers: [OK]",
+        "DEPLOYING: Activating master data cleansing, continuous KYP, and Fiscal Agent swarm...",
+        "ANTIGRAVITY: Ingesting POS events (EPOC), S2P orders (Nimbi), and XML invoices into Bronze layer: [OK]",
+        "CLAUDE CODE: Harmonizing Master List (suppliers, SKUs, BOX/PACK/KG/UN conversions) in Silver layer: [COMPILING]",
+        "CURSOR: Validating NCM/CFOP tax rules via Fiscal Agent & monitoring KYP tiers (Crivo/DataGenesis): [OK]",
+        "VALIDATOR: Auditing Gold layer Explained COGS (CMV) tree and SLA exception queue: [OK]",
+        "COMPLETED: POS1 Medallion Pipeline (ERP + POS + S2P) synchronized and verified.",
+        "SYSTEM: Consolidation finalized in 3.85s."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Objetivo: Unificar a Lista Mestre e o fluxo de compras e custos entre Nimbi (S2P), Teknisa (ERP), EPOC (PDV), DataGenesis e Crivo em um Data Lakehouse Medallion." },
+        { sender: "Antigravity", message: "Camada Bronze ativa: capturando eventos de venda do EPOC, pedidos/cotações do Nimbi e notas fiscais de entrada em tempo real." },
+        { sender: "Claude Code", message: "Camada Silver processada: deduplicamos fornecedores e itens na Lista Mestre, aplicamos fatores de conversão (CX/FD → KG/UN) e o Agente Fiscal validou NCM, CFOP e alíquotas antes de liberar para o Teknisa." },
+        { sender: "Cursor", message: "O Monitor de KYP cruzou dados do DataGenesis e Crivo para reavaliar fornecedores continuamente; divergências fiscais ou cadastrais foram roteadas para a Fila de Exceções com SLA." },
+        { sender: "Validator", message: "Camada Gold publicada: CMV Explicado ponta a ponta auditável da cotação S2P ao consumo na ponta do PDV." }
+      ],
+      es: [
+        { sender: "Architect", message: "Objetivo: Unificar la Lista Maestra y el flujo de compras y costos entre Nimbi (S2P), Teknisa (ERP), EPOC (PDV), DataGenesis y Crivo en un Data Lakehouse Medallion." },
+        { sender: "Antigravity", message: "Capa Bronze activa: capturando eventos de venta de EPOC, pedidos/cotizaciones de Nimbi y facturas electrónicas en tiempo real." },
+        { sender: "Claude Code", message: "Capa Silver procesada: deduplicamos proveedores e ítems en la Lista Maestra, aplicamos factores de conversión (CX/FD → KG/UN) y el Agente Fiscal validó NCM, CFOP y alícuotas antes de impactar Teknisa." },
+        { sender: "Cursor", message: "El Monitor de KYP cruzó señales de DataGenesis y Crivo para reevaluar proveedores continuamente; las divergencias fueron enrutadas a la Cola de Excepciones con SLA." },
+        { sender: "Validator", message: "Capa Gold publicada: CMV Explicado auditable de extremo a extremo desde la cotización S2P hasta el ticket de PDV." }
+      ],
+      en: [
+        { sender: "Architect", message: "Goal: Unify the Master Data List and procurement-to-cost lifecycle across Nimbi (S2P), Teknisa (ERP), EPOC (POS), DataGenesis, and Crivo on a Medallion Data Lakehouse." },
+        { sender: "Antigravity", message: "Bronze Layer active: streaming raw POS sales from EPOC, S2P quotes/POs from Nimbi, and inbound XML invoices in real time." },
+        { sender: "Claude Code", message: "Silver Layer processed: deduplicated suppliers and SKUs in the Master List, harmonized unit conversions (BOX/PACK → KG/UN), and ran Fiscal Agent NCM/CFOP checks prior to Teknisa ERP sync." },
+        { sender: "Cursor", message: "Continuous KYP Monitor fused DataGenesis and Crivo signals to track supplier risk shifts; fiscal or MDM anomalies are routed to the SLA Exception Queue." },
+        { sender: "Validator", message: "Gold Layer published: fully auditable Explained COGS (CMV) from S2P sourcing down to POS recipe depletion." }
+      ]
+    },
+    code: `// medallion/pos1_master_data_lakehouse.ts
+import { BronzeIngestor, SilverMDMAgent, GoldCMVExplainer } from '@epyx/medallion-core';
+import { TeknisaERP, NimbiS2P, EpocPOS, CrivoDataGenesisKYP } from '@epyx/pos1-connectors';
+
+export class POS1MedallionOrchestrator {
+  async processInboundPurchaseAndSyncMasterList(nfeXml: string, posStoreId: string) {
+    // 1. BRONZE LAYER — Raw Ingestion (S2P + POS + ERP + KYP Bureaus)
+    const rawEvent = await BronzeIngestor.appendImmutable({
+      sourceSystems: ['NIMBI_S2P', 'TEKNISA_ERP', 'EPOC_PDV', 'CRIVO_DATAGENESIS'],
+      payload: nfeXml,
+      storeId: posStoreId
+    });
+
+    // 2. SILVER LAYER — Master List (MDM), Unit Conversions & Fiscal Agent
+    const kypStatus = await CrivoDataGenesisKYP.evaluateSupplierContinuous(rawEvent.supplierCnpj);
+    const silverRecord = await SilverMDMAgent.harmonizeAndValidate({
+      rawEvent,
+      kypTier: kypStatus.riskBand, // 'BAIXO' | 'MEDIO' | 'ALTO' | 'BLOQUEADO'
+      convertUnits: { from: 'CX_24_UN', toBase: 'UN', factor: 24 },
+      fiscalAgentRules: ['VALIDATE_NCM_CFOP', 'CHECK_ICMS_ST_PIS_COFINS']
+    });
+
+    if (!silverRecord.isCompliant) {
+      return await SilverMDMAgent.enqueueSlaException(silverRecord.discrepancies);
+    }
+
+    // 3. GOLD LAYER — Auditable Explained COGS (CMV Explicado) & ERP/POS Sync
+    await TeknisaERP.syncReceivingAndCost(silverRecord);
+    await EpocPOS.publishMasterCatalogUpdate(posStoreId, silverRecord.masterSku);
+    return await GoldCMVExplainer.computeExplainedCOGS(silverRecord.masterSku);
+  }
+}`
+  },
+
+  datagenesis: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando DataGenesis v0.1.0 (Inteligência Cadastral & AI Gateway · INPI)...",
+        "SPECIFICATION: Carregando invariantes LGPD, índice qualidade-1.0 e catálogo Data Hub (26 APIs)...",
+        "ARCHITECT: Validando federação Keycloak OIDC (RS256/JWKS) e HMAC-SHA256 para auditoria: [OK]",
+        "DEPLOYING: Acionando Orquestrador (política -> cache -> base local -> qualidade -> enriquecimento)...",
+        "ANTIGRAVITY: Calculando índice determinístico qualidade-1.0 (Associação 40 + Completude 40 + Atualidade 20): [OK]",
+        "CLAUDE CODE: Executando Data Hub Intelligence (11 APIs Estruturais + 15 Mobile / SIM Swap): [COMPILING]",
+        "CURSOR: Traduzindo sinais no AI Gateway para 24 features auditáveis (risk-features-1.0): [OK]",
+        "VALIDATOR: Scanner de logs zero-PII e 83 testes automatizados (pytest) verificados: [OK]",
+        "COMPLETED: Payload risk-features-1.0 entregue ao motor de risco/KYP com linhagem completa.",
+        "SYSTEM: Pipeline DataGenesis concluído em 18ms (Cache-Control: no-store)."
+      ],
+      es: [
+        "STATUS: Inicializando DataGenesis v0.1.0 (Inteligencia Registral & AI Gateway · INPI)...",
+        "SPECIFICATION: Cargando invariantes de privacidad, índice qualidade-1.0 y catálogo Data Hub (26 APIs)...",
+        "ARCHITECT: Validando federación Keycloak OIDC (RS256/JWKS) y HMAC-SHA256 para auditoría: [OK]",
+        "DEPLOYING: Activando Orquestador (política -> caché -> base local -> calidad -> enriquecimiento)...",
+        "ANTIGRAVITY: Calculando índice determinístico qualidade-1.0 (Asociación 40 + Completitud 40 + Actualidad 20): [OK]",
+        "CLAUDE CODE: Ejecutando Data Hub Intelligence (11 APIs Estructurales + 15 Móviles / SIM Swap): [COMPILING]",
+        "CURSOR: Traduciendo señales en AI Gateway a 24 features auditables (risk-features-1.0): [OK]",
+        "VALIDATOR: Escáner de logs cero-PII y 83 pruebas automatizadas (pytest) verificadas: [OK]",
+        "COMPLETED: Payload risk-features-1.0 entregado al motor de riesgo/KYP con linaje completo.",
+        "SYSTEM: Pipeline DataGenesis finalizado en 18ms (Cache-Control: no-store)."
+      ],
+      en: [
+        "STATUS: Initializing DataGenesis v0.1.0 (Registry Intelligence & AI Gateway · INPI)...",
+        "SPECIFICATION: Loading privacy invariants, qualidade-1.0 engine, and Data Hub catalog (26 APIs)...",
+        "ARCHITECT: Verifying Keycloak OIDC (RS256/JWKS) federation and HMAC-SHA256 audit hashing: [OK]",
+        "DEPLOYING: Running Orchestrator (policy -> cache -> local DB -> quality -> enrichment)...",
+        "ANTIGRAVITY: Computing deterministic qualidade-1.0 index (Association 40 + Completeness 40 + Freshness 20): [OK]",
+        "CLAUDE CODE: Calling Data Hub Intelligence (11 Structural APIs + 15 Mobile / SIM Swap APIs): [COMPILING]",
+        "CURSOR: Translating canonical signals in AI Gateway into 24 auditable features (risk-features-1.0): [OK]",
+        "VALIDATOR: Zero-PII log scanner and 83 automated pytest invariants passed: [OK]",
+        "COMPLETED: risk-features-1.0 payload delivered to risk/KYP engine with full per-feature lineage.",
+        "SYSTEM: DataGenesis pipeline completed in 18ms (Cache-Control: no-store)."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Objetivo: Executar uma consulta cadastral auditável no DataGenesis, enriquecer com as 26 APIs do Data Hub Intelligence e gerar o contrato risk-features-1.0 no AI Gateway sem vazar PII." },
+        { sender: "Antigravity", message: "Orquestrador validou a finalidade e aplicou single-flight. O motor qualidade-1.0 pontuou Associação (40), Completude (40) e Atualidade (20), aplicando teto de 60 para contatos sem validação." },
+        { sender: "Claude Code", message: "Data Hub Intelligence consultou o Núcleo Estrutural Comportamental (11 APIs) e Inteligência Corporativa Móvel (15 APIs, incluindo checagem de SIM Swap recente e tempo de posse da linha)." },
+        { sender: "Cursor", message: "O AI Gateway consolidou os 7 blocos (24 features) com lineage por atributo e caveats explícitas. O documento fica restrito a HMAC-SHA256 na trilha de auditoria." },
+        { sender: "Validator", message: "Invariantes confirmadas: zero PII em logs, ausência tratada como indisponivel (nunca inferida) e bloqueio imediato RF-15 ativo." }
+      ],
+      es: [
+        { sender: "Architect", message: "Objetivo: Ejecutar una consulta registral auditable en DataGenesis, enriquecer con las 26 APIs de Data Hub Intelligence y generar el contrato risk-features-1.0 en el AI Gateway sin exponer PII." },
+        { sender: "Antigravity", message: "El Orquestador validó la finalidad y aplicó single-flight. El motor qualidade-1.0 puntuó Asociación (40), Completitud (40) y Actualidad (20), aplicando tope de 60 a contactos no validados." },
+        { sender: "Claude Code", message: "Data Hub Intelligence consultó el Núcleo Estructural Comportamental (11 APIs) e Inteligencia Corporativa Móvil (15 APIs, incluyendo detección de SIM Swap reciente y antigüedad de línea)." },
+        { sender: "Cursor", message: "El AI Gateway consolidó los 7 bloques (24 features) con linaje por atributo y caveats explícitas. El documento se registra solo con HMAC-SHA256 en auditoría." },
+        { sender: "Validator", message: "Invariantes confirmadas: cero PII en logs, ausencia tratada como indisponivel (nunca inferida) y opt-out inmediato RF-15 activo." }
+      ],
+      en: [
+        { sender: "Architect", message: "Goal: Execute an auditable registry consultation in DataGenesis, enrich via the 26 Data Hub Intelligence APIs, and emit the risk-features-1.0 contract through the AI Gateway with zero PII leakage." },
+        { sender: "Antigravity", message: "Orchestrator verified purpose policy and single-flight locks. The qualidade-1.0 engine scored Association (40), Completeness (40), and Freshness (20), capping unvalidated contacts at 60." },
+        { sender: "Claude Code", message: "Data Hub Intelligence queried the Behavioral Structural Core (11 APIs) and Corporate Mobile Intelligence (15 APIs, including recent SIM Swap detection and verified line tenure)." },
+        { sender: "Cursor", message: "AI Gateway synthesized all 7 blocks (24 features) with per-feature lineage and explicit caveats. Raw document never leaves the boundary—only HMAC-SHA256 is stored in audit logs." },
+        { sender: "Validator", message: "All 8 invariants verified: zero PII in logs, missing data marked indisponivel (never guessed), and instant RF-15 opt-out propagation active." }
+      ]
+    },
+    code: `# src/datagenesis/ai_gateway.py — DataGenesis (Registro INPI · EPYX by WangariCarbon)
+from datagenesis.qualidade import calcular_indice_qualidade_v1
+from datagenesis.data_hub import DataHubIntelligenceAdapter
+
+def gerar_risk_features_v1(consulta_canonica: dict, sinais_hub: list[dict]) -> dict:
+    """
+    Traduz determinísticamente a consulta DataGenesis + Data Hub (26 APIs)
+    para o contrato auditável risk-features-1.0 (24 features em 7 blocos).
+    Invariante: Documento nunca trafega no payload de saída (apenas HMAC-SHA256 em auditoria).
+    """
+    qualidade = calcular_indice_qualidade_v1(
+        grupos=consulta_canonica["grupos"],
+        pesos={"associacao": 40, "completude": 40, "atualidade": 20},
+        teto_sem_validacao=60,
+    )
+    sim_swap = DataHubIntelligenceAdapter.extrair_sinal_movel(sinais_hub, "check_sim_swap")
+
+    return {
+        "schema_version": "risk-features-1.0",
+        "qualidade_versao": "qualidade-1.0",
+        "features": {
+            "qualidade_indice_global": qualidade.indice_global,
+            "cadastro_situacao_ativa": consulta_canonica["situacao"] == "REGULAR",
+            "movel_sim_swap_recente": sim_swap.get("troca_recente"),
+            "movel_tempo_posse_meses": sim_swap.get("meses_posse"),
+            "compliance_sancoes_ativas": DataHubIntelligenceAdapter.checar_sancoes(sinais_hub),
+        },
+        "lineage": {
+            "qualidade_indice_global": ["datagenesis.qualidade-1.0"],
+            "movel_sim_swap_recente": ["data_hub.check_sim_swap"],
+        },
+        "caveats": qualidade.ressalvas,
+    }`
   }
 };
 
@@ -1296,6 +1591,16 @@ const stackRecommendations = {
     pt: "Cluster de IA Soberana (NVIDIA Confidential Compute TEE / Bare-Metal VPC) + vLLM / TensorRT-LLM Privado + Vector DB Qdrant Criptografado + Firewall Semântico Zero-Trust & RBAC Criptográfico.",
     es: "Cluster de IA Soberana (NVIDIA Confidential Compute TEE / Bare-Metal VPC) + vLLM / TensorRT-LLM Privado + Vector DB Qdrant Cifrado + Firewall Semántico Zero-Trust & RBAC Criptográfico.",
     en: "Sovereign AI Cluster (NVIDIA Confidential Compute TEE / Bare-Metal VPC) + Private vLLM / TensorRT-LLM + Encrypted Qdrant Vector DB + Zero-Trust Semantic Firewall & Cryptographic RBAC."
+  },
+  pos1: {
+    pt: "Data Lakehouse Medallion (Apache Iceberg / Delta Lake: Bronze, Silver, Gold) + Console Integrador POS1 (Next.js / TypeScript) + Conectores Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis & Crivo (KYP) + Agente Fiscal IA & Motor de CMV Explicado.",
+    es: "Data Lakehouse Medallion (Apache Iceberg / Delta Lake: Bronze, Silver, Gold) + Consola Integradora POS1 (Next.js / TypeScript) + Conectores Teknisa (ERP), Nimbi (S2P), EPOC (PDV), DataGenesis & Crivo (KYP) + Agente Fiscal IA & Motor de CMV Explicado.",
+    en: "Medallion Data Lakehouse (Apache Iceberg / Delta Lake: Bronze, Silver, Gold) + POS1 Integrator Console (Next.js / TypeScript) + Teknisa (ERP), Nimbi (S2P), EPOC (POS), DataGenesis & Crivo (KYP) Connectors + AI Fiscal Agent & Explained COGS Engine."
+  },
+  datagenesis: {
+    pt: "DataGenesis Core (FastAPI Python 3.12 + Motor Determinístico qualidade-1.0) + Data Hub Intelligence Adapter (26 APIs: Estrutural + SIM Swap Móvel) + AI Gateway (risk-features-1.0 com 24 features e linhagem) + Federação Keycloak OIDC (RS256/JWKS) + Auditoria HMAC-SHA256 Zero-PII.",
+    es: "DataGenesis Core (FastAPI Python 3.12 + Motor Determinístico qualidade-1.0) + Data Hub Intelligence Adapter (26 APIs: Estructural + SIM Swap Móvil) + AI Gateway (risk-features-1.0 con 24 features y linaje) + Federación Keycloak OIDC (RS256/JWKS) + Auditoría HMAC-SHA256 Cero-PII.",
+    en: "DataGenesis Core (FastAPI Python 3.12 + Deterministic qualidade-1.0 Engine) + Data Hub Intelligence Adapter (26 APIs: Structural + Mobile SIM Swap) + AI Gateway (risk-features-1.0 with 24 features & lineage) + Keycloak OIDC Federation (RS256/JWKS) + Zero-PII HMAC-SHA256 Audit Trail."
   }
 };
 
