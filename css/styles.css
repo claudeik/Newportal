@@ -2071,3 +2071,225 @@ footer {
     text-align: center;
   }
 }
+
+
+/* ==========================================================================
+   Wangari Carbon Section Styles
+   ========================================================================== */
+.wangari-section {
+  position: relative;
+  margin-top: 40px;
+}
+
+.wangari-hero-card {
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(6, 10, 22, 0.7) 100%);
+  border-radius: 18px;
+  padding: 30px 36px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(16, 185, 129, 0.2);
+}
+
+.wangari-hero-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.wangari-quote-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wangari-nobel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  color: var(--gold-light);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.wangari-nobel-badge svg {
+  stroke: var(--gold-light);
+}
+
+.wangari-quote-text {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+.wangari-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.wangari-meta-pill {
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--emerald);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.wangari-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.wangari-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-radius: 16px;
+  padding: 26px 24px;
+  transition: transform var(--transition-medium), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.wangari-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.wangari-card.environment {
+  border-top: 2px solid var(--emerald);
+}
+.wangari-card.environment:hover {
+  border-color: var(--emerald);
+}
+
+.wangari-card.social {
+  border-top: 2px solid var(--gold-primary);
+}
+.wangari-card.social:hover {
+  border-color: var(--gold-light);
+}
+
+.wangari-card.tech {
+  border-top: 2px solid var(--cyan);
+}
+.wangari-card.tech:hover {
+  border-color: var(--cyan);
+}
+
+.wangari-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2px;
+}
+
+.wangari-card.environment .wangari-card-icon {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--emerald);
+}
+.wangari-card.social .wangari-card-icon {
+  background: rgba(197, 160, 89, 0.12);
+  border-color: rgba(197, 160, 89, 0.3);
+  color: var(--gold-light);
+}
+.wangari-card.tech .wangari-card-icon {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: rgba(0, 240, 255, 0.3);
+  color: var(--cyan);
+}
+
+.wangari-card-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+.wangari-card-badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.wangari-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.wangari-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.wangari-card-stat {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wangari-card-stat .stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.wangari-card.environment .stat-number { color: var(--emerald); }
+.wangari-card.social .stat-number { color: var(--gold-light); }
+.wangari-card.tech .stat-number { color: var(--cyan); }
+
+.wangari-card-stat .stat-label {
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .wangari-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .wangari-hero-card {
+    padding: 22px 20px;
+  }
+}
