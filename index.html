@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPYX by WangariCarbon — IA Agêntica, Blockchain, Trading Cripto &amp; IA Soberana</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="EPYX by WangariCarbon — IA Agêntica, Blockchain, Trading Cripto & IA Soberana">
+  <meta name="description" content="Plataformas de IA Agêntica com hiperautomação de última geração em blockchain, plataformas de treinamento e trading em criptoativos, refatoração corporativa para stacks modernas e segurança com IA Soberana.">
+  <meta name="google" content="notranslate">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Liquid Metaball Screen Canvas -->
+  <canvas id="liquid-canvas"></canvas>
+  <div class="background-overlay"></div>
+  <div class="grid-mesh-overlay"></div>
+
+  <!-- SVG Filter for the Liquid Screen (Metaball) effect -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" width="0" height="0" aria-hidden="true">
+    <defs>
+      <filter id="liquid-filter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="25" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 65 -20" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#home" class="logo-group">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+        <polyline points="2 17 12 22 22 17" />
+        <polyline points="2 12 12 17 22 12" />
+      </svg>
+      <div class="logo-text-wrap">
+        <div class="logo-main">EPYX<span>.</span></div>
+        <div class="logo-sub">by <strong>WangariCarbon</strong></div>
+      </div>
+    </a>
+
+    <nav aria-label="Primary Navigation">
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">Início</a></li>
+        <li><a href="#pillars" class="nav-link" data-i18n="nav.pillars">Pilares</a></li>
+        <li><a href="#methodology" class="nav-link" data-i18n="nav.methodology">Metodologia</a></li>
+        <li><a href="#simulator" class="nav-link" data-i18n="nav.simulator">Simulador IA</a></li>
+        <li><a href="#estimator" class="nav-link" data-i18n="nav.estimator">Arquitetura</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav.services">Especialidades</a></li>
+        <li><a href="#cases" class="nav-link" data-i18n="nav.cases">Ecossistema</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+        <li><a href="simulador-btc.html" class="nav-link nav-pill-cta" data-i18n="nav.btclab">₿ Crypto &amp; BTC Lab</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-selector" role="group" aria-label="Seleção de idioma">
+        <button class="lang-btn active" data-lang="pt" title="Português (Brasil)">PT</button>
+        <button class="lang-btn" data-lang="es" title="Español">ES</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+      </div>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="hero-grid fade-in-section">
+        <div class="hero-content">
+          <div class="hero-badges-row">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              <span class="hero-badge-text" data-i18n="hero.badge1">EPYX by WangariCarbon</span>
+            </div>
+            <div class="hero-badge sovereign">
+              <span class="hero-badge-dot"></span>
+              <span class="hero-badge-text" data-i18n="hero.badge2">Arquitetura de IA Soberana &amp; Web3</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero.title">IA Agêntica com Hiperautomação em Blockchain, Trading Cripto e IA Soberana</h1>
+          <p class="hero-desc" data-i18n="hero.desc">Evoluímos a engenharia de software de missão crítica. Desenvolvemos plataformas de IA Agêntica com liquidação on-chain, ecossistemas de treinamento e trading algorítmico em criptoativos, e refatoramos plataformas corporativas para stacks de última geração com escalabilidade elástica e segurança de IA Soberana.</p>
+
+          <div class="hero-focus-pills">
+            <div class="focus-pill"><span>◆</span> <strong data-i18n="hero.pill1">Enxames de IA Agêntica &amp; Smart Contracts</strong></div>
+            <div class="focus-pill"><span>◆</span> <strong data-i18n="hero.pill2">Trading Algorítmico &amp; Simuladores Cripto</strong></div>
+            <div class="focus-pill"><span>◆</span> <strong data-i18n="hero.pill3">Refatoração Corporativa Spec-First</strong></div>
+            <div class="focus-pill"><span>◆</span> <strong data-i18n="hero.pill4">IA Soberana Zero-Trust &amp; On-Premise</strong></div>
+          </div>
+
+          <div class="btn-container">
+            <a href="#simulator" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              <span data-i18n="hero.cta.simulate">Simular Squad Agêntica</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta.contact">Agendar Diagnóstico de Arquitetura</a>
+          </div>
+        </div>
+
+        <!-- Right Executive Telemetry Console -->
+        <aside class="hero-telemetry-card" aria-label="Sovereign Architecture Telemetry">
+          <div class="telemetry-header">
+            <span class="telemetry-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span data-i18n="telemetry.title">Telemetria de Nó Soberano</span>
+            </span>
+            <span class="telemetry-status" data-i18n="telemetry.status">● NÓS ATIVOS · ZERO-TRUST</span>
+          </div>
+
+          <div class="telemetry-metrics-grid">
+            <div class="telemetry-metric-box">
+              <div class="metric-val gold" data-i18n="telemetry.m1.val">99.998%</div>
+              <div class="metric-lbl" data-i18n="telemetry.m1.lbl">Disponibilidade SLA em Clusters Distribuídos</div>
+            </div>
+            <div class="telemetry-metric-box">
+              <div class="metric-val blue" id="live-latency-val" data-i18n="telemetry.m2.val">&lt; 12ms</div>
+              <div class="metric-lbl" data-i18n="telemetry.m2.lbl">Latência de Execução Quant &amp; Oráculos</div>
+            </div>
+            <div class="telemetry-metric-box">
+              <div class="metric-val emerald" data-i18n="telemetry.m3.val">100%</div>
+              <div class="metric-lbl" data-i18n="telemetry.m3.lbl">Privacidade de Dados em IA Soberana (VPC/TEE)</div>
+            </div>
+            <div class="telemetry-metric-box">
+              <div class="metric-val gold" data-i18n="telemetry.m4.val">4.8x</div>
+              <div class="metric-lbl" data-i18n="telemetry.m4.lbl">Aceleração de Refatoração Legacy-to-NextGen</div>
+            </div>
+          </div>
+
+          <div class="telemetry-live-stream">
+            <div class="stream-row">
+              <span class="stream-tag" data-i18n="telemetry.stream1">Enxame Multi-Agente [ZK-Verified]</span>
+              <span class="stream-val">ERC-4337 · ACTIVE</span>
+            </div>
+            <div class="stream-row">
+              <span class="stream-tag" data-i18n="telemetry.stream2">Motor Quant CEX/DEX &amp; RWA Vault</span>
+              <span class="stream-val">SHARPE 3.14 · SYNC</span>
+            </div>
+            <div class="stream-row">
+              <span class="stream-tag" data-i18n="telemetry.stream3">Cluster LLM Soberano [AES-256 / TEE]</span>
+              <span class="stream-val">ZERO-EGRESS · OK</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 4 Strategic Pillars Section -->
+    <section id="pillars" class="fade-in-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="pillars.subtitle">Foco Estratégico de Nova Geração</span>
+        <h2 class="section-title" data-i18n="pillars.title">Os 4 Pilares de Engenharia EPYX by WangariCarbon</h2>
+        <p class="section-desc" data-i18n="pillars.desc">Unimos inteligência artificial autônoma, infraestrutura descentralizada de alta performance e engenharia corporativa rigorosa para criar plataformas que operam na fronteira tecnológica.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <article class="glass-card pillar-card pillar-1">
+          <div class="pillar-top">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <span class="pillar-badge" data-i18n="pillars.p1.badge">PILAR 01 · AGENTIC WEB3</span>
+          </div>
+          <h3 data-i18n="pillars.p1.title">Plataformas de IA Agêntica com Hiperautomação em Blockchain</h3>
+          <p data-i18n="pillars.p1.desc">Orquestramos enxames de agentes autônomos capazes de negociar, auditar e liquidar transações on-chain e off-chain sem intervenção humana. Integração nativa com contratos inteligentes verificáveis, provas de conhecimento zero (ZK-Proofs), Account Abstraction (ERC-4337) e oráculos descentralizados.</p>
+          <ul class="pillar-specs">
+            <li>Swarm Orchestration</li>
+            <li>ZK-Verified Agents</li>
+            <li>Solidity / Rust / Move</li>
+            <li>ERC-4337 Smart Accounts</li>
+          </ul>
+        </article>
+
+        <!-- Pillar 2 -->
+        <article class="glass-card pillar-card pillar-2">
+          <div class="pillar-top">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                <polyline points="16 7 22 7 22 13"/>
+              </svg>
+            </div>
+            <span class="pillar-badge" data-i18n="pillars.p2.badge">PILAR 02 · QUANT &amp; ACADEMY</span>
+          </div>
+          <h3 data-i18n="pillars.p2.title">Plataformas de Treinamento e de Trading em Criptoativos</h3>
+          <p data-i18n="pillars.p2.desc">Construímos terminais de execução algorítmica de baixa latência, arbitragem CEX/DEX, cofres DeFi colateralizados e gestão preditiva de risco. Integramos academias interativas e simuladores institucionais com copilotos de IA que treinam traders e mesas proprietárias em tempo real.</p>
+          <ul class="pillar-specs">
+            <li>HFT &amp; Smart Order Routing</li>
+            <li>AI Trading Coach &amp; Replay</li>
+            <li>BTC / RWA Collateral Vaults</li>
+            <li>Real-Time VaR Guardrails</li>
+          </ul>
+        </article>
+
+        <!-- Pillar 3 -->
+        <article class="glass-card pillar-card pillar-3">
+          <div class="pillar-top">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+                <line x1="14" y1="4" x2="10" y2="20"/>
+              </svg>
+            </div>
+            <span class="pillar-badge" data-i18n="pillars.p3.badge">PILAR 03 · NEXT-GEN REFACTORING</span>
+          </div>
+          <h3 data-i18n="pillars.p3.title">Refatoração de Plataformas Corporativas para Stacks de Última Geração</h3>
+          <p data-i18n="pillars.p3.desc">Transformamos monólitos legados críticos em arquiteturas distribuídas modernas (Rust, Go, TypeScript, Event-Driven Kafka, Kubernetes) utilizando engenharia reversa agêntica Spec-First. Migração progressiva sem downtime, paridade funcional garantida e redução drástica de custo de nuvem.</p>
+          <ul class="pillar-specs">
+            <li>Spec-First AST Migration</li>
+            <li>Rust / Go / TypeScript</li>
+            <li>Shadow Traffic Parity</li>
+            <li>Event-Driven Microservices</li>
+          </ul>
+        </article>
+
+        <!-- Pillar 4 -->
+        <article class="glass-card pillar-card pillar-4">
+          <div class="pillar-top">
+            <div class="pillar-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                <circle cx="12" cy="16" r="1"/>
+              </svg>
+            </div>
+            <span class="pillar-badge" data-i18n="pillars.p4.badge">PILAR 04 · SOVEREIGN AI</span>
+          </div>
+          <h3 data-i18n="pillars.p4.title">Escalabilidade Elástica e Segurança com IA Soberana</h3>
+          <p data-i18n="pillars.p4.desc">Implantações de modelos fundacionais e agentes proprietários dentro do perímetro de segurança da sua organização (On-Premise, Bare-Metal GPUs ou VPC Isolada). Zero vazamento de propriedade intelectual, enclaves seguros (TEE), criptografia ponta a ponta e conformidade total com LGPD, GDPR e BACEN.</p>
+          <ul class="pillar-specs">
+            <li>Confidential Compute (TEE)</li>
+            <li>Private vLLM &amp; RAG</li>
+            <li>Zero-Egress Governance</li>
+            <li>LGPD / GDPR / ISO-27001</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="fade-in-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="methodology.subtitle">Metodologia Core</span>
+        <h2 class="section-title" data-i18n="methodology.title">Spec-First, Vibe Coding &amp; Governança de IA Soberana</h2>
+        <p class="section-desc" data-i18n="methodology.desc">Não escrevemos código às cegas. Projetamos especificações formais rigorosas onde arquitetos sêniores e enxames de agentes especializados constroem, refatoram e auditam sistemas complexos em paralelo.</p>
+      </div>
+
+      <div class="methodology-grid">
+        <div class="glass-card step-card">
+          <div class="step-number">01</div>
+          <h3 data-i18n="methodology.step1.title">1. Arquitetura Spec-First</h3>
+          <p data-i18n="methodology.step1.desc">Mapeamos contratos de dados, invariantes financeiras e modelos de ameaça antes da primeira linha de código, eliminando alucinações e ambiguidades.</p>
+        </div>
+
+        <div class="glass-card step-card">
+          <div class="step-number">02</div>
+          <h3 data-i18n="methodology.step2.title">2. Squads Multi-Agente</h3>
+          <p data-i18n="methodology.step2.desc">Deploys coordenados com agentes especializados (Antigravity, Claude Code, Cursor) atuando junto a engenheiros de elite em ciclos contínuos.</p>
+        </div>
+
+        <div class="glass-card step-card">
+          <div class="step-number">03</div>
+          <h3 data-i18n="methodology.step3.title">3. Auditoria On-Chain &amp; Formal</h3>
+          <p data-i18n="methodology.step3.desc">Agentes validadores executam verificação formal de smart contracts, testes de estresse de liquidez, fuzzing e análise estática de segurança.</p>
+        </div>
+
+        <div class="glass-card step-card">
+          <div class="step-number">04</div>
+          <h3 data-i18n="methodology.step4.title">4. Deploy em Nuvem Soberana</h3>
+          <p data-i18n="methodology.step4.desc">Provisionamento automatizado em clusters Kubernetes auto-escaláveis e enclaves de IA Soberana com telemetria observável em tempo real.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulator Section (Interactive Agentic Console) -->
+    <section id="simulator" class="fade-in-section heavy-sim-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="simulator.subtitle">Laboratório Interativo ao Vivo</span>
+        <h2 class="section-title" data-i18n="simulator.title">Simulador de Squad Agêntica &amp; Blockchain</h2>
+      </div>
+
+      <div class="simulator-container">
+        <div class="project-selector">
+          <div class="project-selector-top">
+            <p data-i18n="simulator.label">Selecione uma arquitetura para inspecionar os agentes construindo e auditando em tempo real:</p>
+            <button class="sim-btn-run">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              <span data-i18n="simulator.btn.run">Executar Simulação da Squad</span>
+            </button>
+          </div>
+
+          <div class="project-buttons">
+            <button class="project-btn active" data-project="agentic" data-i18n="simulator.project.agentic">Hiperautomação Blockchain &amp; IA Agêntica</button>
+            <button class="project-btn" data-project="trading" data-i18n="simulator.project.trading">Motor de Trading &amp; Treinamento Cripto</button>
+            <button class="project-btn" data-project="refactor" data-i18n="simulator.project.refactor">Refatoração Corporativa Next-Gen</button>
+            <button class="project-btn" data-project="sovereign" data-i18n="simulator.project.sovereign">Cluster de IA Soberana Zero-Trust</button>
+            <button class="project-btn" data-project="carbon" data-i18n="simulator.project.carbon">Wangari Carbon &amp; Tokenização RWA</button>
+            <button class="project-btn" data-project="agro" data-i18n="simulator.project.agro">Agro Embedded Finance &amp; Derivativos</button>
+          </div>
+        </div>
+
+        <div class="simulator-workspace">
+          <!-- Left Sidebar: Persistent Orchestration Logs -->
+          <div class="sim-sidebar">
+            <div class="sim-sidebar-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <span data-i18n="simulator.terminal.tab.logs">Logs de Orquestração</span>
+            </div>
+            <div id="sim-logs" class="sim-pane-content">
+              <div class="idle-text" data-i18n="simulator.terminal.idle">Console pronto. Selecione um cenário estratégico acima e clique em 'Executar Simulação da Squad'...</div>
+            </div>
+          </div>
+
+          <!-- Main Content: Chat and Code Tabs -->
+          <div class="sim-content">
+            <div class="sim-tabs-header">
+              <button class="tab-btn active" data-tab="chat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                <span data-i18n="simulator.terminal.tab.chat">Colaboração da Squad IA</span>
+              </button>
+              <button class="tab-btn" data-tab="code">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+                <span data-i18n="simulator.terminal.tab.code">Código &amp; Contratos Gerados</span>
+              </button>
+            </div>
+
+            <div id="panel-chat" class="terminal-panel active">
+              <div id="sim-chat" class="sim-scroll-area">
+                <div class="idle-text" data-i18n="simulator.terminal.idle">Console pronto. Selecione um cenário estratégico acima e clique em 'Executar Simulação da Squad'...</div>
+              </div>
+            </div>
+
+            <div id="panel-code" class="terminal-panel">
+              <div class="sim-scroll-area">
+                <pre><code id="sim-code" data-state="idle" data-i18n="simulator.terminal.idle">Console pronto. Selecione um cenário estratégico acima e clique em 'Executar Simulação da Squad'...</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Architecture, Scale & Sovereignty Estimator -->
+    <section id="estimator" class="fade-in-section heavy-sim-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="estimator.subtitle">Planejador de Escala &amp; Soberania</span>
+        <h2 class="section-title" data-i18n="estimator.title">Simulador de Arquitetura, Escala e Refatoração</h2>
+        <p class="section-desc" data-i18n="estimator.desc">Configure o perfil da sua operação para estimar ganhos de performance, redução de latência e a stack recomendada pela engenharia da EPYX by WangariCarbon.</p>
+      </div>
+
+      <div class="estimator-grid">
+        <div class="glass-card estimator-controls">
+          <div class="control-group">
+            <label for="est-domain" class="control-label-row" data-i18n="estimator.domain.label">Domínio Principal do Projeto</label>
+            <select id="est-domain" class="epyx-select">
+              <option value="agentic" data-i18n="estimator.domain.opt1">Plataforma de IA Agêntica &amp; Hiperautomação Blockchain</option>
+              <option value="trading" data-i18n="estimator.domain.opt2">Plataforma de Trading Algorítmico &amp; Treinamento Cripto</option>
+              <option value="refactor" data-i18n="estimator.domain.opt3">Refatoração de Sistema Corporativo para Stack de Última Geração</option>
+              <option value="sovereign" data-i18n="estimator.domain.opt4">Infraestrutura de IA Soberana &amp; Segurança Zero-Trust</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <div class="control-label-row">
+              <label for="est-scale" data-i18n="estimator.scale.label">Volume de Operações / Inferências Diárias</label>
+              <span id="est-scale-val" class="control-val-badge">4.500.000 ops/dia</span>
+            </div>
+            <input type="range" id="est-scale" class="range-slider" min="1" max="100" value="30">
+          </div>
+
+          <div class="control-group">
+            <div class="control-label-row">
+              <label for="est-autonomy" data-i18n="estimator.autonomy.label">Nível de Hiperautomação &amp; Agentes Autônomos</label>
+              <span id="est-autonomy-val" class="control-val-badge">88% Agêntico</span>
+            </div>
+            <input type="range" id="est-autonomy" class="range-slider" min="50" max="99" value="88">
+          </div>
+
+          <div class="control-group">
+            <label for="est-security" class="control-label-row" data-i18n="estimator.security.label">Modelo de Soberania &amp; Isolamento de Dados</label>
+            <select id="est-security" class="epyx-select">
+              <option value="tee" data-i18n="estimator.sec.opt2">IA 100% Soberana (On-Premise / Enclaves TEE Air-Gapped)</option>
+              <option value="zk" data-i18n="estimator.sec.opt3">Consenso Descentralizado + Verificação Zero-Knowledge (ZK)</option>
+              <option value="vpc" data-i18n="estimator.sec.opt1">VPC Dedicada Híbrida + Guardrails Criptográficos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="glass-card estimator-output">
+          <div class="est-kpi-grid">
+            <div class="est-kpi-card">
+              <div class="est-kpi-num" id="est-kpi-cost">-66%</div>
+              <div class="est-kpi-label" data-i18n="estimator.kpi1.label">Redução Estimada de Custo Operacional / Infra</div>
+            </div>
+            <div class="est-kpi-card">
+              <div class="est-kpi-num" id="est-kpi-speed">4.5x</div>
+              <div class="est-kpi-label" data-i18n="estimator.kpi2.label">Ganho de Velocidade de Entrega (Spec-First)</div>
+            </div>
+            <div class="est-kpi-card">
+              <div class="est-kpi-num" id="est-kpi-latency">&lt; 10ms</div>
+              <div class="est-kpi-label" data-i18n="estimator.kpi3.label">Latência Alvo de Orquestração / Execução</div>
+            </div>
+            <div class="est-kpi-card">
+              <div class="est-kpi-num" id="est-kpi-sov" style="color: var(--emerald);">100% · Air-Gapped TEE</div>
+              <div class="est-kpi-label" data-i18n="estimator.kpi4.label">Índice de Soberania &amp; Resiliência Cibernética</div>
+            </div>
+          </div>
+
+          <div class="est-stack-rec">
+            <div style="color: var(--gold-primary); font-weight: 700; margin-bottom: 6px;" data-i18n="estimator.rec.title">STACK RECOMENDADA PELO ARQUITETO AGÊNTICO:</div>
+            <div id="est-stack-text">Orquestrador Multi-Agente (LangGraph / Antigravity SDK) + Contratos Solidity/Rust (ERC-4337 Account Abstraction) + Verificador ZK-SNARK + Oráculos Chainlink + Indexador Subgraph em Tempo Real.</div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary" style="width: 100%;" data-i18n="hero.cta.contact">Agendar Diagnóstico de Arquitetura</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Specialties Section -->
+    <section id="services" class="fade-in-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="services.subtitle">Engenharia de Alta Complexidade</span>
+        <h2 class="section-title" data-i18n="services.title">Especialidades Tecnológicas</h2>
+        <p class="section-desc" data-i18n="services.desc">Soluções completas desenhadas para instituições financeiras, gestoras de criptoativos, corporações em transformação digital e ecossistemas Web3.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card1.title">Hiperautomação On-Chain com IA Agêntica</h3>
+          <p data-i18n="services.card1.desc">Agentes autônomos conectados a redes EVM, Solana e L2 para execução de tesouraria programável, liquidação atômica, arbitragem e governança automatizada.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card2.title">Motores de Trading &amp; Execução Cripto</h3>
+          <p data-i18n="services.card2.desc">Desenvolvimento de plataformas de trading institucional, roteamento inteligente de ordens (SOR), market making automatizado e análise preditiva de sentimento e fluxo on-chain.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card3.title">Plataformas de Treinamento &amp; Simuladores Cripto</h3>
+          <p data-i18n="services.card3.desc">Ambientes gamificados de educação financeira e simulação de mercado com replay histórico (paper trading), avaliação de risco e mentoria por agentes de IA em tempo real.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card4.title">Refatoração Corporativa Assistida por IA</h3>
+          <p data-i18n="services.card4.desc">Tradução arquitetural segura de sistemas legados (Java, .NET, PHP, COBOL) para microsserviços em Rust, Go e Node.js/TypeScript com cobertura de testes automatizada.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card5.title">Infraestrutura de IA Soberana (Sovereign AI)</h3>
+          <p data-i18n="services.card5.desc">Deploy de LLMs proprietários (Llama, Qwen, Mistral fine-tuned) e bancos vetoriais locais com controle total sobre pesos, prompts e dados sensíveis da corporação.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="8"/>
+              <line x1="12" y1="2" x2="12" y2="6"/>
+              <line x1="12" y1="18" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="6" y2="12"/>
+              <line x1="18" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card6.title">Tokenização de RWA &amp; Colateralização Cripto</h3>
+          <p data-i18n="services.card6.desc">Fracionamento de ativos reais, títulos verdes e crédito colateralizado em Bitcoin/Stablecoins com oráculos Chainlink e gestão automática de LTV.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card7.title">Segurança Zero-Trust &amp; Auditoria Contínua</h3>
+          <p data-i18n="services.card7.desc">Blindagem de plataformas críticas com autenticação multifator criptográfica, MPC Wallets, detecção de anomalias em tempo real e proteção contra ataques MEV/flash-loan.</p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3 data-i18n="services.card8.title">Pagamentos Globais, Pix &amp; Liquidação Cross-Border</h3>
+          <p data-i18n="services.card8.desc">Gateways financeiros multi-moeda de alta resiliência integrando trilhos bancários tradicionais (Pix, SPEI, ACH) e liquidação instantânea em stablecoins.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases & Ecosystem Section -->
+    <section id="cases" class="fade-in-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="cases.subtitle">Ecossistema &amp; Produção Real</span>
+        <h2 class="section-title" data-i18n="cases.title">Plataformas Concebidas para Escala Global</h2>
+        <p class="section-desc" data-i18n="cases.desc">Conheça os produtos e infraestruturas em produção desenvolvidos sob a assinatura tecnológica EPYX by WangariCarbon.</p>
+      </div>
+
+      <div class="cases-grid">
+        <div class="glass-card case-card wagari">
+          <div class="case-header">
+            <span class="case-name">Wangari Carbon RWA</span>
+            <span class="case-tag" data-i18n="cases.c1.tag">RWA Blockchain &amp; Sustentabilidade</span>
+          </div>
+          <p data-i18n="cases.c1.desc">Plataforma descentralizada para certificação, rastreamento IoT e comercialização de créditos de carbono e ativos ambientais tokenizados com auditoria imutável e liquidez global.</p>
+          <div class="case-metrics">
+            <span class="case-metric-pill">ERC-3643 RWA</span>
+            <span class="case-metric-pill">Oráculos IoT &amp; Satélite</span>
+            <span class="case-metric-pill">Auditoria On-Chain</span>
+          </div>
+          <a href="#simulator" class="case-link">
+            <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="glass-card case-card urus">
+          <div class="case-header">
+            <span class="case-name">Urus Sovereign Stack</span>
+            <span class="case-tag" data-i18n="cases.c2.tag">Refatoração &amp; IA Soberana</span>
+          </div>
+          <p data-i18n="cases.c2.desc">Suíte de engenharia Spec-First que orquestra enxames de agentes para refatoração de sistemas corporativos legados, geração de código tipado e deploy em clusters de IA Soberana.</p>
+          <div class="case-metrics">
+            <span class="case-metric-pill">Spec-First AST</span>
+            <span class="case-metric-pill">Rust / Go / Kafka</span>
+            <span class="case-metric-pill">Zero-Trust TEE</span>
+          </div>
+          <a href="#estimator" class="case-link">
+            <span data-i18n="cases.link.explore">Explorar Arquitetura</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="glass-card case-card nexus">
+          <div class="case-header">
+            <span class="case-name">EPYX Quant &amp; BTC Lab</span>
+            <span class="case-tag" data-i18n="cases.c3.tag">Crypto Trading &amp; Academy</span>
+          </div>
+          <p data-i18n="cases.c3.desc">Ecossistema integrado de execução quantitativa em criptoativos e plataforma de treinamento imersivo com simulador de derivativos, colateral em BTC e copiloto de análise on-chain.</p>
+          <div class="case-metrics">
+            <span class="case-metric-pill">CEX/DEX Smart Routing</span>
+            <span class="case-metric-pill">AI Trader Coach</span>
+            <span class="case-metric-pill">BTC Collateral Vault</span>
+          </div>
+          <a href="simulador-btc.html" class="case-link">
+            <span data-i18n="cases.link.btclab">Abrir Simulador Cripto</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="glass-card case-card agro">
+          <div class="case-header">
+            <span class="case-name">Ceres Trading &amp; Agro DeFi</span>
+            <span class="case-tag" data-i18n="cases.c4.tag">Agro Embedded Finance &amp; DeFi</span>
+          </div>
+          <p data-i18n="cases.c4.desc">Arquitetura financeira embarcada integrando motores de scoring satelital NDVI, carteiras multi-moeda, hedge de commodities e emissão de CPRs digitais em blockchain.</p>
+          <div class="case-metrics">
+            <span class="case-metric-pill">Scoring Satelital NDVI</span>
+            <span class="case-metric-pill">CPR Digital On-Chain</span>
+            <span class="case-metric-pill">Multi-Currency FX</span>
+          </div>
+          <a href="https://ceres-trading-mvp.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-link">
+            <span data-i18n="cases.link.live">Ver Preview ao Vivo</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (Standalone Interactive Encrypted Briefing) -->
+    <section id="contact" class="fade-in-section">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <span class="section-tag" data-i18n="contact.subtitle">Inicie Sua Evolução Tecnológica</span>
+          <h2 class="section-title" data-i18n="contact.title">Construa ou Refatore Sua Plataforma com Nossa Squad</h2>
+          <p class="section-desc" data-i18n="contact.desc">Agende uma sessão técnica com nossos arquitetos de IA Soberana, Blockchain e Engenharia de Sistemas. Estruturamos a especificação completa do seu projeto com confidencialidade absoluta.</p>
+
+          <div class="contact-badges">
+            <div class="contact-badge">
+              <span class="badge-icon">⚡</span>
+              <span data-i18n="contact.badge1">Diagnóstico técnico Spec-First em até 24h</span>
+            </div>
+            <div class="contact-badge">
+              <span class="badge-icon">🛡️</span>
+              <span data-i18n="contact.badge2">Arquitetura com IA Soberana &amp; NDA garantido</span>
+            </div>
+            <div class="contact-badge">
+              <span class="badge-icon">🌎</span>
+              <span data-i18n="contact.badge3">Operação global: Brasil, Uruguai, EUA &amp; Europa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card contact-form-wrapper">
+          <div class="form-header">
+            <div class="form-header-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span data-i18n="contact.form.header">Briefing Criptografado de Arquitetura</span>
+            </div>
+            <span class="security-tag">AES-256 · ZERO-TRUST</span>
+          </div>
+
+          <form id="epyx-contact-form" class="epyx-form">
+            <div class="epyx-form-row">
+              <div class="epyx-form-group">
+                <label for="form-name" data-i18n="contact.form.name">Nome Completo</label>
+                <input type="text" id="form-name" class="epyx-input" required placeholder="Ex.: Carlos Mendes" data-i18n-placeholder="contact.form.name.ph">
+              </div>
+              <div class="epyx-form-group">
+                <label for="form-company" data-i18n="contact.form.company">Empresa / Instituição</label>
+                <input type="text" id="form-company" class="epyx-input" required placeholder="Ex.: Alpha Capital / Enterprise Corp" data-i18n-placeholder="contact.form.company.ph">
+              </div>
+            </div>
+
+            <div class="epyx-form-row">
+              <div class="epyx-form-group">
+                <label for="form-email" data-i18n="contact.form.email">E-mail Corporativo</label>
+                <input type="email" id="form-email" class="epyx-input" required placeholder="voce@empresa.com" data-i18n-placeholder="contact.form.email.ph">
+              </div>
+              <div class="epyx-form-group">
+                <label for="form-phone" data-i18n="contact.form.phone">WhatsApp / Telefone</label>
+                <input type="tel" id="form-phone" class="epyx-input" placeholder="+55 11 99999-9999" data-i18n-placeholder="contact.form.phone.ph">
+              </div>
+            </div>
+
+            <div class="epyx-form-group">
+              <label for="form-pillar" data-i18n="contact.form.pillar">Foco Principal do Projeto</label>
+              <select id="form-pillar" class="epyx-select">
+                <option value="Agentic_Blockchain" data-i18n="contact.form.pillar.opt1">Plataforma de IA Agêntica &amp; Hiperautomação Blockchain</option>
+                <option value="Crypto_Trading_Academy" data-i18n="contact.form.pillar.opt2">Plataforma de Trading ou Treinamento em Criptoativos</option>
+                <option value="Enterprise_Refactoring" data-i18n="contact.form.pillar.opt3">Refatoração de Plataforma Corporativa (Next-Gen Stack)</option>
+                <option value="Sovereign_AI" data-i18n="contact.form.pillar.opt4">Implantação de IA Soberana, Escalabilidade &amp; Segurança</option>
+                <option value="RWA_Embedded_Finance" data-i18n="contact.form.pillar.opt5">Tokenização RWA, Pagamentos &amp; Finanças Embarcadas</option>
+              </select>
+            </div>
+
+            <div class="epyx-form-group">
+              <label for="form-message" data-i18n="contact.form.message">Escopo Técnico, Desafios de Escala ou Objetivos</label>
+              <textarea id="form-message" class="epyx-textarea" required placeholder="Descreva a plataforma que deseja construir ou refatorar, volumes esperados, requisitos de soberania de dados ou integrações blockchain..." data-i18n-placeholder="contact.form.message.ph"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary epyx-submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <span data-i18n="contact.form.submit">Transmitir Especificação de Projeto</span>
+            </button>
+          </form>
+
+          <div id="form-response" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="#home" class="footer-logo">EPYX<span>.</span></a>
+      <span class="footer-sub">by WangariCarbon</span>
+    </div>
+    <p data-i18n="footer.rights">&copy; 2026 EPYX by WangariCarbon. Todos os direitos reservados. Engenharia de IA Soberana, Blockchain &amp; Sistemas Críticos.</p>
+    <div class="footer-links">
+      <a href="#pillars" data-i18n="footer.link.security">IA Soberana &amp; Segurança</a>
+      <a href="#methodology" data-i18n="footer.link.spec">Metodologia Spec-First</a>
+      <a href="simulador-btc.html" data-i18n="footer.link.btclab">Simulador BTC Auto</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/liquid.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

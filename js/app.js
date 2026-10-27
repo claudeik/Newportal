@@ -1,0 +1,1566 @@
+// ============================================================
+// EPYX by WangariCarbon — Multi-Language & Interactive Engine
+// Languages: Português do Brasil (pt - default), Español (es), English (en)
+// ============================================================
+
+const translations = {
+  pt: {
+    "meta.title": "EPYX by WangariCarbon — IA Agêntica, Blockchain, Trading Cripto & IA Soberana",
+    "nav.home": "Início",
+    "nav.pillars": "Pilares",
+    "nav.methodology": "Metodologia",
+    "nav.simulator": "Simulador IA",
+    "nav.estimator": "Arquitetura",
+    "nav.services": "Especialidades",
+    "nav.cases": "Ecossistema",
+    "nav.contact": "Contato",
+    "nav.btclab": "₿ Crypto & BTC Lab",
+
+    "hero.badge1": "EPYX by WangariCarbon",
+    "hero.badge2": "Arquitetura de IA Soberana & Web3",
+    "hero.title": "IA Agêntica com Hiperautomação em Blockchain, Trading Cripto e IA Soberana",
+    "hero.desc": "Evoluímos a engenharia de software de missão crítica. Desenvolvemos plataformas de IA Agêntica com liquidação on-chain, ecossistemas de treinamento e trading algorítmico em criptoativos, e refatoramos plataformas corporativas para stacks de última geração com escalabilidade elástica e segurança de IA Soberana.",
+    "hero.pill1": "Enxames de IA Agêntica & Smart Contracts",
+    "hero.pill2": "Trading Algorítmico & Simuladores Cripto",
+    "hero.pill3": "Refatoração Corporativa Spec-First",
+    "hero.pill4": "IA Soberana Zero-Trust & On-Premise",
+    "hero.cta.simulate": "Simular Squad Agêntica",
+    "hero.cta.contact": "Agendar Diagnóstico de Arquitetura",
+
+    "telemetry.title": "Telemetria de Nó Soberano",
+    "telemetry.status": "● NÓS ATIVOS · ZERO-TRUST",
+    "telemetry.m1.val": "99.998%",
+    "telemetry.m1.lbl": "Disponibilidade SLA em Clusters Distribuídos",
+    "telemetry.m2.val": "< 12ms",
+    "telemetry.m2.lbl": "Latência de Execução Quant & Oráculos",
+    "telemetry.m3.val": "100%",
+    "telemetry.m3.lbl": "Privacidade de Dados em IA Soberana (VPC/TEE)",
+    "telemetry.m4.val": "4.8x",
+    "telemetry.m4.lbl": "Aceleração de Refatoração Legacy-to-NextGen",
+    "telemetry.stream1": "Enxame Multi-Agente [ZK-Verified]",
+    "telemetry.stream2": "Motor Quant CEX/DEX & RWA Vault",
+    "telemetry.stream3": "Cluster LLM Soberano [AES-256 / TEE]",
+
+    "pillars.subtitle": "Foco Estratégico de Nova Geração",
+    "pillars.title": "Os 4 Pilares de Engenharia EPYX by WangariCarbon",
+    "pillars.desc": "Unimos inteligência artificial autônoma, infraestrutura descentralizada de alta performance e engenharia corporativa rigorosa para criar plataformas que operam na fronteira tecnológica.",
+
+    "pillars.p1.badge": "PILAR 01 · AGENTIC WEB3",
+    "pillars.p1.title": "Plataformas de IA Agêntica com Hiperautomação em Blockchain",
+    "pillars.p1.desc": "Orquestramos enxames de agentes autônomos capazes de negociar, auditar e liquidar transações on-chain e off-chain sem intervenção humana. Integração nativa com contratos inteligentes verificáveis, provas de conhecimento zero (ZK-Proofs), Account Abstraction (ERC-4337) e oráculos descentralizados.",
+
+    "pillars.p2.badge": "PILAR 02 · QUANT & ACADEMY",
+    "pillars.p2.title": "Plataformas de Treinamento e de Trading em Criptoativos",
+    "pillars.p2.desc": "Construímos terminais de execução algorítmica de baixa latência, arbitragem CEX/DEX, cofres DeFi colateralizados e gestão preditiva de risco. Integramos academias interativas e simuladores institucionais com copilotos de IA que treinam traders e mesas proprietárias em tempo real.",
+
+    "pillars.p3.badge": "PILAR 03 · NEXT-GEN REFACTORING",
+    "pillars.p3.title": "Refatoração de Plataformas Corporativas para Stacks de Última Geração",
+    "pillars.p3.desc": "Transformamos monólitos legados críticos em arquiteturas distribuídas modernas (Rust, Go, TypeScript, Event-Driven Kafka, Kubernetes) utilizando engenharia reversa agêntica Spec-First. Migração progressiva sem downtime, paridade funcional garantida e redução drástica de custo de nuvem.",
+
+    "pillars.p4.badge": "PILAR 04 · SOVEREIGN AI",
+    "pillars.p4.title": "Escalabilidade Elástica e Segurança com IA Soberana",
+    "pillars.p4.desc": "Implantações de modelos fundacionais e agentes proprietários dentro do perímetro de segurança da sua organização (On-Premise, Bare-Metal GPUs ou VPC Isolada). Zero vazamento de propriedade intelectual, enclaves seguros (TEE), criptografia ponta a ponta e conformidade total com LGPD, GDPR e BACEN.",
+
+    "methodology.subtitle": "Metodologia Core",
+    "methodology.title": "Spec-First, Vibe Coding & Governança de IA Soberana",
+    "methodology.desc": "Não escrevemos código às cegas. Projetamos especificações formais rigorosas onde arquitetos sêniores e enxames de agentes especializados constroem, refatoram e auditam sistemas complexos em paralelo.",
+    "methodology.step1.title": "1. Arquitetura Spec-First",
+    "methodology.step1.desc": "Mapeamos contratos de dados, invariantes financeiras e modelos de ameaça antes da primeira linha de código, eliminando alucinações e ambiguidades.",
+    "methodology.step2.title": "2. Squads Multi-Agente",
+    "methodology.step2.desc": "Deploys coordenados com agentes especializados (Antigravity, Claude Code, Cursor) atuando junto a engenheiros de elite em ciclos contínuos.",
+    "methodology.step3.title": "3. Auditoria On-Chain & Formal",
+    "methodology.step3.desc": "Agentes validadores executam verificação formal de smart contracts, testes de estresse de liquidez, fuzzing e análise estática de segurança.",
+    "methodology.step4.title": "4. Deploy em Nuvem Soberana",
+    "methodology.step4.desc": "Provisionamento automatizado em clusters Kubernetes auto-escaláveis e enclaves de IA Soberana com telemetria observável em tempo real.",
+
+    "simulator.subtitle": "Laboratório Interativo ao Vivo",
+    "simulator.title": "Simulador de Squad Agêntica & Blockchain",
+    "simulator.label": "Selecione uma arquitetura para inspecionar os agentes construindo e auditando em tempo real:",
+    "simulator.project.agentic": "Hiperautomação Blockchain & IA Agêntica",
+    "simulator.project.trading": "Motor de Trading & Treinamento Cripto",
+    "simulator.project.refactor": "Refatoração Corporativa Next-Gen",
+    "simulator.project.sovereign": "Cluster de IA Soberana Zero-Trust",
+    "simulator.project.carbon": "Wangari Carbon & Tokenização RWA",
+    "simulator.project.agro": "Agro Embedded Finance & Derivativos",
+    "simulator.terminal.tab.logs": "Logs de Orquestração",
+    "simulator.terminal.tab.chat": "Colaboração da Squad IA",
+    "simulator.terminal.tab.code": "Código & Contratos Gerados",
+    "simulator.btn.run": "Executar Simulação da Squad",
+    "simulator.terminal.idle": "Console pronto. Selecione um cenário estratégico acima e clique em 'Executar Simulação da Squad'...",
+
+    "estimator.subtitle": "Planejador de Escala & Soberania",
+    "estimator.title": "Simulador de Arquitetura, Escala e Refatoração",
+    "estimator.desc": "Configure o perfil da sua operação para estimar ganhos de performance, redução de latência e a stack recomendada pela engenharia da EPYX by WangariCarbon.",
+    "estimator.domain.label": "Domínio Principal do Projeto",
+    "estimator.domain.opt1": "Plataforma de IA Agêntica & Hiperautomação Blockchain",
+    "estimator.domain.opt2": "Plataforma de Trading Algorítmico & Treinamento Cripto",
+    "estimator.domain.opt3": "Refatoração de Sistema Corporativo para Stack de Última Geração",
+    "estimator.domain.opt4": "Infraestrutura de IA Soberana & Segurança Zero-Trust",
+    "estimator.scale.label": "Volume de Operações / Inferências Diárias",
+    "estimator.autonomy.label": "Nível de Hiperautomação & Agentes Autônomos",
+    "estimator.security.label": "Modelo de Soberania & Isolamento de Dados",
+    "estimator.sec.opt1": "VPC Dedicada Híbrida + Guardrails Criptográficos",
+    "estimator.sec.opt2": "IA 100% Soberana (On-Premise / Enclaves TEE Air-Gapped)",
+    "estimator.sec.opt3": "Consenso Descentralizado + Verificação Zero-Knowledge (ZK)",
+    "estimator.kpi1.label": "Redução Estimada de Custo Operacional / Infra",
+    "estimator.kpi2.label": "Ganho de Velocidade de Entrega (Spec-First)",
+    "estimator.kpi3.label": "Latência Alvo de Orquestração / Execução",
+    "estimator.kpi4.label": "Índice de Soberania & Resiliência Cibernética",
+    "estimator.rec.title": "STACK RECOMENDADA PELO ARQUITETO AGÊNTICO:",
+
+    "services.subtitle": "Engenharia de Alta Complexidade",
+    "services.title": "Especialidades Tecnológicas",
+    "services.desc": "Soluções completas desenhadas para instituições financeiras, gestoras de criptoativos, corporações em transformação digital e ecossistemas Web3.",
+    "services.card1.title": "Hiperautomação On-Chain com IA Agêntica",
+    "services.card1.desc": "Agentes autônomos conectados a redes EVM, Solana e L2 para execução de tesouraria programável, liquidação atômica, arbitragem e governança automatizada.",
+    "services.card2.title": "Motores de Trading & Execução Cripto",
+    "services.card2.desc": "Desenvolvimento de plataformas de trading institucional, roteamento inteligente de ordens (SOR), market making automatizado e análise preditiva de sentimento e fluxo on-chain.",
+    "services.card3.title": "Plataformas de Treinamento & Simuladores Cripto",
+    "services.card3.desc": "Ambientes gamificados de educação financeira e simulação de mercado com replay histórico (paper trading), avaliação de risco e mentoria por agentes de IA em tempo real.",
+    "services.card4.title": "Refatoração Corporativa Assistida por IA",
+    "services.card4.desc": "Tradução arquitetural segura de sistemas legados (Java, .NET, PHP, COBOL) para microsserviços em Rust, Go e Node.js/TypeScript com cobertura de testes automatizada.",
+    "services.card5.title": "Infraestrutura de IA Soberana (Sovereign AI)",
+    "services.card5.desc": "Deploy de LLMs proprietários (Llama, Qwen, Mistral fine-tuned) e bancos vetoriais locais com controle total sobre pesos, prompts e dados sensíveis da corporação.",
+    "services.card6.title": "Tokenização de RWA & Colateralização Cripto",
+    "services.card6.desc": "Fracionamento de ativos reais, títulos verdes e crédito colateralizado em Bitcoin/Stablecoins com oráculos Chainlink e gestão automática de LTV.",
+    "services.card7.title": "Segurança Zero-Trust & Auditoria Contínua",
+    "services.card7.desc": "Blindagem de plataformas críticas com autenticação multifator criptográfica, MPC Wallets, detecção de anomalias em tempo real e proteção contra ataques MEV/flash-loan.",
+    "services.card8.title": "Pagamentos Globais, Pix & Liquidação Cross-Border",
+    "services.card8.desc": "Gateways financeiros multi-moeda de alta resiliência integrando trilhos bancários tradicionais (Pix, SPEI, ACH) e liquidação instantânea em stablecoins.",
+
+    "cases.subtitle": "Ecossistema & Produção Real",
+    "cases.title": "Plataformas Concebidas para Escala Global",
+    "cases.desc": "Conheça os produtos e infraestruturas em produção desenvolvidos sob a assinatura tecnológica EPYX by WangariCarbon.",
+    "cases.c1.tag": "RWA Blockchain & Sustentabilidade",
+    "cases.c1.desc": "Plataforma descentralizada para certificação, rastreamento IoT e comercialização de créditos de carbono e ativos ambientais tokenizados com auditoria imutável e liquidez global.",
+    "cases.c2.tag": "Refatoração & IA Soberana",
+    "cases.c2.desc": "Suíte de engenharia Spec-First que orquestra enxames de agentes para refatoração de sistemas corporativos legados, geração de código tipado e deploy em clusters de IA Soberana.",
+    "cases.c3.tag": "Crypto Trading & Academy",
+    "cases.c3.desc": "Ecossistema integrado de execução quantitativa em criptoativos e plataforma de treinamento imersivo com simulador de derivativos, colateral em BTC e copiloto de análise on-chain.",
+    "cases.c4.tag": "Agro Embedded Finance & DeFi",
+    "cases.c4.desc": "Arquitetura financeira embarcada integrando motores de scoring satelital NDVI, carteiras multi-moeda, hedge de commodities e emissão de CPRs digitais em blockchain.",
+    "cases.link.explore": "Explorar Arquitetura",
+    "cases.link.btclab": "Abrir Simulador Cripto",
+    "cases.link.live": "Ver Preview ao Vivo",
+
+    "contact.subtitle": "Inicie Sua Evolução Tecnológica",
+    "contact.title": "Construa ou Refatore Sua Plataforma com Nossa Squad",
+    "contact.desc": "Agende uma sessão técnica com nossos arquitetos de IA Soberana, Blockchain e Engenharia de Sistemas. Estruturamos a especificação completa do seu projeto com confidencialidade absoluta.",
+    "contact.badge1": "Diagnóstico técnico Spec-First em até 24h",
+    "contact.badge2": "Arquitetura com IA Soberana & NDA garantido",
+    "contact.badge3": "Operação global: Brasil, Uruguai, EUA & Europa",
+    "contact.form.header": "Briefing Criptografado de Arquitetura",
+    "contact.form.name": "Nome Completo",
+    "contact.form.name.ph": "Ex.: Carlos Mendes",
+    "contact.form.company": "Empresa / Instituição",
+    "contact.form.company.ph": "Ex.: Alpha Capital / Enterprise Corp",
+    "contact.form.email": "E-mail Corporativo",
+    "contact.form.email.ph": "voce@empresa.com",
+    "contact.form.phone": "WhatsApp / Telefone",
+    "contact.form.phone.ph": "+55 11 99999-9999",
+    "contact.form.pillar": "Foco Principal do Projeto",
+    "contact.form.pillar.opt1": "Plataforma de IA Agêntica & Hiperautomação Blockchain",
+    "contact.form.pillar.opt2": "Plataforma de Trading ou Treinamento em Criptoativos",
+    "contact.form.pillar.opt3": "Refatoração de Plataforma Corporativa (Next-Gen Stack)",
+    "contact.form.pillar.opt4": "Implantação de IA Soberana, Escalabilidade & Segurança",
+    "contact.form.pillar.opt5": "Tokenização RWA, Pagamentos & Finanças Embarcadas",
+    "contact.form.message": "Escopo Técnico, Desafios de Escala ou Objetivos",
+    "contact.form.message.ph": "Descreva a plataforma que deseja construir ou refatorar, volumes esperados, requisitos de soberania de dados ou integrações blockchain...",
+    "contact.form.submit": "Transmitir Especificação de Projeto",
+    "contact.form.sending": "Criptografando e transmitindo ao nó EPYX...",
+    "contact.form.success": "Briefing registrado com sucesso no protocolo EPYX by WangariCarbon! Nossa equipe de arquitetos entrará em contato em breve.",
+
+    "footer.rights": "© 2026 EPYX by WangariCarbon. Todos os direitos reservados. Engenharia de IA Soberana, Blockchain & Sistemas Críticos.",
+    "footer.link.security": "IA Soberana & Segurança",
+    "footer.link.spec": "Metodologia Spec-First",
+    "footer.link.btclab": "Simulador BTC Auto"
+  },
+
+  es: {
+    "meta.title": "EPYX by WangariCarbon — IA Agéntica, Blockchain, Trading Cripto e IA Soberana",
+    "nav.home": "Inicio",
+    "nav.pillars": "Pilares",
+    "nav.methodology": "Metodología",
+    "nav.simulator": "Simulador IA",
+    "nav.estimator": "Arquitectura",
+    "nav.services": "Especialidades",
+    "nav.cases": "Ecosistema",
+    "nav.contact": "Contacto",
+    "nav.btclab": "₿ Crypto & BTC Lab",
+
+    "hero.badge1": "EPYX by WangariCarbon",
+    "hero.badge2": "Arquitectura de IA Soberana & Web3",
+    "hero.title": "IA Agéntica con Hiperautomatización en Blockchain, Trading Cripto e IA Soberana",
+    "hero.desc": "Evolucionamos la ingeniería de software de misión crítica. Desarrollamos plataformas de IA Agéntica con liquidación on-chain, ecosistemas de entrenamiento y trading algorítmico en criptoactivos, y refactorizamos plataformas corporativas hacia stacks de última generación con escalabilidad elástica y seguridad de IA Soberana.",
+    "hero.pill1": "Enjambres de IA Agéntica & Smart Contracts",
+    "hero.pill2": "Trading Algorítmico & Simuladores Cripto",
+    "hero.pill3": "Refactorización Corporativa Spec-First",
+    "hero.pill4": "IA Soberana Zero-Trust & On-Premise",
+    "hero.cta.simulate": "Simular Squad Agéntica",
+    "hero.cta.contact": "Agendar Diagnóstico de Arquitectura",
+
+    "telemetry.title": "Telemetría de Nodo Soberano",
+    "telemetry.status": "● NODOS ACTIVOS · ZERO-TRUST",
+    "telemetry.m1.val": "99.998%",
+    "telemetry.m1.lbl": "Disponibilidad SLA en Clusters Distribuidos",
+    "telemetry.m2.val": "< 12ms",
+    "telemetry.m2.lbl": "Latencia de Ejecución Quant & Oráculos",
+    "telemetry.m3.val": "100%",
+    "telemetry.m3.lbl": "Privacidad de Datos en IA Soberana (VPC/TEE)",
+    "telemetry.m4.val": "4.8x",
+    "telemetry.m4.lbl": "Aceleración en Refactorización Legacy-to-NextGen",
+    "telemetry.stream1": "Enjambre Multi-Agente [ZK-Verified]",
+    "telemetry.stream2": "Motor Quant CEX/DEX & RWA Vault",
+    "telemetry.stream3": "Cluster LLM Soberano [AES-256 / TEE]",
+
+    "pillars.subtitle": "Enfoque Estratégico de Nueva Generación",
+    "pillars.title": "Los 4 Pilares de Ingeniería EPYX by WangariCarbon",
+    "pillars.desc": "Unimos inteligencia artificial autónoma, infraestructura descentralizada de alto rendimiento e ingeniería corporativa rigurosa para crear plataformas que operan en la frontera tecnológica.",
+
+    "pillars.p1.badge": "PILAR 01 · AGENTIC WEB3",
+    "pillars.p1.title": "Plataformas de IA Agéntica con Hiperautomatización en Blockchain",
+    "pillars.p1.desc": "Orquestamos enjambres de agentes autónomos capaces de negociar, auditar y liquidar transacciones on-chain y off-chain sin intervención humana. Integración nativa con contratos inteligentes verificables, pruebas Zero-Knowledge (ZK-Proofs), Account Abstraction (ERC-4337) y oráculos descentralizados.",
+
+    "pillars.p2.badge": "PILAR 02 · QUANT & ACADEMY",
+    "pillars.p2.title": "Plataformas de Entrenamiento y de Trading en Criptoactivos",
+    "pillars.p2.desc": "Construimos terminales de ejecución algorítmica de baja latencia, arbitraje CEX/DEX, bóvedas DeFi colateralizadas y gestión predictiva de riesgo. Integramos academias interactivas y simuladores institucionales con copilotos de IA que entrenan a traders y mesas propietarias en tiempo real.",
+
+    "pillars.p3.badge": "PILAR 03 · NEXT-GEN REFACTORING",
+    "pillars.p3.title": "Refactorización de Plataformas Corporativas a Stacks de Última Generación",
+    "pillars.p3.desc": "Transformamos monolitos legados críticos en arquitecturas distribuidas modernas (Rust, Go, TypeScript, Event-Driven Kafka, Kubernetes) utilizando ingeniería inversa agéntica Spec-First. Migración progresiva sin downtime, paridad funcional garantizada y reducción drástica de costos cloud.",
+
+    "pillars.p4.badge": "PILAR 04 · SOVEREIGN AI",
+    "pillars.p4.title": "Escalabilidad Elástica y Seguridad con IA Soberana",
+    "pillars.p4.desc": "Despliegues de modelos fundacionales y agentes propietarios dentro del perímetro de seguridad de su organización (On-Premise, Bare-Metal GPUs o VPC Aislada). Cero fuga de propiedad intelectual, enclaves seguros (TEE), cifrado extremo a extremo y cumplimiento total normativo.",
+
+    "methodology.subtitle": "Metodología Core",
+    "methodology.title": "Spec-First, Vibe Coding & Gobernanza de IA Soberana",
+    "methodology.desc": "No escribimos código a ciegas. Diseñamos especificaciones formales rigurosas donde arquitectos sénior y enjambres de agentes especializados construyen, refactorizan y auditan sistemas complejos en paralelo.",
+    "methodology.step1.title": "1. Arquitectura Spec-First",
+    "methodology.step1.desc": "Mapeamos contratos de datos, invariantes financieras y modelos de amenaza antes de la primera línea de código, eliminando alucinaciones y ambigüedades.",
+    "methodology.step2.title": "2. Squads Multi-Agente",
+    "methodology.step2.desc": "Despliegues coordinados con agentes especializados (Antigravity, Claude Code, Cursor) operando junto a ingenieros de élite en ciclos continuos.",
+    "methodology.step3.title": "3. Auditoría On-Chain & Formal",
+    "methodology.step3.desc": "Agentes validadores ejecutan verificación formal de smart contracts, pruebas de estrés de liquidez, fuzzing y análisis estático de seguridad.",
+    "methodology.step4.title": "4. Despliegue en Nube Soberana",
+    "methodology.step4.desc": "Aprovisionamiento automatizado en clusters Kubernetes auto-escalables y enclaves de IA Soberana con telemetría observable en tiempo real.",
+
+    "simulator.subtitle": "Laboratorio Interactivo en Vivo",
+    "simulator.title": "Simulador de Squad Agéntica & Blockchain",
+    "simulator.label": "Seleccione una arquitectura para inspeccionar a los agentes construyendo y auditando en tiempo real:",
+    "simulator.project.agentic": "Hiperautomatización Blockchain & IA Agéntica",
+    "simulator.project.trading": "Motor de Trading & Entrenamiento Cripto",
+    "simulator.project.refactor": "Refactorización Corporativa Next-Gen",
+    "simulator.project.sovereign": "Cluster de IA Soberana Zero-Trust",
+    "simulator.project.carbon": "Wangari Carbon & Tokenización RWA",
+    "simulator.project.agro": "Agro Embedded Finance & Derivados",
+    "simulator.terminal.tab.logs": "Logs de Orquestación",
+    "simulator.terminal.tab.chat": "Colaboración de Squad IA",
+    "simulator.terminal.tab.code": "Código & Contratos Generados",
+    "simulator.btn.run": "Ejecutar Simulación de Squad",
+    "simulator.terminal.idle": "Consola lista. Seleccione un escenario estratégico arriba y haga clic en 'Ejecutar Simulación de Squad'...",
+
+    "estimator.subtitle": "Planificador de Escala & Soberanía",
+    "estimator.title": "Simulador de Arquitectura, Escala y Refactorización",
+    "estimator.desc": "Configure el perfil de su operación para estimar mejoras de rendimiento, reducción de latencia y el stack recomendado por la ingeniería de EPYX by WangariCarbon.",
+    "estimator.domain.label": "Dominio Principal del Proyecto",
+    "estimator.domain.opt1": "Plataforma de IA Agéntica & Hiperautomatización Blockchain",
+    "estimator.domain.opt2": "Plataforma de Trading Algorítmico & Entrenamiento Cripto",
+    "estimator.domain.opt3": "Refactorización de Sistema Corporativo a Stack de Última Generación",
+    "estimator.domain.opt4": "Infraestructura de IA Soberana & Seguridad Zero-Trust",
+    "estimator.scale.label": "Volumen de Operaciones / Inferencias Diarias",
+    "estimator.autonomy.label": "Nivel de Hiperautomatización & Agentes Autónomos",
+    "estimator.security.label": "Modelo de Soberanía & Aislamiento de Datos",
+    "estimator.sec.opt1": "VPC Dedicada Híbrida + Guardrails Criptográficos",
+    "estimator.sec.opt2": "IA 100% Soberana (On-Premise / Enclaves TEE Air-Gapped)",
+    "estimator.sec.opt3": "Consenso Descentralizado + Verificación Zero-Knowledge (ZK)",
+    "estimator.kpi1.label": "Reducción Estimada de Costo Operativo / Infra",
+    "estimator.kpi2.label": "Ganancia de Velocidad de Entrega (Spec-First)",
+    "estimator.kpi3.label": "Latencia Objetivo de Orquestación / Ejecución",
+    "estimator.kpi4.label": "Índice de Soberanía & Resiliencia Cibernética",
+    "estimator.rec.title": "STACK RECOMENDADO POR EL ARQUITECTO AGÉNTICO:",
+
+    "services.subtitle": "Ingeniería de Alta Complejidad",
+    "services.title": "Especialidades Tecnológicas",
+    "services.desc": "Soluciones integrales diseñadas para instituciones financieras, gestoras de criptoactivos, corporaciones en transformación digital y ecosistemas Web3.",
+    "services.card1.title": "Hiperautomatización On-Chain con IA Agéntica",
+    "services.card1.desc": "Agentes autónomos conectados a redes EVM, Solana y L2 para ejecución de tesorería programable, liquidación atómica, arbitraje y gobernanza automatizada.",
+    "services.card2.title": "Motores de Trading & Ejecución Cripto",
+    "services.card2.desc": "Desarrollo de plataformas de trading institucional, enrutamiento inteligente de órdenes (SOR), market making automatizado y análisis predictivo on-chain.",
+    "services.card3.title": "Plataformas de Entrenamiento & Simuladores Cripto",
+    "services.card3.desc": "Entornos gamificados de educación financiera y simulación de mercado con replay histórico (paper trading), evaluación de riesgo y mentoría por agentes de IA.",
+    "services.card4.title": "Refactorización Corporativa Asistida por IA",
+    "services.card4.desc": "Traducción arquitectónica segura de sistemas legados (Java, .NET, PHP, COBOL) hacia microservicios en Rust, Go y Node.js/TypeScript con pruebas automatizadas.",
+    "services.card5.title": "Infraestructura de IA Soberana (Sovereign AI)",
+    "services.card5.desc": "Despliegue de LLMs propietarios (Llama, Qwen, Mistral fine-tuned) y bases vectoriales locales con control total sobre pesos, prompts y datos sensibles.",
+    "services.card6.title": "Tokenización de RWA & Colateralización Cripto",
+    "services.card6.desc": "Fraccionamiento de activos reales, bonos verdes y crédito colateralizado en Bitcoin/Stablecoins con oráculos Chainlink y gestión automática de LTV.",
+    "services.card7.title": "Seguridad Zero-Trust & Auditoría Continua",
+    "services.card7.desc": "Blindaje de plataformas críticas con autenticación multifactor criptográfica, MPC Wallets, detección de anomalías en tiempo real y protección anti-MEV.",
+    "services.card8.title": "Pagos Globales, Pix & Liquidación Cross-Border",
+    "services.card8.desc": "Pasarelas financieras multimoneda de alta resiliencia integrando rieles bancarios tradicionales (Pix, SPEI, ACH) y liquidación instantánea en stablecoins.",
+
+    "cases.subtitle": "Ecosistema & Producción Real",
+    "cases.title": "Plataformas Concebidas para Escala Global",
+    "cases.desc": "Conozca los productos e infraestructuras en producción desarrollados bajo la firma tecnológica EPYX by WangariCarbon.",
+    "cases.c1.tag": "RWA Blockchain & Sustentabilidad",
+    "cases.c1.desc": "Plataforma descentralizada para certificación, trazabilidad IoT y comercialización de créditos de carbono y activos ambientales tokenizados con auditoría inmutable.",
+    "cases.c2.tag": "Refactorización & IA Soberana",
+    "cases.c2.desc": "Suite de ingeniería Spec-First que orquesta enjambres de agentes para refactorización de sistemas corporativos legados, código tipado y despliegue en IA Soberana.",
+    "cases.c3.tag": "Crypto Trading & Academy",
+    "cases.c3.desc": "Ecosistema integrado de ejecución cuantitativa en criptoactivos y plataforma de entrenamiento inmersivo con simulador de derivados, colateral BTC y copiloto on-chain.",
+    "cases.c4.tag": "Agro Embedded Finance & DeFi",
+    "cases.c4.desc": "Arquitectura financiera embebida integrando motores de scoring satelital NDVI, billeteras multimoneda, cobertura de commodities y emisión de CPRs digitales.",
+    "cases.link.explore": "Explorar Arquitectura",
+    "cases.link.btclab": "Abrir Simulador Cripto",
+    "cases.link.live": "Ver Preview en Vivo",
+
+    "contact.subtitle": "Inicie Su Evolución Tecnológica",
+    "contact.title": "Construya o Refactorice Su Plataforma con Nuestra Squad",
+    "contact.desc": "Agende una sesión técnica con nuestros arquitectos de IA Soberana, Blockchain e Ingeniería de Sistemas. Estructuramos la especificación completa de su proyecto con confidencialidad absoluta.",
+    "contact.badge1": "Diagnóstico técnico Spec-First en menos de 24h",
+    "contact.badge2": "Arquitectura con IA Soberana & NDA garantizado",
+    "contact.badge3": "Operación global: Brasil, Uruguay, EE.UU. & Europa",
+    "contact.form.header": "Briefing Cifrado de Arquitectura",
+    "contact.form.name": "Nombre Completo",
+    "contact.form.name.ph": "Ej.: Carlos Méndez",
+    "contact.form.company": "Empresa / Institución",
+    "contact.form.company.ph": "Ej.: Alpha Capital / Enterprise Corp",
+    "contact.form.email": "Correo Corporativo",
+    "contact.form.email.ph": "usted@empresa.com",
+    "contact.form.phone": "WhatsApp / Teléfono",
+    "contact.form.phone.ph": "+598 99 000 000",
+    "contact.form.pillar": "Enfoque Principal del Proyecto",
+    "contact.form.pillar.opt1": "Plataforma de IA Agéntica & Hiperautomatización Blockchain",
+    "contact.form.pillar.opt2": "Plataforma de Trading o Entrenamiento en Criptoactivos",
+    "contact.form.pillar.opt3": "Refactorización de Plataforma Corporativa (Next-Gen Stack)",
+    "contact.form.pillar.opt4": "Despliegue de IA Soberana, Escalabilidad & Seguridad",
+    "contact.form.pillar.opt5": "Tokenización RWA, Pagos & Finanzas Embebidas",
+    "contact.form.message": "Alcance Técnico, Desafíos de Escala u Objetivos",
+    "contact.form.message.ph": "Describa la plataforma que desea construir o refactorizar, volúmenes esperados, requisitos de soberanía de datos o integraciones blockchain...",
+    "contact.form.submit": "Transmitir Especificación de Proyecto",
+    "contact.form.sending": "Cifrando y transmitiendo al nodo EPYX...",
+    "contact.form.success": "¡Briefing registrado con éxito en el protocolo EPYX by WangariCarbon! Nuestro equipo de arquitectos se pondrá en contacto en breve.",
+
+    "footer.rights": "© 2026 EPYX by WangariCarbon. Todos los derechos reservados. Ingeniería de IA Soberana, Blockchain & Sistemas Críticos.",
+    "footer.link.security": "IA Soberana & Seguridad",
+    "footer.link.spec": "Metodología Spec-First",
+    "footer.link.btclab": "Simulador BTC Auto"
+  },
+
+  en: {
+    "meta.title": "EPYX by WangariCarbon — Agentic AI, Blockchain, Crypto Trading & Sovereign AI",
+    "nav.home": "Home",
+    "nav.pillars": "Pillars",
+    "nav.methodology": "Methodology",
+    "nav.simulator": "AI Simulator",
+    "nav.estimator": "Architecture",
+    "nav.services": "Specialties",
+    "nav.cases": "Ecosystem",
+    "nav.contact": "Contact",
+    "nav.btclab": "₿ Crypto & BTC Lab",
+
+    "hero.badge1": "EPYX by WangariCarbon",
+    "hero.badge2": "Sovereign AI & Web3 Architecture",
+    "hero.title": "Agentic AI with Next-Gen Blockchain Hyperautomation, Crypto Trading & Sovereign AI",
+    "hero.desc": "We evolve mission-critical software engineering. We build Agentic AI platforms with on-chain settlement, algorithmic crypto trading and training ecosystems, and refactor enterprise platforms into next-generation stacks with elastic scalability and Sovereign AI security.",
+    "hero.pill1": "Agentic AI Swarms & Smart Contracts",
+    "hero.pill2": "Algorithmic Trading & Crypto Simulators",
+    "hero.pill3": "Spec-First Enterprise Refactoring",
+    "hero.pill4": "Zero-Trust Sovereign AI & On-Premise",
+    "hero.cta.simulate": "Simulate Agentic Squad",
+    "hero.cta.contact": "Schedule Architecture Briefing",
+
+    "telemetry.title": "Sovereign Node Telemetry",
+    "telemetry.status": "● NODES ACTIVE · ZERO-TRUST",
+    "telemetry.m1.val": "99.998%",
+    "telemetry.m1.lbl": "SLA Availability Across Distributed Clusters",
+    "telemetry.m2.val": "< 12ms",
+    "telemetry.m2.lbl": "Quant Execution & Oracle Feed Latency",
+    "telemetry.m3.val": "100%",
+    "telemetry.m3.lbl": "Data Privacy in Sovereign AI (VPC/TEE)",
+    "telemetry.m4.val": "4.8x",
+    "telemetry.m4.lbl": "Legacy-to-NextGen Refactoring Acceleration",
+    "telemetry.stream1": "Multi-Agent Swarm [ZK-Verified]",
+    "telemetry.stream2": "CEX/DEX Quant Engine & RWA Vault",
+    "telemetry.stream3": "Sovereign LLM Cluster [AES-256 / TEE]",
+
+    "pillars.subtitle": "Next-Generation Strategic Focus",
+    "pillars.title": "The 4 Engineering Pillars of EPYX by WangariCarbon",
+    "pillars.desc": "We unite autonomous artificial intelligence, high-throughput decentralized infrastructure, and rigorous enterprise engineering to build platforms operating at the technological frontier.",
+
+    "pillars.p1.badge": "PILLAR 01 · AGENTIC WEB3",
+    "pillars.p1.title": "Agentic AI Platforms with Next-Gen Blockchain Hyperautomation",
+    "pillars.p1.desc": "We orchestrate autonomous agent swarms capable of negotiating, auditing, and settling on-chain and off-chain transactions without human intervention. Native integration with verifiable smart contracts, Zero-Knowledge proofs (ZK-Proofs), Account Abstraction (ERC-4337), and decentralized oracles.",
+
+    "pillars.p2.badge": "PILLAR 02 · QUANT & ACADEMY",
+    "pillars.p2.title": "Crypto Asset Trading & Institutional Training Platforms",
+    "pillars.p2.desc": "We engineer low-latency algorithmic execution terminals, CEX/DEX arbitrage engines, collateralized DeFi vaults, and predictive AI risk guards. We integrate interactive academies and institutional trading simulators with AI copilots that train traders and prop desks in real time.",
+
+    "pillars.p3.badge": "PILLAR 03 · NEXT-GEN REFACTORING",
+    "pillars.p3.title": "Enterprise Platform Refactoring to Next-Generation Stacks",
+    "pillars.p3.desc": "We transform critical legacy monoliths into modern distributed architectures (Rust, Go, TypeScript, Event-Driven Kafka, Kubernetes) using Spec-First agentic reverse engineering. Zero-downtime strangler migrations, guaranteed functional parity, and drastic cloud cost reduction.",
+
+    "pillars.p4.badge": "PILLAR 04 · SOVEREIGN AI",
+    "pillars.p4.title": "Elastic Scalability & Security with Sovereign AI",
+    "pillars.p4.desc": "Deployments of foundational models and proprietary agents strictly inside your organization's security perimeter (On-Premise, Bare-Metal GPUs, or Isolated VPC). Zero intellectual property leakage, Trusted Execution Environments (TEEs), end-to-end encryption, and full regulatory compliance.",
+
+    "methodology.subtitle": "Core Methodology",
+    "methodology.title": "Spec-First, Vibe Coding & Sovereign AI Governance",
+    "methodology.desc": "We never write code blindly. We design rigorous formal specifications where senior architects and specialized agent swarms build, refactor, and audit complex systems in parallel.",
+    "methodology.step1.title": "1. Spec-First Blueprint",
+    "methodology.step1.desc": "We map data contracts, financial invariants, and threat models before writing a single line of code, eliminating AI hallucinations and ambiguity.",
+    "methodology.step2.title": "2. Multi-Agent Squads",
+    "methodology.step2.desc": "Coordinated deployments with specialized agents (Antigravity, Claude Code, Cursor) collaborating alongside elite human engineers.",
+    "methodology.step3.title": "3. On-Chain & Formal Audit",
+    "methodology.step3.desc": "Autonomous validator agents execute formal verification of smart contracts, liquidity stress tests, fuzzing, and static security analysis.",
+    "methodology.step4.title": "4. Sovereign Cloud Deploy",
+    "methodology.step4.desc": "Automated provisioning across auto-scaling Kubernetes clusters and Sovereign AI enclaves with real-time observable telemetry.",
+
+    "simulator.subtitle": "Live Interactive Lab",
+    "simulator.title": "Agentic AI & Blockchain Squad Simulator",
+    "simulator.label": "Select an architecture scenario to watch autonomous agents build and audit in real time:",
+    "simulator.project.agentic": "Blockchain Hyperautomation & Agentic AI",
+    "simulator.project.trading": "Crypto Trading Engine & Training Academy",
+    "simulator.project.refactor": "Enterprise Next-Gen Stack Refactoring",
+    "simulator.project.sovereign": "Zero-Trust Sovereign AI Cluster",
+    "simulator.project.carbon": "Wangari Carbon & RWA Tokenization",
+    "simulator.project.agro": "Agro Embedded Finance & Derivatives",
+    "simulator.terminal.tab.logs": "Orchestration Logs",
+    "simulator.terminal.tab.chat": "AI Squad Collaboration",
+    "simulator.terminal.tab.code": "Generated Code & Contracts",
+    "simulator.btn.run": "Run Squad Simulation",
+    "simulator.terminal.idle": "Console ready. Select a strategic scenario above and click 'Run Squad Simulation'...",
+
+    "estimator.subtitle": "Scale & Sovereignty Planner",
+    "estimator.title": "Architecture, Scale & Refactoring Simulator",
+    "estimator.desc": "Configure your operational profile to estimate performance gains, latency reduction, and the reference stack recommended by EPYX by WangariCarbon engineering.",
+    "estimator.domain.label": "Primary Project Domain",
+    "estimator.domain.opt1": "Agentic AI Platform & Blockchain Hyperautomation",
+    "estimator.domain.opt2": "Algorithmic Crypto Trading & Training Platform",
+    "estimator.domain.opt3": "Enterprise Platform Refactoring to Next-Gen Stack",
+    "estimator.domain.opt4": "Sovereign AI Infrastructure & Zero-Trust Security",
+    "estimator.scale.label": "Daily Operations / Inferences Volume",
+    "estimator.autonomy.label": "Hyperautomation & Autonomous Agent Level",
+    "estimator.security.label": "Data Sovereignty & Isolation Model",
+    "estimator.sec.opt1": "Dedicated Hybrid VPC + Cryptographic Guardrails",
+    "estimator.sec.opt2": "100% Sovereign AI (On-Premise / Air-Gapped TEE Enclaves)",
+    "estimator.sec.opt3": "Decentralized Consensus + Zero-Knowledge (ZK) Verification",
+    "estimator.kpi1.label": "Estimated Infra / Operational Cost Reduction",
+    "estimator.kpi2.label": "Delivery Velocity Gain (Spec-First Squad)",
+    "estimator.kpi3.label": "Target Orchestration / Execution Latency",
+    "estimator.kpi4.label": "Sovereignty & Cyber Resilience Score",
+    "estimator.rec.title": "AGENTIC ARCHITECT RECOMMENDED STACK:",
+
+    "services.subtitle": "High-Complexity Engineering",
+    "services.title": "Technological Specialties",
+    "services.desc": "End-to-end solutions engineered for financial institutions, crypto asset managers, enterprises undergoing digital transformation, and Web3 ecosystems.",
+    "services.card1.title": "On-Chain Hyperautomation with Agentic AI",
+    "services.card1.desc": "Autonomous agents connected to EVM, Solana, and L2 networks for programmable treasury execution, atomic settlement, arbitrage, and automated governance.",
+    "services.card2.title": "Crypto Trading & Execution Engines",
+    "services.card2.desc": "Development of institutional trading terminals, smart order routing (SOR), automated market making, and predictive on-chain sentiment and flow analytics.",
+    "services.card3.title": "Crypto Training Platforms & Market Simulators",
+    "services.card3.desc": "Gamified financial education and market simulation environments with historical tick replay (paper trading), risk scoring, and real-time AI coaching.",
+    "services.card4.title": "AI-Assisted Enterprise Refactoring",
+    "services.card4.desc": "Safe architectural translation of legacy systems (Java, .NET, PHP, COBOL) into Rust, Go, and Node.js/TypeScript microservices with automated test coverage.",
+    "services.card5.title": "Sovereign AI Infrastructure",
+    "services.card5.desc": "Deployment of proprietary LLMs (fine-tuned Llama, Qwen, Mistral) and local vector databases with full ownership of weights, prompts, and sensitive corporate data.",
+    "services.card6.title": "RWA Tokenization & Crypto Collateralization",
+    "services.card6.desc": "Fractionalization of real-world assets, green bonds, and Bitcoin/Stablecoin collateralized credit with Chainlink oracles and automated LTV management.",
+    "services.card7.title": "Zero-Trust Security & Continuous Auditing",
+    "services.card7.desc": "Hardening of critical platforms with cryptographic MFA, MPC Wallets, real-time anomaly detection, and protection against MEV and flash-loan exploits.",
+    "services.card8.title": "Global Payments, Pix & Cross-Border Settlement",
+    "services.card8.desc": "High-resilience multi-currency payment gateways bridging traditional banking rails (Pix, SPEI, ACH) with instant stablecoin liquidity.",
+
+    "cases.subtitle": "Ecosystem & Production Cases",
+    "cases.title": "Platforms Engineered for Global Scale",
+    "cases.desc": "Explore the production products and infrastructures built under the EPYX by WangariCarbon technological signature.",
+    "cases.c1.tag": "RWA Blockchain & Sustainability",
+    "cases.c1.desc": "Decentralized platform for certifying, IoT-tracking, and trading carbon credits and tokenized environmental assets with immutable auditing and global liquidity.",
+    "cases.c2.tag": "Refactoring & Sovereign AI",
+    "cases.c2.desc": "Spec-First engineering suite orchestrating agent swarms for legacy enterprise refactoring, strictly typed code generation, and Sovereign AI cluster deployment.",
+    "cases.c3.tag": "Crypto Trading & Academy",
+    "cases.c3.desc": "Integrated quantitative crypto execution ecosystem and immersive training platform featuring derivatives simulation, BTC collateral vaults, and an on-chain AI copilot.",
+    "cases.c4.tag": "Agro Embedded Finance & DeFi",
+    "cases.c4.desc": "Embedded financial architecture integrating satellite NDVI scoring engines, multi-currency wallets, commodity hedging, and blockchain digital CPR issuance.",
+    "cases.link.explore": "Explore Architecture",
+    "cases.link.btclab": "Open Crypto Simulator",
+    "cases.link.live": "Live Preview",
+
+    "contact.subtitle": "Initiate Your Technological Evolution",
+    "contact.title": "Build or Refactor Your Platform with Our Squad",
+    "contact.desc": "Schedule a technical session with our Sovereign AI, Blockchain, and Systems Engineering architects. We structure your complete project specification under strict confidentiality.",
+    "contact.badge1": "Spec-First technical diagnosis within 24 hours",
+    "contact.badge2": "Sovereign AI architecture & guaranteed NDA",
+    "contact.badge3": "Global operations: Brazil, Uruguay, USA & Europe",
+    "contact.form.header": "Encrypted Architecture Briefing",
+    "contact.form.name": "Full Name",
+    "contact.form.name.ph": "e.g., Carlos Mendes",
+    "contact.form.company": "Company / Institution",
+    "contact.form.company.ph": "e.g., Alpha Capital / Enterprise Corp",
+    "contact.form.email": "Corporate Email",
+    "contact.form.email.ph": "you@company.com",
+    "contact.form.phone": "WhatsApp / Phone",
+    "contact.form.phone.ph": "+1 (555) 000-0000",
+    "contact.form.pillar": "Primary Project Focus",
+    "contact.form.pillar.opt1": "Agentic AI Platform & Blockchain Hyperautomation",
+    "contact.form.pillar.opt2": "Crypto Asset Trading or Training Platform",
+    "contact.form.pillar.opt3": "Enterprise Platform Refactoring (Next-Gen Stack)",
+    "contact.form.pillar.opt4": "Sovereign AI Deployment, Scalability & Security",
+    "contact.form.pillar.opt5": "RWA Tokenization, Payments & Embedded Finance",
+    "contact.form.message": "Technical Scope, Scale Challenges or Objectives",
+    "contact.form.message.ph": "Describe the platform you want to build or refactor, expected throughput, data sovereignty requirements, or blockchain integrations...",
+    "contact.form.submit": "Transmit Project Specification",
+    "contact.form.sending": "Encrypting and transmitting to EPYX node...",
+    "contact.form.success": "Briefing successfully registered on the EPYX by WangariCarbon protocol! Our principal architects will reach out shortly.",
+
+    "footer.rights": "© 2026 EPYX by WangariCarbon. All rights reserved. Sovereign AI, Blockchain & Mission-Critical Systems Engineering.",
+    "footer.link.security": "Sovereign AI & Security",
+    "footer.link.spec": "Spec-First Methodology",
+    "footer.link.btclab": "BTC Auto Simulator"
+  }
+};
+
+let currentLanguage = 'pt'; // Português do Brasil as default
+
+// ============================================================
+// Multi-Language Simulator Scenarios (6 Next-Gen Scenarios)
+// ============================================================
+const simulatorData = {
+  agentic: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Enxame de IA Agêntica & Hiperautomação Web3...",
+        "SPECIFICATION: Carregando 'spec/agentic_blockchain_swarm_v4.json'...",
+        "ARCHITECT: Invariantes de liquidação atômica e limites de gas ERC-4337 definidos.",
+        "DEPLOYING: Ativando agentes (Antigravity, Claude Code & Sovereign Guard)...",
+        "ANTIGRAVITY: Compilando contrato `AgenticTreasuryVault.sol` com verificação ZK: [OK]",
+        "CLAUDE CODE: Orquestrando grafo de decisão multi-agente para arbitragem e liquidação... [COMPILING]",
+        "CLAUDE CODE: Agente Executor assinou transação via sessão MPC-AA com latência de 9ms: [OK]",
+        "VALIDATOR: Auditoria Slither + Verificação Formal de invariantes de saldo... [OK]",
+        "VALIDATOR: Zero vulnerabilidades de reentrância ou manipulação de oráculo detectadas.",
+        "COMPLETED: Plataforma de IA Agêntica em Blockchain implantada na rede principal.",
+        "SYSTEM: Execução concluída em 4.12s · Prova ZK #0x9f8a...c41 verificada."
+      ],
+      es: [
+        "STATUS: Inicializando Enjambre de IA Agéntica & Hiperautomatización Web3...",
+        "SPECIFICATION: Cargando 'spec/agentic_blockchain_swarm_v4.json'...",
+        "ARCHITECT: Invariantes de liquidación atómica y límites de gas ERC-4337 definidos.",
+        "DEPLOYING: Activando agentes (Antigravity, Claude Code & Sovereign Guard)...",
+        "ANTIGRAVITY: Compilando contrato `AgenticTreasuryVault.sol` con verificación ZK: [OK]",
+        "CLAUDE CODE: Orquestando grafo de decisión multi-agente para arbitraje y liquidación... [COMPILING]",
+        "CLAUDE CODE: Agente Ejecutor firmó transacción vía sesión MPC-AA con latencia de 9ms: [OK]",
+        "VALIDATOR: Auditoría Slither + Verificación Formal de invariantes de balance... [OK]",
+        "VALIDATOR: Cero vulnerabilidades de reentrancia o manipulación de oráculo detectadas.",
+        "COMPLETED: Plataforma de IA Agéntica en Blockchain desplegada en red principal.",
+        "SYSTEM: Ejecución finalizada en 4.12s · Prueba ZK #0x9f8a...c41 verificada."
+      ],
+      en: [
+        "STATUS: Initializing Agentic AI Swarm & Web3 Hyperautomation...",
+        "SPECIFICATION: Loading 'spec/agentic_blockchain_swarm_v4.json'...",
+        "ARCHITECT: Atomic settlement invariants and ERC-4337 gas bounds locked.",
+        "DEPLOYING: Activating agents (Antigravity, Claude Code & Sovereign Guard)...",
+        "ANTIGRAVITY: Compiling `AgenticTreasuryVault.sol` with ZK-proof verification: [OK]",
+        "CLAUDE CODE: Orchestrating multi-agent decision graph for arbitrage & settlement... [COMPILING]",
+        "CLAUDE CODE: Executor Agent signed transaction via MPC-AA session key in 9ms: [OK]",
+        "VALIDATOR: Slither Audit + Formal Verification of balance invariants... [OK]",
+        "VALIDATOR: Zero reentrancy or oracle manipulation vectors detected.",
+        "COMPLETED: Agentic Blockchain Hyperautomation platform live on mainnet.",
+        "SYSTEM: Execution finalized in 4.12s · ZK Proof #0x9f8a...c41 verified."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Objetivo: Construir um cofre de hiperautomação onde agentes de IA executam rebalanceamento de liquidez e liquidações on-chain apenas quando a prova criptográfica de risco (ZK-Proof) for validada." },
+        { sender: "Antigravity", message: "Entendido. Vou estruturar o smart contract `AgenticTreasuryVault.sol` com suporte a ERC-4337 Session Keys e verificação de provas ZK antes de liberar qualquer execução autônoma." },
+        { sender: "Claude Code", message: "Vou implementar o orquestrador do enxame de agentes. O Agente Analista monitora os oráculos Chainlink e mempools, enquanto o Agente Executor gera a prova determinística de execução." },
+        { sender: "Antigravity", message: "Adicionei travas de segurança (`CircuitBreaker`) que limitam o drawdown máximo por época em 0.5% e exigem assinatura multi-agente 3-de-4." },
+        { sender: "Validator", message: "Verificação formal concluída: 32/32 testes de invariante aprovados. Simulação de ataque Flash-Loan bloqueada com sucesso." }
+      ],
+      es: [
+        { sender: "Architect", message: "Objetivo: Construir una bóveda de hiperautomatización donde agentes de IA ejecuten rebalanceo de liquidez y liquidaciones on-chain solo cuando la prueba criptográfica de riesgo (ZK-Proof) sea validada." },
+        { sender: "Antigravity", message: "Entendido. Estructuraré el smart contract `AgenticTreasuryVault.sol` con soporte ERC-4337 Session Keys y verificación ZK antes de autorizar cualquier ejecución autónoma." },
+        { sender: "Claude Code", message: "Implementaré el orquestador del enjambre de agentes. El Agente Analista monitorea oráculos Chainlink y mempools, mientras el Agente Ejecutor genera la prueba determinística." },
+        { sender: "Antigravity", message: "Añadí frenos de seguridad (`CircuitBreaker`) que limitan el drawdown máximo por época al 0.5% y exigen firma multi-agente 3-de-4." },
+        { sender: "Validator", message: "Verificación formal completada: 32/32 pruebas de invariante aprobadas. Simulación de ataque Flash-Loan bloqueada con éxito." }
+      ],
+      en: [
+        { sender: "Architect", message: "Goal: Build a hyperautomation vault where autonomous AI agents execute liquidity rebalancing and on-chain settlements strictly when a cryptographic risk ZK-Proof is verified." },
+        { sender: "Antigravity", message: "Understood. I'll structure `AgenticTreasuryVault.sol` with ERC-4337 Session Keys and on-chain ZK-verifier hooks prior to authorizing any autonomous state transition." },
+        { sender: "Claude Code", message: "I'll implement the agent swarm orchestrator. The Analyst Agent monitors Chainlink feeds and mempools while the Executor Agent generates the deterministic execution proof." },
+        { sender: "Antigravity", message: "Added `CircuitBreaker` guardrails capping per-epoch slippage at 0.50% and enforcing 3-of-4 multi-agent quorum signatures." },
+        { sender: "Validator", message: "Formal verification complete: 32/32 invariant tests passed. Simulated Flash-Loan exploit blocked deterministically." }
+      ]
+    },
+    code: `// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+
+interface IZKAgentVerifier {
+    function verifyIntentProof(bytes calldata proof, bytes32 intentHash) external view returns (bool);
+}
+
+contract AgenticTreasuryVault is ReentrancyGuard {
+    IZKAgentVerifier public immutable zkVerifier;
+    uint256 public constant MAX_SLIPPAGE_BPS = 50; // 0.50% max autonomous slippage
+    mapping(address => bool) public authorizedSwarmAgents;
+    mapping(bytes32 => bool) public executedIntents;
+
+    event HyperautomatedSettlement(bytes32 indexed intentId, address indexed agent, uint256 volume, uint256 timestamp);
+
+    constructor(address _zkVerifier) {
+        zkVerifier = IZKAgentVerifier(_zkVerifier);
+    }
+
+    function executeAutonomousStrategy(
+        bytes32 intentId,
+        uint256 amount,
+        uint256 expectedMinOut,
+        bytes calldata zkRiskProof,
+        bytes calldata targetCalldata
+    ) external nonReentrant returns (bytes memory result) {
+        require(authorizedSwarmAgents[msg.sender], "ERR_UNAUTHORIZED_AGENT_NODE");
+        require(!executedIntents[intentId], "ERR_INTENT_ALREADY_SETTLED");
+
+        bytes32 intentHash = keccak256(abi.encodePacked(intentId, amount, expectedMinOut, block.chainid));
+        require(zkVerifier.verifyIntentProof(zkRiskProof, intentHash), "ERR_INVALID_ZK_AGENT_PROOF");
+
+        executedIntents[intentId] = true;
+        emit HyperautomatedSettlement(intentId, msg.sender, amount, block.timestamp);
+        return targetCalldata;
+    }
+}`
+  },
+
+  trading: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Motor Quant Cripto & Plataforma de Treinamento...",
+        "SPECIFICATION: Carregando 'spec/crypto_trading_academy_engine.json'...",
+        "ARCHITECT: Definindo pipeline WebSocket de Orderbook L3 + Copiloto de Treinamento IA.",
+        "DEPLOYING: Ativando agentes (Antigravity, Cursor & Claude Code)...",
+        "ANTIGRAVITY: Construindo roteador de ordens CEX/DEX em Rust/TypeScript: [OK]",
+        "CURSOR: Treinando modelo de detecção de regime de volatilidade e liquidez: [COMPILING]",
+        "CLAUDE CODE: Integrando Simulador de Replay Histórico & Coach Agêntico para Traders: [OK]",
+        "VALIDATOR: Backtesting em 180.000 ticks de BTC/USDT e ETH/USDC... Sharpe Ratio: 3.14 [OK]",
+        "VALIDATOR: Travas de Value-at-Risk (VaR) e proteção anti-MEV ativas.",
+        "COMPLETED: Plataforma de Trading & Academia Cripto pronta para operação institucional.",
+        "SYSTEM: Latência ponta a ponta medida em 4.2ms."
+      ],
+      es: [
+        "STATUS: Inicializando Motor Quant Cripto & Plataforma de Entrenamiento...",
+        "SPECIFICATION: Cargando 'spec/crypto_trading_academy_engine.json'...",
+        "ARCHITECT: Definiendo pipeline WebSocket de Orderbook L3 + Copiloto de Entrenamiento IA.",
+        "DEPLOYING: Activando agentes (Antigravity, Cursor & Claude Code)...",
+        "ANTIGRAVITY: Construyendo enrutador de órdenes CEX/DEX en Rust/TypeScript: [OK]",
+        "CURSOR: Entrenando modelo de detección de régimen de volatilidad y liquidez: [COMPILING]",
+        "CLAUDE CODE: Integrando Simulador de Replay Histórico & Coach Agéntico para Traders: [OK]",
+        "VALIDATOR: Backtesting en 180.000 ticks de BTC/USDT y ETH/USDC... Sharpe Ratio: 3.14 [OK]",
+        "VALIDATOR: Frenos de Value-at-Risk (VaR) y protección anti-MEV activos.",
+        "COMPLETED: Plataforma de Trading & Academia Cripto lista para operación institucional.",
+        "SYSTEM: Latencia extremo a extremo medida en 4.2ms."
+      ],
+      en: [
+        "STATUS: Booting Crypto Quant Engine & Institutional Training Platform...",
+        "SPECIFICATION: Loading 'spec/crypto_trading_academy_engine.json'...",
+        "ARCHITECT: Defining L3 Orderbook WebSocket pipeline + AI Training Copilot.",
+        "DEPLOYING: Activating agents (Antigravity, Cursor & Claude Code)...",
+        "ANTIGRAVITY: Scaffolding CEX/DEX Smart Order Router in Rust/TypeScript: [OK]",
+        "CURSOR: Training volatility regime & orderbook imbalance model: [COMPILING]",
+        "CLAUDE CODE: Integrating Historical Tick Replay Simulator & Agentic Trader Coach: [OK]",
+        "VALIDATOR: Backtesting across 180,000 BTC/USDT & ETH/USDC ticks... Sharpe: 3.14 [OK]",
+        "VALIDATOR: Value-at-Risk (VaR) circuit breakers and anti-MEV protection active.",
+        "COMPLETED: Crypto Trading & Training Platform ready for institutional deployment.",
+        "SYSTEM: End-to-end execution latency measured at 4.2ms."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Precisamos unir dois módulos: o motor de execução algorítmica para criptoativos (CEX/DEX) e o ambiente de treinamento onde traders simulam estratégias com feedback de IA em tempo real." },
+        { sender: "Antigravity", message: "Estou implementando o Smart Order Router com agregação de liquidez entre Binance, Hyperliquid e Uniswap v4, garantindo execução com menor impacto de preço." },
+        { sender: "Cursor", message: "Criei o motor de análise de fluxo (Order Flow Imbalance) que calcula o risco dinâmico e alimenta tanto o robô de trading quanto o painel educacional." },
+        { sender: "Claude Code", message: "Conectei o Agente Mentor de Trading: enquanto o aluno opera no simulador com replay de mercado real, a IA avalia posicionamento de stop, alavancagem e psicologia operacional." },
+        { sender: "Validator", message: "Testes de carga concluídos: 25.000 ordens/seg processadas sem perda de pacotes. Módulo de treinamento sincronizado com dados em tempo real." }
+      ],
+      es: [
+        { sender: "Architect", message: "Necesitamos unir dos módulos: el motor de ejecución algorítmica para criptoactivos (CEX/DEX) y el entorno de entrenamiento donde los traders simulan estrategias con feedback de IA en tiempo real." },
+        { sender: "Antigravity", message: "Estoy implementando el Smart Order Router con agregación de liquidez entre Binance, Hyperliquid y Uniswap v4, garantizando ejecución con mínimo impacto de precio." },
+        { sender: "Cursor", message: "Creé el motor de análisis de flujo (Order Flow Imbalance) que calcula el riesgo dinámico y alimenta tanto al bot de trading como al panel educativo." },
+        { sender: "Claude Code", message: "Conecté el Agente Mentor de Trading: mientras el alumno opera en el simulador con replay de mercado real, la IA evalúa stops, apalancamiento y gestión emocional." },
+        { sender: "Validator", message: "Pruebas de carga completadas: 25.000 órdenes/seg procesadas sin pérdida de paquetes. Módulo de entrenamiento sincronizado." }
+      ],
+      en: [
+        { sender: "Architect", message: "We need to unify two modules: the low-latency CEX/DEX algorithmic execution engine and the training simulator where traders practice strategies with real-time AI coaching." },
+        { sender: "Antigravity", message: "I'm implementing the Smart Order Router aggregating liquidity across Binance, Hyperliquid, and Uniswap v4 for minimal price impact." },
+        { sender: "Cursor", message: "Built the Order Flow Imbalance analyzer computing dynamic VaR metrics to feed both live algorithmic vaults and the training cockpit." },
+        { sender: "Claude Code", message: "Connected the Agentic Trading Coach: as trainees trade on historical or live market replays, the AI evaluates drawdown discipline, sizing, and risk-reward ratios." },
+        { sender: "Validator", message: "Stress tests complete: 25,000 orders/sec processed with zero dropped frames. Training telemetry synchronized." }
+      ]
+    },
+    code: `// engine/quant_router_and_coach.ts
+import { OrderBookStream, SmartOrderRouter } from '@epyx/quant-core';
+import { SovereignAgentCoach } from '@epyx/sovereign-ai';
+
+export class CryptoTradingAndAcademyEngine {
+  private router = new SmartOrderRouter({ venues: ['BINANCE_PERP', 'HYPERLIQUID', 'UNISWAP_V4'] });
+  private aiCoach = new SovereignAgentCoach({ model: 'epyx-quant-llm-v3', mode: 'REALTIME_MENTOR' });
+
+  async executeOrSimulateOrder(session: {
+    traderId: string;
+    mode: 'LIVE_EXECUTION' | 'ACADEMY_SIMULATOR';
+    pair: 'BTC/USDT' | 'ETH/USDC' | 'SOL/USDT';
+    side: 'BUY' | 'SELL';
+    sizeUsd: number;
+    leverage: number;
+  }) {
+    const l3Snapshot = await OrderBookStream.getSnapshot(session.pair);
+    const riskReport = this.router.computeVaR(l3Snapshot, session.sizeUsd, session.leverage);
+
+    // Real-time AI Coaching & Risk Guardrail Evaluation
+    const coachingFeedback = await this.aiCoach.evaluateTradeIntent({
+      orderbookImbalance: l3Snapshot.ofiScore,
+      volatilityRegime: l3Snapshot.realizedVol24h,
+      leverage: session.leverage,
+      liquidationDistancePct: riskReport.liquidationBufferPct
+    });
+
+    if (riskReport.exceedsMaxDrawdown && session.mode === 'LIVE_EXECUTION') {
+      throw new Error(\`RISK_GUARD_BLOCKED: \${coachingFeedback.recommendation}\`);
+    }
+
+    const execution = await this.router.dispatchOptimalRoute(session, l3Snapshot);
+    return { execution, riskReport, coachingFeedback };
+  }
+}`
+  },
+
+  refactor: {
+    logs: {
+      pt: [
+        "STATUS: Iniciando Refatoração Corporativa Spec-First para Stack Next-Gen...",
+        "SPECIFICATION: Extraindo grafo semântico de monólito legado (1.4M linhas de código)...",
+        "ARCHITECT: Plano Strangler Fig definido: Migração Java/COBOL -> Rust + Go + Kafka.",
+        "DEPLOYING: Ativando enxame de refatoração (Antigravity, Claude Code & Cursor)...",
+        "CLAUDE CODE: Mapeando 420 regras de negócio críticas para especificações formais OpenAPI/Protobuf: [OK]",
+        "ANTIGRAVITY: Gerando microsserviços em Rust (Actix/Axum) com tipagem estrita e zero-copy: [COMPILING]",
+        "CURSOR: Executando testes de sombra (Shadow Traffic) comparando legado vs nova stack: [OK]",
+        "VALIDATOR: Paridade funcional de 100.00% em 1.2M transações espelhadas.",
+        "VALIDATOR: Redução de consumo de memória em 74% e latência P99 de 840ms para 11ms.",
+        "COMPLETED: Refatoração concluída sem downtime. Monólito desativado com segurança.",
+        "SYSTEM: Pipeline de modernização finalizado."
+      ],
+      es: [
+        "STATUS: Iniciando Refactorización Corporativa Spec-First hacia Stack Next-Gen...",
+        "SPECIFICATION: Extrayendo grafo semántico de monolito legado (1.4M líneas de código)...",
+        "ARCHITECT: Plan Strangler Fig definido: Migración Java/COBOL -> Rust + Go + Kafka.",
+        "DEPLOYING: Activando enjambre de refactorización (Antigravity, Claude Code & Cursor)...",
+        "CLAUDE CODE: Mapeando 420 reglas de negocio críticas a especificaciones formales OpenAPI/Protobuf: [OK]",
+        "ANTIGRAVITY: Generando microservicios en Rust (Actix/Axum) con tipado estricto y zero-copy: [COMPILING]",
+        "CURSOR: Ejecutando pruebas de sombra (Shadow Traffic) comparando legado vs nuevo stack: [OK]",
+        "VALIDATOR: Paridad funcional del 100.00% en 1.2M transacciones espejadas.",
+        "VALIDATOR: Reducción de memoria del 74% y latencia P99 de 840ms a 11ms.",
+        "COMPLETED: Refactorización concluida sin downtime. Monolito retirado con seguridad.",
+        "SYSTEM: Pipeline de modernización finalizado."
+      ],
+      en: [
+        "STATUS: Initiating Spec-First Enterprise Refactoring to Next-Gen Stack...",
+        "SPECIFICATION: Extracting semantic AST graph from legacy monolith (1.4M LOC)...",
+        "ARCHITECT: Strangler Fig blueprint locked: Legacy Java/COBOL -> Rust + Go + Kafka.",
+        "DEPLOYING: Activating refactoring swarm (Antigravity, Claude Code & Cursor)...",
+        "CLAUDE CODE: Translating 420 business rules into formal OpenAPI/Protobuf specs: [OK]",
+        "ANTIGRAVITY: Generating zero-copy Rust microservices with strict memory safety: [COMPILING]",
+        "CURSOR: Running live Shadow Traffic parity tests (Legacy vs Next-Gen Stack): [OK]",
+        "VALIDATOR: 100.00% deterministic output parity across 1.2M mirrored requests.",
+        "VALIDATOR: Memory footprint reduced by 74% · P99 latency dropped from 840ms to 11ms.",
+        "COMPLETED: Zero-downtime cutover complete. Legacy monolith safely decommissioned.",
+        "SYSTEM: Modernization pipeline finalized."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Temos um sistema corporativo legado monolítico com alto custo de manutenção e gargalos severos. A meta é refatorar para Rust e Go em arquitetura orientada a eventos com zero downtime." },
+        { sender: "Claude Code", message: "Realizei a engenharia reversa assistida por IA: extraí todas as regras de negócio ocultas no legado e gerei uma especificação formal imutável antes de escrever o novo código." },
+        { sender: "Antigravity", message: "A partir da Spec, gerei os novos microsserviços de liquidação em Rust com comunicação gRPC e mensageria Kafka, eliminando locks de banco de dados." },
+        { sender: "Cursor", message: "Configurei o proxy de Shadow Traffic: todas as requisições reais de produção são processadas em paralelo pelo legado e pela nova stack para provar equivalência matemática." },
+        { sender: "Validator", message: "1.2 milhão de requisições comparadas com 0 divergências. Latência P99 caiu 98.6% e custo de infraestrutura AWS/On-Premise reduziu em 68%." }
+      ],
+      es: [
+        { sender: "Architect", message: "Tenemos un sistema corporativo legado monolítico con alto costo de mantenimiento y cuellos de botella. La meta es refactorizar hacia Rust y Go en arquitectura orientada a eventos sin downtime." },
+        { sender: "Claude Code", message: "Realicé la ingeniería inversa asistida por IA: extraje todas las reglas de negocio ocultas en el legado y generé una especificación formal inmutable antes de codificar." },
+        { sender: "Antigravity", message: "A partir de la Spec, generé los nuevos microservicios de liquidación en Rust con comunicación gRPC y mensajería Kafka, eliminando bloqueos de base de datos." },
+        { sender: "Cursor", message: "Configuré el proxy de Shadow Traffic: todas las solicitudes reales se procesan en paralelo por el legado y el nuevo stack para probar equivalencia matemática." },
+        { sender: "Validator", message: "1.2 millones de transacciones comparadas con 0 divergencias. Latencia P99 cayó 98.6% y el costo de infraestructura se redujo un 68%." }
+      ],
+      en: [
+        { sender: "Architect", message: "We are refactoring a mission-critical legacy monolith suffering from high cloud costs and database lock bottlenecks into an event-driven Rust and Go stack with zero downtime." },
+        { sender: "Claude Code", message: "Completed AI-assisted reverse engineering: extracted all implicit business rules from the legacy codebase into a formal specification before generating new code." },
+        { sender: "Antigravity", message: "From the Spec, I scaffolded the new settlement microservices in Rust using gRPC and Kafka event sourcing, eliminating synchronous DB locks." },
+        { sender: "Cursor", message: "Configured the Shadow Traffic proxy: live production requests are mirrored in real time across both legacy and next-gen stacks to prove mathematical parity." },
+        { sender: "Validator", message: "1.2M mirrored requests verified with 0 discrepancies. P99 latency dropped 98.6% and compute costs decreased by 68%." }
+      ]
+    },
+    code: `// src/refactoring/shadow_parity_engine.rs
+use std::sync::Arc;
+use tokio::time::Instant;
+
+pub struct NextGenSettlementEngine {
+    pub spec_version: &'static str,
+}
+
+#[derive(Debug, PartialEq, Clone)]
+pub struct LedgerDecision {
+    pub tx_id: String,
+    pub net_amount_cents: i128,
+    pub risk_Cleared: bool,
+    pub state_hash: [u8; 32],
+}
+
+impl NextGenSettlementEngine {
+    /// Spec-First refactored core replacing legacy monolithic stored procedures
+    pub async fn process_atomic_event(&self, tx_id: &str, payload_cents: i128) -> Result<LedgerDecision, &'static str> {
+        let started = Instant::now();
+        if payload_cents <= 0 {
+            return Err("ERR_INVALID_PAYLOAD_INVARIANT");
+        }
+
+        let decision = LedgerDecision {
+            tx_id: tx_id.to_string(),
+            net_amount_cents: payload_cents,
+            risk_Cleared: true,
+            state_hash: blake3::hash(tx_id.as_bytes()).into(),
+        };
+
+        tracing::info!(latency_us = started.elapsed().as_micros(), "Next-Gen Rust core settled event");
+        Ok(decision)
+    }
+}`
+  },
+
+  sovereign: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Cluster de IA Soberana & Governança Zero-Trust...",
+        "SPECIFICATION: Carregando 'spec/sovereign_ai_enclave_policy.json'...",
+        "ARCHITECT: Isolamento Air-Gapped VPC + Hardware TEE (NVIDIA H200 Confidential Compute) ativo.",
+        "DEPLOYING: Ativando agentes de segurança e inferência local...",
+        "ANTIGRAVITY: Provisionando gateway de inferência vLLM Soberano com criptografia mTLS: [OK]",
+        "CLAUDE CODE: Configurando pipeline RAG Privado com sanitização automática de PII/Segredos: [COMPILING]",
+        "CURSOR: Aplicando firewall semântico contra Prompt Injection e exfiltração de dados: [OK]",
+        "VALIDATOR: Teste de penetração Red-Team: 500 vetores de ataque bloqueados (100% defesa).",
+        "VALIDATOR: Atestado criptográfico de enclave (Remote Attestation) verificado: Zero chamadas externas.",
+        "COMPLETED: IA Soberana em produção com soberania total de dados e conformidade LGPD/GDPR.",
+        "SYSTEM: Throughput do cluster: 4.800 tokens/seg com latência interna de 18ms."
+      ],
+      es: [
+        "STATUS: Inicializando Cluster de IA Soberana & Gobernanza Zero-Trust...",
+        "SPECIFICATION: Cargando 'spec/sovereign_ai_enclave_policy.json'...",
+        "ARCHITECT: Aislamiento Air-Gapped VPC + Hardware TEE (NVIDIA H200 Confidential Compute) activo.",
+        "DEPLOYING: Activando agentes de seguridad e inferencia local...",
+        "ANTIGRAVITY: Aprovisionando gateway de inferencia vLLM Soberano con cifrado mTLS: [OK]",
+        "CLAUDE CODE: Configurando pipeline RAG Privado con sanitización automática de PII/Secretos: [COMPILING]",
+        "CURSOR: Aplicando firewall semántico contra Prompt Injection y exfiltración de datos: [OK]",
+        "VALIDATOR: Prueba de penetración Red-Team: 500 vectores de ataque bloqueados (100% defensa).",
+        "VALIDATOR: Atestación criptográfica de enclave (Remote Attestation) verificada: Cero llamadas externas.",
+        "COMPLETED: IA Soberana en producción con soberanía total de datos y cumplimiento GDPR/LGPD.",
+        "SYSTEM: Throughput del cluster: 4.800 tokens/seg con latencia interna de 18ms."
+      ],
+      en: [
+        "STATUS: Initializing Sovereign AI Cluster & Zero-Trust Governance...",
+        "SPECIFICATION: Loading 'spec/sovereign_ai_enclave_policy.json'...",
+        "ARCHITECT: Air-Gapped VPC isolation + Hardware TEE (NVIDIA H200 Confidential Compute) active.",
+        "DEPLOYING: Activating local inference and security agents...",
+        "ANTIGRAVITY: Provisioning Sovereign vLLM inference gateway with mTLS encryption: [OK]",
+        "CLAUDE CODE: Configuring Private RAG pipeline with automated PII/Secret redaction: [COMPILING]",
+        "CURSOR: Enforcing semantic firewall against Prompt Injection & data exfiltration: [OK]",
+        "VALIDATOR: Automated Red-Team penetration suite: 500/500 attack vectors blocked.",
+        "VALIDATOR: Hardware Remote Attestation verified: Zero external API egress.",
+        "COMPLETED: Sovereign AI live with 100% data residency and GDPR/LGPD compliance.",
+        "SYSTEM: Cluster throughput: 4,800 tokens/sec at 18ms internal latency."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Diretriz crítica: Nenhum dado corporativo, código-fonte ou documento financeiro pode sair do perímetro da empresa. Precisamos de IA Soberana rodando em enclaves confidenciais." },
+        { sender: "Antigravity", message: "Configurei o cluster de inferência privado usando GPUs com Confidential Computing (TEE). Os pesos do modelo e os vetores em memória ficam criptografados em hardware." },
+        { sender: "Claude Code", message: "Implementei o pipeline de RAG Soberano com controle de acesso baseado em função (RBAC) no nível do embedding: cada agente só acessa documentos autorizados pelo token criptográfico do usuário." },
+        { sender: "Cursor", message: "Adicionei o Guardrail Zero-Trust de saída com assinatura de auditoria imutável para cada inferência realizada pelos agentes internos." },
+        { sender: "Validator", message: "Auditoria de rede confirmada: bloqueio total de tráfego externo (Egress = 0). Atestado de hardware válido e conformidade LGPD/ISO-27001 certificada." }
+      ],
+      es: [
+        { sender: "Architect", message: "Directriz crítica: Ningún dato corporativo, código fuente o documento financiero puede salir del perímetro de la empresa. Necesitamos IA Soberana operando en enclaves confidenciales." },
+        { sender: "Antigravity", message: "Configuré el cluster de inferencia privado usando GPUs con Confidential Computing (TEE). Los pesos del modelo y los vectores en memoria permanecen cifrados por hardware." },
+        { sender: "Claude Code", message: "Implementé el pipeline de RAG Soberano con control de acceso basado en roles (RBAC) a nivel de embedding: cada agente solo accede a documentos autorizados por el token criptográfico." },
+        { sender: "Cursor", message: "Añadí el Guardrail Zero-Trust de salida con firma de auditoría inmutable para cada inferencia realizada por los agentes internos." },
+        { sender: "Validator", message: "Auditoría de red confirmada: bloqueo total de tráfico externo (Egress = 0). Atestación de hardware válida y cumplimiento GDPR/ISO-27001 certificado." }
+      ],
+      en: [
+        { sender: "Architect", message: "Critical directive: Zero corporate data, source code, or financial records may leave the enterprise perimeter. We need Sovereign AI running inside confidential hardware enclaves." },
+        { sender: "Antigravity", message: "Provisioned the private inference cluster on Confidential Computing GPUs (TEE). Model weights and in-memoryKV caches remain hardware-encrypted at all times." },
+        { sender: "Claude Code", message: "Implemented the Sovereign RAG pipeline with embedding-level RBAC: agents can only retrieve vector chunks matching the caller's cryptographic clearance." },
+        { sender: "Cursor", message: "Added Zero-Trust output guardrails and immutable cryptographic audit logs for every agentic inference." },
+        { sender: "Validator", message: "Network audit confirmed: Zero external egress (Egress = 0.00B). Hardware remote attestation valid and ISO-27001/GDPR compliance verified." }
+      ]
+    },
+    code: `# sovereign_ai/enclave_inference_gateway.py
+import hashlib
+from typing import Dict, List
+
+class SovereignEnclaveGateway:
+    def __init__(self, enclave_measurement: str):
+        self.enclave_measurement = enclave_measurement
+        self.external_egress_allowed = False  # Strict Zero-Egress Policy
+
+    def verify_hardware_attestation(self, quote_signature: str) -> bool:
+        expected = hashlib.sha256(self.enclave_measurement.encode()).hexdigest()[:32]
+        return quote_signature.startswith("TEE_VALID_") and len(expected) == 32
+
+    def execute_sovereign_inference(
+        self,
+        caller_clearance: str,
+        prompt: str,
+        authorized_namespaces: List[str],
+        tee_quote: str
+    ) -> Dict[str, str]:
+        if not self.verify_hardware_attestation(tee_quote):
+            raise PermissionError("ERR_TEE_ATTESTATION_FAILED: Unverified hardware enclave")
+
+        if self.external_egress_allowed:
+            raise SecurityError("ERR_SOVEREIGNTY_VIOLATION: External network egress must be disabled")
+
+        audit_hash = hashlib.sha3_256(f"{caller_clearance}:{prompt}".encode()).hexdigest()
+        return {
+            "status": "SOVEREIGN_ENCLAVE_OK",
+            "model": "epyx-sovereign-70b-instruct-int8",
+            "namespaces_scoped": ",".join(authorized_namespaces),
+            "zero_trust_audit_hash": f"0x{audit_hash[:40]}"
+        }`
+  },
+
+  carbon: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Motor Wangari Carbon & Tokenização RWA...",
+        "SPECIFICATION: Carregando 'spec/wangari_carbon_rwa_ledger.json'...",
+        "ARCHITECT: Definindo parâmetros de telemetria IoT, auditoria satelital e tokenização ERC-3643.",
+        "DEPLOYING: Ativando agentes (Antigravity & Cursor)...",
+        "ANTIGRAVITY: Compilando contratos de emissão e aposentadoria imutável de créditos de carbono: [OK]",
+        "CURSOR: Treinando modelo de clusterização de emissões e originação de ativos verdes: [COMPILING]",
+        "ANTIGRAVITY: Conectando colateralização cripto para financiamento de energia renovável: [OK]",
+        "VALIDATOR: Auditoria de lastro 1:1 com registros de satélite verificada: [OK]",
+        "COMPLETED: Ecossistema Wangari Carbon RWA ativo e liquidando ativos ambientais on-chain.",
+        "SYSTEM: Deploy finalizado em 4.45s."
+      ],
+      es: [
+        "STATUS: Inicializando Motor Wangari Carbon & Tokenización RWA...",
+        "SPECIFICATION: Cargando 'spec/wangari_carbon_rwa_ledger.json'...",
+        "ARCHITECT: Definiendo parámetros de telemetría IoT, auditoría satelital y tokenización ERC-3643.",
+        "DEPLOYING: Activando agentes (Antigravity & Cursor)...",
+        "ANTIGRAVITY: Compilando contratos de emisión y retiro inmutable de créditos de carbono: [OK]",
+        "CURSOR: Entrenando modelo de clusterización de emisiones y originación de activos verdes: [COMPILING]",
+        "ANTIGRAVITY: Conectando colateralización cripto para financiamiento de energía renovable: [OK]",
+        "VALIDATOR: Auditoría de respaldo 1:1 con registros satelitales verificada: [OK]",
+        "COMPLETED: Ecosistema Wangari Carbon RWA activo y liquidando activos ambientales on-chain.",
+        "SYSTEM: Despliegue finalizado en 4.45s."
+      ],
+      en: [
+        "STATUS: Initializing Wangari Carbon Engine & RWA Tokenization...",
+        "SPECIFICATION: Loading 'spec/wangari_carbon_rwa_ledger.json'...",
+        "ARCHITECT: Defining IoT telemetry, satellite auditing, and ERC-3643 RWA tokenization rules.",
+        "DEPLOYING: Activating agents (Antigravity & Cursor)...",
+        "ANTIGRAVITY: Compiling immutable carbon offset minting & retirement contracts: [OK]",
+        "CURSOR: Training emission clustering & green bond origination model: [COMPILING]",
+        "ANTIGRAVITY: Linking crypto-collateral vault for renewable energy project financing: [OK]",
+        "VALIDATOR: 1:1 satellite registry backing audit verified: [OK]",
+        "COMPLETED: Wangari Carbon RWA platform active and settling environmental assets on-chain.",
+        "SYSTEM: Deployment finalized in 4.45s."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Meta: Integrar a rastreabilidade ambiental da Wangari Carbon com nossa infraestrutura de tokenização RWA e liquidação agêntica." },
+        { sender: "Antigravity", message: "Implementei o registro on-chain com prova de origem IoT e bloqueio contra dupla contagem de créditos de carbono." },
+        { sender: "Cursor", message: "O motor de IA cruza dados de emissões industriais e propõe automaticamente estruturas de compensação ou financiamento verde colateralizado." },
+        { sender: "Validator", message: "Contratos RWA e feeds de verificação satelital validados com 100% de cobertura." }
+      ],
+      es: [
+        { sender: "Architect", message: "Meta: Integrar la trazabilidad ambiental de Wangari Carbon con nuestra infraestructura de tokenización RWA y liquidación agéntica." },
+        { sender: "Antigravity", message: "Implementé el registro on-chain con prueba de origen IoT y bloqueo contra doble contabilidad de créditos de carbono." },
+        { sender: "Cursor", message: "El motor de IA cruza datos de emisiones industriales y propone automáticamente estructuras de compensación o financiamiento verde colateralizado." },
+        { sender: "Validator", message: "Contratos RWA y feeds de verificación satelital validados con 100% de cobertura." }
+      ],
+      en: [
+        { sender: "Architect", message: "Goal: Integrate Wangari Carbon's environmental traceability with our RWA tokenization and agentic settlement infrastructure." },
+        { sender: "Antigravity", message: "Implemented the on-chain registry featuring IoT provenance proofs and anti-double-counting retirement locks." },
+        { sender: "Cursor", message: "The AI engine correlates industrial emission telemetry and autonomously structures carbon offset or crypto-collateralized green bond proposals." },
+        { sender: "Validator", message: "RWA smart contracts and satellite verification feeds audited with 100% test coverage." }
+      ]
+    },
+    code: `// blockchain/wangari_rwa_tokenizer.ts
+import { Tokenizer, SatelliteOracle } from '@wangaricarbon/rwa-sdk';
+
+export class WangariCarbonRWAVault {
+  async mintVerifiedCarbonBatch(projectId: string, metricTons: number, iotMerkleRoot: string) {
+    const satelliteCheck = await SatelliteOracle.verifyBiomassAndTelemetry(projectId, iotMerkleRoot);
+    if (!satelliteCheck.verified || satelliteCheck.confidence < 0.98) {
+      throw new Error('ERR_SATELLITE_VERIFICATION_BELOW_THRESHOLD');
+    }
+
+    return await Tokenizer.issueERC3643Batch({
+      issuer: 'EPYX_BY_WANGARICARBON',
+      projectId,
+      supplyTons: metricTons,
+      merkleRoot: iotMerkleRoot,
+      complianceStandard: 'VERRA_GOLD_ONCHAIN_V2'
+    });
+  }
+}`
+  },
+
+  agro: {
+    logs: {
+      pt: [
+        "STATUS: Inicializando Motor Agro Embedded Finance & Derivativos (Ceres Ref)...",
+        "SPECIFICATION: Carregando 'spec/agro_cpr_defi_engine.json'...",
+        "ARCHITECT: Parâmetros de scoring satelital NDVI, carteira multi-moeda e CPR digital definidos.",
+        "DEPLOYING: Ativando agentes (Antigravity & Claude Code)...",
+        "ANTIGRAVITY: Estruturando carteira FX multi-moeda (BRL, USD, USDT) e liquidação instantânea: [OK]",
+        "CLAUDE CODE: Compilando motor de crédito com índice vegetativo NDVI e seguro paramétrico: [COMPILING]",
+        "ANTIGRAVITY: Integrando emissão de CPR Digital registrada em blockchain: [OK]",
+        "VALIDATOR: Simulação com 1.500 produtores e contratos de barter validada: [OK]",
+        "COMPLETED: Plataforma Agro Embedded Finance ativa.",
+        "SYSTEM: Deploy finalizado em 4.60s."
+      ],
+      es: [
+        "STATUS: Inicializando Motor Agro Embedded Finance & Derivados (Ceres Ref)...",
+        "SPECIFICATION: Cargando 'spec/agro_cpr_defi_engine.json'...",
+        "ARCHITECT: Parámetros de scoring satelital NDVI, billetera multimoneda y CPR digital definidos.",
+        "DEPLOYING: Activando agentes (Antigravity & Claude Code)...",
+        "ANTIGRAVITY: Estructurando billetera FX multimoneda (BRL, USD, USDT) y liquidación instantánea: [OK]",
+        "CLAUDE CODE: Compilando motor de crédito con índice vegetativo NDVI y seguro paramétrico: [COMPILING]",
+        "ANTIGRAVITY: Integrando emisión de CPR Digital registrada en blockchain: [OK]",
+        "VALIDATOR: Simulación con 1.500 productores y contratos de barter validada: [OK]",
+        "COMPLETED: Plataforma Agro Embedded Finance activa.",
+        "SYSTEM: Despliegue finalizado en 4.60s."
+      ],
+      en: [
+        "STATUS: Initializing Agro Embedded Finance & Derivatives Engine (Ceres Ref)...",
+        "SPECIFICATION: Loading 'spec/agro_cpr_defi_engine.json'...",
+        "ARCHITECT: Satellite NDVI scoring, multi-currency FX wallet, and Digital CPR rules locked.",
+        "DEPLOYING: Activating agents (Antigravity & Claude Code)...",
+        "ANTIGRAVITY: Scaffolding multi-currency FX wallet (BRL, USD, USDT) with instant clearing: [OK]",
+        "CLAUDE CODE: Compiling NDVI satellite credit scoring & parametric insurance triggers: [COMPILING]",
+        "ANTIGRAVITY: Integrating blockchain-anchored Digital CPR issuance: [OK]",
+        "VALIDATOR: Simulation across 1,500 producers and barter derivatives verified: [OK]",
+        "COMPLETED: Agro Embedded Finance platform active.",
+        "SYSTEM: Deployment finalized in 4.60s."
+      ]
+    },
+    chat: {
+      pt: [
+        { sender: "Architect", message: "Objetivo: Orquestrar crédito agrícola embarcado combinando imagens de satélite NDVI, derivativos de commodities e emissão de CPRs digitais em blockchain." },
+        { sender: "Claude Code", message: "Implementei o modelo de scoring que cruza histórico climático, NDVI da safra e dados financeiros para liberar limite de crédito em segundos." },
+        { sender: "Antigravity", message: "A carteira multi-moeda e o motor de Barter permitem travar o preço da saca em USD/USDT e emitir a CPR Digital assinada criptograficamente." },
+        { sender: "Validator", message: "Oráculos climáticos e contratos de liquidação auditados com sucesso." }
+      ],
+      es: [
+        { sender: "Architect", message: "Objetivo: Orquestar crédito agrícola embebido combinando imágenes satelitales NDVI, derivados de commodities y emisión de CPRs digitales en blockchain." },
+        { sender: "Claude Code", message: "Implementé el modelo de scoring que cruza historial climático, NDVI del cultivo y datos financieros para aprobar límites en segundos." },
+        { sender: "Antigravity", message: "La billetera multimoneda y el motor de Barter permiten fijar el precio del grano en USD/USDT y emitir la CPR Digital con firma criptográfica." },
+        { sender: "Validator", message: "Oráculos climáticos y contratos de liquidación auditados con éxito." }
+      ],
+      en: [
+        { sender: "Architect", message: "Goal: Orchestrate embedded agricultural finance combining NDVI satellite imagery, commodity derivatives, and blockchain Digital CPR issuance." },
+        { sender: "Claude Code", message: "Implemented the scoring engine fusing climate telemetry, crop NDVI indices, and credit bureaus to underwrite limits in seconds." },
+        { sender: "Antigravity", message: "The multi-currency wallet and Barter engine lock commodity prices in USD/USDT and mint cryptographically signed Digital CPRs." },
+        { sender: "Validator", message: "Parametric weather oracles and settlement contracts verified." }
+      ]
+    },
+    code: `// core/agro_embedded_finance.ts
+import { SatelliteScoring } from '@ceres/ndvi-score';
+import { CPRBlockchainRegistry } from '@epyx/agro-chain';
+
+export class AgroEmbeddedFinanceEngine {
+  async underwriteAndIssueCPR(producerId: string, soybeanTons: number) {
+    const ndvi = await SatelliteScoring.evaluateCropHealth(producerId);
+    const creditMultiplier = ndvi.score > 85 ? 1.45 : 1.0;
+
+    return await CPRBlockchainRegistry.mintDigitalCPR({
+      producerId,
+      commodity: 'SOYBEAN_EXPORT_GRADE',
+      volumeTons: soybeanTons,
+      creditLimitUsd: Math.round(soybeanTons * 410 * creditMultiplier),
+      parametricInsuranceActive: true
+    });
+  }
+}`
+  }
+};
+
+// ============================================================
+// Language Switcher Logic
+// ============================================================
+let selectedProject = 'agentic';
+let isSimRunning = false;
+
+function setLanguage(lang) {
+  if (!translations[lang]) return;
+  currentLanguage = lang;
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+
+  if (translations[lang]["meta.title"]) {
+    document.title = translations[lang]["meta.title"];
+  }
+
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = translations[lang][key];
+
+    if (translation) {
+      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+        element.placeholder = translation;
+      } else {
+        element.innerHTML = translation;
+      }
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    const translation = translations[lang][key];
+    if (translation) {
+      element.placeholder = translation;
+    }
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+
+  // Update simulator idle text or re-render active simulation in the selected language
+  if (!isSimRunning) {
+    const logsEl = document.getElementById('sim-logs');
+    const chatEl = document.getElementById('sim-chat');
+    const codeEl = document.getElementById('sim-code');
+    if (logsEl && logsEl.querySelector('.idle-text')) {
+      logsEl.innerHTML = `<div class="idle-text">${translations[lang]["simulator.terminal.idle"]}</div>`;
+    }
+    if (chatEl && chatEl.querySelector('.idle-text')) {
+      chatEl.innerHTML = `<div class="idle-text">${translations[lang]["simulator.terminal.idle"]}</div>`;
+    }
+    if (codeEl && codeEl.dataset.state === 'idle') {
+      codeEl.textContent = translations[lang]["simulator.terminal.idle"];
+    }
+  }
+
+  updateArchitectureEstimator();
+  localStorage.setItem('epyx_wangari_lang', lang);
+}
+
+// ============================================================
+// Simulator Execution Engine
+// ============================================================
+let simTimers = [];
+
+function clearSimulation() {
+  simTimers.forEach(clearTimeout);
+  simTimers = [];
+  isSimRunning = false;
+
+  const logsEl = document.getElementById('sim-logs');
+  const chatEl = document.getElementById('sim-chat');
+  const codeEl = document.getElementById('sim-code');
+
+  if (logsEl) logsEl.innerHTML = '';
+  if (chatEl) chatEl.innerHTML = '';
+  if (codeEl) {
+    codeEl.textContent = '';
+    codeEl.dataset.state = 'active';
+  }
+}
+
+function runSimulation(projectKey) {
+  clearSimulation();
+  const data = simulatorData[projectKey];
+  if (!data) return;
+
+  isSimRunning = true;
+  const logsContainer = document.getElementById('sim-logs');
+  const chatContainer = document.getElementById('sim-chat');
+  const codeContainer = document.getElementById('sim-code');
+  const runBtn = document.querySelector('.sim-btn-run');
+
+  if (runBtn) runBtn.disabled = true;
+
+  const langLogs = data.logs[currentLanguage] || data.logs.pt;
+  const langChat = data.chat[currentLanguage] || data.chat.pt;
+  const codeText = data.code;
+
+  // 1. Logs timeline
+  let logIdx = 0;
+  function printNextLog() {
+    if (logIdx < langLogs.length) {
+      const line = document.createElement('div');
+      line.className = 'log-line';
+
+      let html = langLogs[logIdx];
+      html = html.replace(/\[OK\]/g, '<span class="log-ok">[OK]</span>');
+      html = html.replace(/\[COMPILING\]/g, '<span class="log-warning">[COMPILING]</span>');
+      html = html.replace(/(STATUS:|SPECIFICATION:|ARCHITECT:|DEPLOYING:|ANTIGRAVITY:|CLAUDE CODE:|CURSOR:|VALIDATOR:|COMPLETED:|SYSTEM:)/g, '<span class="log-tag">$1</span>');
+
+      line.innerHTML = html;
+      logsContainer.appendChild(line);
+      logsContainer.scrollTop = logsContainer.scrollHeight;
+
+      logIdx++;
+      const t = setTimeout(printNextLog, Math.random() * 240 + 140);
+      simTimers.push(t);
+    } else {
+      isSimRunning = false;
+      if (runBtn) runBtn.disabled = false;
+    }
+  }
+
+  // 2. Chat timeline
+  let chatIdx = 0;
+  function printNextChat() {
+    if (chatIdx < langChat.length) {
+      const chatItem = langChat[chatIdx];
+      const bubble = document.createElement('div');
+      bubble.className = `chat-bubble ${chatItem.sender.toLowerCase().replace(/\s+/g, '-')}`;
+
+      let avatar = '🤖';
+      if (chatItem.sender.includes('Architect')) avatar = '👨‍💻';
+      if (chatItem.sender.includes('Antigravity')) avatar = '⚡';
+      if (chatItem.sender.includes('Claude')) avatar = '🔮';
+      if (chatItem.sender.includes('Cursor')) avatar = '🛠️';
+      if (chatItem.sender.includes('Validator')) avatar = '🛡️';
+
+      bubble.innerHTML = `
+        <div class="chat-meta">
+          <span class="chat-avatar">${avatar}</span>
+          <span class="chat-sender">${chatItem.sender}</span>
+        </div>
+        <div class="chat-message">${chatItem.message}</div>
+      `;
+      chatContainer.appendChild(bubble);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      chatIdx++;
+      const t = setTimeout(printNextChat, Math.random() * 650 + 750);
+      simTimers.push(t);
+    }
+  }
+
+  // 3. Code typing effect
+  let codeCharIdx = 0;
+  function typeCode() {
+    if (codeCharIdx < codeText.length) {
+      const chunk = codeText.substring(codeCharIdx, codeCharIdx + 6);
+      codeContainer.textContent += chunk;
+      codeCharIdx += 6;
+
+      const block = codeContainer.parentElement;
+      if (block) block.scrollTop = block.scrollHeight;
+
+      const t = setTimeout(typeCode, 18);
+      simTimers.push(t);
+    }
+  }
+
+  printNextLog();
+  simTimers.push(setTimeout(printNextChat, 250));
+  simTimers.push(setTimeout(typeCode, 600));
+}
+
+// ============================================================
+// Interactive Architecture, Scale & Sovereignty Estimator
+// ============================================================
+const stackRecommendations = {
+  agentic: {
+    pt: "Orquestrador Multi-Agente (LangGraph / Antigravity SDK) + Contratos Solidity/Rust (ERC-4337 Account Abstraction) + Verificador ZK-SNARK + Oráculos Chainlink + Indexador Subgraph em Tempo Real.",
+    es: "Orquestador Multi-Agente (LangGraph / Antigravity SDK) + Contratos Solidity/Rust (ERC-4337 Account Abstraction) + Verificador ZK-SNARK + Oráculos Chainlink + Indexador Subgraph en Tiempo Real.",
+    en: "Multi-Agent Orchestrator (LangGraph / Antigravity SDK) + Solidity/Rust Smart Contracts (ERC-4337 Account Abstraction) + ZK-SNARK Verifier + Chainlink Oracles + Real-Time Subgraph Indexer."
+  },
+  trading: {
+    pt: "Motor de Execução em Rust (Tokio Zero-Copy) + WebSocket L3 Aggregator (CEX/DEX) + Copiloto IA de Treinamento & Risco (vLLM Local) + TimescaleDB / ClickHouse para Replay de Ticks.",
+    es: "Motor de Ejecución en Rust (Tokio Zero-Copy) + WebSocket L3 Aggregator (CEX/DEX) + Copiloto IA de Entrenamiento & Riesgo (vLLM Local) + TimescaleDB / ClickHouse para Replay de Ticks.",
+    en: "Rust Execution Core (Tokio Zero-Copy) + L3 WebSocket Aggregator (CEX/DEX) + AI Training & Risk Copilot (Local vLLM) + TimescaleDB / ClickHouse Tick Replay Engine."
+  },
+  refactor: {
+    pt: "Engenharia Reversa Spec-First + Microsserviços em Rust & Go + Event Mesh Apache Kafka + Proxy Envoy para Shadow Traffic + Kubernetes Auto-Scaling com Observabilidade OpenTelemetry.",
+    es: "Ingeniería Inversa Spec-First + Microservicios en Rust & Go + Event Mesh Apache Kafka + Proxy Envoy para Shadow Traffic + Kubernetes Auto-Scaling con Observabilidad OpenTelemetry.",
+    en: "Spec-First Reverse Engineering + Rust & Go Microservices + Apache Kafka Event Mesh + Envoy Shadow Traffic Proxy + Auto-Scaling Kubernetes with OpenTelemetry."
+  },
+  sovereign: {
+    pt: "Cluster de IA Soberana (NVIDIA Confidential Compute TEE / Bare-Metal VPC) + vLLM / TensorRT-LLM Privado + Vector DB Qdrant Criptografado + Firewall Semântico Zero-Trust & RBAC Criptográfico.",
+    es: "Cluster de IA Soberana (NVIDIA Confidential Compute TEE / Bare-Metal VPC) + vLLM / TensorRT-LLM Privado + Vector DB Qdrant Cifrado + Firewall Semántico Zero-Trust & RBAC Criptográfico.",
+    en: "Sovereign AI Cluster (NVIDIA Confidential Compute TEE / Bare-Metal VPC) + Private vLLM / TensorRT-LLM + Encrypted Qdrant Vector DB + Zero-Trust Semantic Firewall & Cryptographic RBAC."
+  }
+};
+
+function updateArchitectureEstimator() {
+  const domainEl = document.getElementById('est-domain');
+  const scaleEl = document.getElementById('est-scale');
+  const autonomyEl = document.getElementById('est-autonomy');
+  const secEl = document.getElementById('est-security');
+
+  if (!domainEl || !scaleEl || !autonomyEl || !secEl) return;
+
+  const domain = domainEl.value;
+  const scaleVal = parseInt(scaleEl.value, 10); // 1 to 100
+  const autonomyVal = parseInt(autonomyEl.value, 10); // 50 to 99
+  const secMode = secEl.value;
+
+  const opsPerDay = (scaleVal * 150000).toLocaleString(currentLanguage === 'en' ? 'en-US' : 'pt-BR');
+  document.getElementById('est-scale-val').textContent = `${opsPerDay} ops/dia`;
+  document.getElementById('est-autonomy-val').textContent = `${autonomyVal}% Agêntico`;
+
+  // Compute dynamic KPIs
+  const costReduction = Math.min(78, Math.round(38 + (autonomyVal - 50) * 0.65 + (scaleVal * 0.12)));
+  const speedMultiplier = (2.4 + ((autonomyVal - 50) / 50) * 2.8).toFixed(1);
+  const latencyMs = domain === 'trading'
+    ? Math.max(2, Math.round(14 - scaleVal * 0.08))
+    : Math.max(6, Math.round(28 - scaleVal * 0.14));
+
+  let sovScore = "99.4% · Tier-4";
+  if (secMode === 'tee') sovScore = "100% · Air-Gapped TEE";
+  if (secMode === 'zk') sovScore = "99.9% · ZK-Verified";
+
+  document.getElementById('est-kpi-cost').textContent = `-${costReduction}%`;
+  document.getElementById('est-kpi-speed').textContent = `${speedMultiplier}x`;
+  document.getElementById('est-kpi-latency').textContent = `< ${latencyMs}ms`;
+  document.getElementById('est-kpi-sov').textContent = sovScore;
+
+  const recText = (stackRecommendations[domain] && stackRecommendations[domain][currentLanguage])
+    || stackRecommendations.agentic.pt;
+  document.getElementById('est-stack-text').textContent = recText;
+}
+
+// ============================================================
+// Interactive Encrypted Architecture Briefing Form
+// ============================================================
+function setupContactForm() {
+  const form = document.getElementById('epyx-contact-form');
+  const responseDiv = document.getElementById('form-response');
+  if (!form || !responseDiv) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalHTML = submitBtn.innerHTML;
+
+    const name = document.getElementById('form-name').value.trim();
+    const company = document.getElementById('form-company').value.trim();
+    const email = document.getElementById('form-email').value.trim();
+    const pillar = document.getElementById('form-pillar').value;
+
+    form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
+    submitBtn.innerHTML = `<span>⚡ ${translations[currentLanguage]['contact.form.sending']}</span>`;
+
+    const protocolHash = '0x' + Array.from({ length: 16 }, () =>
+      Math.floor(Math.random() * 16).toString(16)
+    ).join('');
+
+    responseDiv.innerHTML = `
+      <div class="terminal-success" id="terminal-anim">
+        <p>&gt; INIT SOVEREIGN HANDSHAKE [AES-256-GCM / TLS 1.3]...</p>
+      </div>
+    `;
+    const terminalEl = document.getElementById('terminal-anim');
+
+    const steps = [
+      `&gt; CLIENT NODE: ${name} (${company || 'Enterprise'})`,
+      `&gt; TARGET ARCHITECTURE: [${pillar.toUpperCase()}]`,
+      `&gt; VERIFYING ZERO-KNOWLEDGE SPEC ENVELOPE... [OK]`,
+      `&gt; COMMITTING BRIEF TO EPYX BY WANGARICARBON LEDGER (${protocolHash})... [OK]`
+    ];
+
+    let idx = 0;
+    const timer = setInterval(() => {
+      if (idx < steps.length) {
+        const p = document.createElement('p');
+        p.innerHTML = steps[idx++];
+        terminalEl.appendChild(p);
+      } else {
+        clearInterval(timer);
+        const done = document.createElement('p');
+        done.className = 'success-text';
+        done.textContent = translations[currentLanguage]['contact.form.success'];
+        terminalEl.appendChild(done);
+
+        form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = false);
+        submitBtn.innerHTML = originalHTML;
+        form.reset();
+      }
+    }, 320);
+  });
+}
+
+// ============================================================
+// Background Processing Optimization (content-visibility + Fallback)
+// ============================================================
+function setupEfficientBackgroundProcessing() {
+  let telemetryInterval = null;
+
+  function startLiveTelemetryPulse() {
+    if (telemetryInterval) return;
+    telemetryInterval = setInterval(() => {
+      const latencyEl = document.getElementById('live-latency-val');
+      if (latencyEl) {
+        const jitter = (8.4 + Math.random() * 3.1).toFixed(1);
+        latencyEl.textContent = `${jitter}ms`;
+      }
+    }, 2800);
+  }
+
+  function stopLiveTelemetryPulse() {
+    if (telemetryInterval) {
+      clearInterval(telemetryInterval);
+      telemetryInterval = null;
+    }
+  }
+
+  startLiveTelemetryPulse();
+
+  // Pause background simulation work when heavy sections are skipped off-screen
+  document.addEventListener('contentvisibilityautostatechange', (event) => {
+    if (event.target.matches && event.target.matches('.heavy-sim-section')) {
+      if (event.skipped) {
+        stopLiveTelemetryPulse();
+      } else {
+        startLiveTelemetryPulse();
+      }
+    }
+  }, { capture: true });
+
+  // Fallback using IntersectionObserver for browsers without content-visibility support
+  const isContentVisibilitySupported = 'contentVisibility' in document.documentElement.style;
+  if (!isContentVisibilitySupported) {
+    const heavySections = document.querySelectorAll('.heavy-sim-section');
+    const bgObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startLiveTelemetryPulse();
+        } else {
+          stopLiveTelemetryPulse();
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    heavySections.forEach(sec => bgObserver.observe(sec));
+  }
+}
+
+// ============================================================
+// DOM Initialization
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Initialize Language (Default: Portuguese 'pt')
+  const savedLang = localStorage.getItem('epyx_wangari_lang') || 'pt';
+  setLanguage(savedLang);
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.getAttribute('data-lang'));
+    });
+  });
+
+  // 2. Navbar scroll effect & mobile menu
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  const mobileBtn = document.getElementById('mobile-menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  if (mobileBtn && navMenu) {
+    mobileBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  }
+
+  // Smooth anchor navigation & active link state
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href').substring(1);
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        if (navMenu) navMenu.classList.remove('open');
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        if (anchor.classList.contains('nav-link')) anchor.classList.add('active');
+      }
+    });
+  });
+
+  // 3. Simulator controls
+  const projectBtns = document.querySelectorAll('.project-btn');
+  projectBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      projectBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedProject = btn.getAttribute('data-project');
+      runSimulation(selectedProject);
+    });
+  });
+
+  const runBtn = document.querySelector('.sim-btn-run');
+  if (runBtn) {
+    runBtn.addEventListener('click', () => {
+      runSimulation(selectedProject);
+    });
+  }
+
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetPanel = btn.getAttribute('data-tab');
+      document.querySelectorAll('.terminal-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      const panelEl = document.getElementById(`panel-${targetPanel}`);
+      if (panelEl) panelEl.classList.add('active');
+    });
+  });
+
+  // 4. Architecture Estimator controls
+  ['est-domain', 'est-scale', 'est-autonomy', 'est-security'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('input', updateArchitectureEstimator);
+      el.addEventListener('change', updateArchitectureEstimator);
+    }
+  });
+  updateArchitectureEstimator();
+
+  // 5. Fade-in section observer
+  const fadeElements = document.querySelectorAll('.fade-in-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeElements.forEach(el => observer.observe(el));
+
+  // 6. Contact form & Background optimization
+  setupContactForm();
+  setupEfficientBackgroundProcessing();
+
+  // Run initial simulation preview automatically after short delay
+  setTimeout(() => {
+    runSimulation(selectedProject);
+  }, 500);
+});
