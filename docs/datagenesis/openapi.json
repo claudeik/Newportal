@@ -1,0 +1,1506 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DataGenesis — Plataforma de Inteligência Cadastral & Data Hub Intelligence",
+    "description": "API de consulta CPF/CNPJ com índice de qualidade cadastral (`qualidade-1.0`), integração ao portfólio Salesbox (26 APIs: Núcleo Estrutural Comportamental e Inteligência Corporativa Móvel) e AI Gateway que traduz os dados para o schema `risk-features-1.0` consumido pelo Motor de Risco e Crédito da fintech.\n\nOperação: Wangari Carbon (EPYX). Documento sempre no corpo (POST), nunca na URL. Respostas sempre com `Cache-Control: no-store`.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "saude"
+        ],
+        "summary": "Verificação de vida do serviço",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "saude"
+        ],
+        "summary": "Prontidão: dependências internas",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ready Ready Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/token": {
+      "post": {
+        "tags": [
+          "autenticacao"
+        ],
+        "summary": "Emite token de acesso (client_credentials)",
+        "operationId": "emitir_token_auth_token_post",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_emitir_token_auth_token_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Emitir Token Auth Token Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBasic": []
+          }
+        ]
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "tags": [
+          "autenticacao"
+        ],
+        "summary": "Perfil e validade do token",
+        "operationId": "perfil_auth_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Perfil Auth Me Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/revogar": {
+      "post": {
+        "tags": [
+          "autenticacao"
+        ],
+        "summary": "Revoga o token enviado (imediata)",
+        "operationId": "revogar_auth_revogar_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Revogar Auth Revogar Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/registrar-demo": {
+      "post": {
+        "tags": [
+          "autenticacao"
+        ],
+        "summary": "Cria um cliente de teste (apenas quando PERMITIR_AUTOCADASTRO_DEMO=true)",
+        "description": "Disponível somente em ambientes de demonstração pública com a flag `PERMITIR_AUTOCADASTRO_DEMO=true`. Cria um cliente com escopos de analista e as finalidades padrão de demonstração. Em produção, use POST /admin/clientes.",
+        "operationId": "registrar_demo_auth_registrar_demo_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroDemoIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Registrar Demo Auth Registrar Demo Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/consultas": {
+      "post": {
+        "tags": [
+          "consultas"
+        ],
+        "summary": "Consulta cadastral de CPF ou CNPJ com índice de qualidade",
+        "description": "Documento sempre no corpo (nunca na URL). Responde `completo`, `parcial` ou `nao_localizado` com evidências, qualidade por grupo e metadados de origem.",
+        "operationId": "consultar_v1_consultas_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Consultar V1 Consultas Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/consultas/historico": {
+      "get": {
+        "tags": [
+          "consultas"
+        ],
+        "summary": "Histórico de consultas (sem dado pessoal bruto)",
+        "operationId": "historico_v1_consultas_historico_get",
+        "parameters": [
+          {
+            "name": "finalidade",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Finalidade"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "origem",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Origem"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Historico V1 Consultas Historico Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/capacidades": {
+      "get": {
+        "tags": [
+          "capacidades"
+        ],
+        "summary": "Recursos, campos, limites e portfólio Data Hub Intelligence ativos",
+        "operationId": "capacidades_v1_capacidades_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Capacidades V1 Capacidades Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/uso": {
+      "get": {
+        "tags": [
+          "uso"
+        ],
+        "summary": "Consumo, quota e qualidade agregada do cliente",
+        "operationId": "uso_v1_uso_get",
+        "parameters": [
+          {
+            "name": "dias",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 90,
+              "minimum": 1,
+              "default": 30,
+              "title": "Dias"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Uso V1 Uso Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/clientes": {
+      "get": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Lista clientes com credenciais, finalidades e quotas",
+        "operationId": "listar_clientes_admin_clientes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Listar Clientes Admin Clientes Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Cria cliente; o segredo é exibido uma única vez",
+        "operationId": "criar_cliente_admin_clientes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarClienteIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Criar Cliente Admin Clientes Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/clientes/{cliente_id}/status": {
+      "post": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Ativa ou desativa cliente (bloqueia tokens)",
+        "operationId": "alterar_status_admin_clientes__cliente_id__status_post",
+        "parameters": [
+          {
+            "name": "cliente_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Cliente Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatusClienteIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Alterar Status Admin Clientes  Cliente Id  Status Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/clientes/{cliente_id}/rotacionar": {
+      "post": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Rotaciona a credencial; novo segredo exibido uma vez",
+        "operationId": "rotacionar_admin_clientes__cliente_id__rotacionar_post",
+        "parameters": [
+          {
+            "name": "cliente_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Cliente Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Rotacionar Admin Clientes  Cliente Id  Rotacionar Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/clientes/{cliente_id}/quota": {
+      "put": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Atualiza quotas e finalidades habilitadas",
+        "operationId": "atualizar_quota_admin_clientes__cliente_id__quota_put",
+        "parameters": [
+          {
+            "name": "cliente_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Cliente Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuotaFinalidadesIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Atualizar Quota Admin Clientes  Cliente Id  Quota Put"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/auditoria": {
+      "get": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Trilha de auditoria para o DPO (sem dado pessoal bruto)",
+        "operationId": "auditoria_admin_auditoria_get",
+        "parameters": [
+          {
+            "name": "cliente_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Cliente Id"
+            }
+          },
+          {
+            "name": "finalidade",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Finalidade"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "origem",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Origem"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Auditoria Admin Auditoria Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/restricoes": {
+      "post": {
+        "tags": [
+          "administracao"
+        ],
+        "summary": "Aplica exclusão/restrição de uso; propaga ao cache (RF-15)",
+        "operationId": "aplicar_restricao_admin_restricoes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestricaoIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Aplicar Restricao Admin Restricoes Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/datahub/catalogo": {
+      "get": {
+        "tags": [
+          "datahub-intelligence"
+        ],
+        "summary": "Portfólio completo das 26 APIs (11 Núcleo + 15 Inteligência Corporativa)",
+        "operationId": "catalogo_v1_datahub_catalogo_get",
+        "parameters": [
+          {
+            "name": "bloco",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filtra por bloco do portfólio.",
+              "title": "Bloco"
+            },
+            "description": "Filtra por bloco do portfólio."
+          },
+          {
+            "name": "finalidade",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Filtra pelas APIs permitidas para a finalidade.",
+              "title": "Finalidade"
+            },
+            "description": "Filtra pelas APIs permitidas para a finalidade."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Catalogo V1 Datahub Catalogo Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/datahub/executar": {
+      "post": {
+        "tags": [
+          "datahub-intelligence"
+        ],
+        "summary": "Executa uma API do portfólio via adaptador Salesbox",
+        "operationId": "executar_api_v1_datahub_executar_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExecutarApiIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Executar Api V1 Datahub Executar Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/datahub/execucoes": {
+      "get": {
+        "tags": [
+          "datahub-intelligence"
+        ],
+        "summary": "Histórico de execuções Data Hub (custo e finalidade)",
+        "operationId": "execucoes_v1_datahub_execucoes_get",
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Execucoes V1 Datahub Execucoes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/gateway/capacidades": {
+      "get": {
+        "tags": [
+          "ai-gateway"
+        ],
+        "summary": "Capacidades de tradução do AI Gateway",
+        "operationId": "capacidades_v1_gateway_capacidades_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Capacidades V1 Gateway Capacidades Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/gateway/translate": {
+      "post": {
+        "tags": [
+          "ai-gateway"
+        ],
+        "summary": "Traduz payload bruto Salesbox para o modelo canônico DataGenesis",
+        "operationId": "translate_v1_gateway_translate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GatewayTranslateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Translate V1 Gateway Translate Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/gateway/risk-features": {
+      "post": {
+        "tags": [
+          "ai-gateway"
+        ],
+        "summary": "Gera pacote risk-features-1.0 para o motor de risco e crédito",
+        "description": "Executa a consulta cadastral (política padrão `auto`), coleta opcionalmente sinais de rede móvel e compliance via Data Hub Intelligence e traduz tudo para o schema de features do motor de risco. Ausência vira feature nula com caveat — nunca palpite.",
+        "operationId": "risk_features_v1_gateway_risk_features_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GatewayRiskFeaturesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Risk Features V1 Gateway Risk Features Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_emitir_token_auth_token_post": {
+        "properties": {
+          "grant_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grant Type"
+          },
+          "client_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Secret"
+          },
+          "scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scope"
+          }
+        },
+        "type": "object",
+        "title": "Body_emitir_token_auth_token_post"
+      },
+      "ConsultaRequest": {
+        "properties": {
+          "documento": {
+            "$ref": "#/components/schemas/DocumentoIn"
+          },
+          "finalidade": {
+            "type": "string",
+            "title": "Finalidade",
+            "examples": [
+              "protecao_credito"
+            ]
+          },
+          "campos": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Campos",
+            "examples": [
+              [
+                "identificacao",
+                "cadastro",
+                "contatos",
+                "enderecos"
+              ]
+            ]
+          },
+          "politica": {
+            "type": "string",
+            "enum": [
+              "somente_base",
+              "auto",
+              "forcar_externo"
+            ],
+            "title": "Politica",
+            "default": "somente_base"
+          },
+          "aceitar_parcial": {
+            "type": "boolean",
+            "title": "Aceitar Parcial",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "documento",
+          "finalidade",
+          "campos"
+        ],
+        "title": "ConsultaRequest"
+      },
+      "CriarClienteIn": {
+        "properties": {
+          "nome": {
+            "type": "string",
+            "title": "Nome"
+          },
+          "client_id": {
+            "type": "string",
+            "title": "Client Id"
+          },
+          "finalidades": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Finalidades"
+          },
+          "escopos": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Escopos"
+          },
+          "consultas_dia": {
+            "type": "integer",
+            "title": "Consultas Dia",
+            "default": 5000
+          },
+          "externas_dia": {
+            "type": "integer",
+            "title": "Externas Dia",
+            "default": 500
+          },
+          "orcamento_mes": {
+            "type": "number",
+            "title": "Orcamento Mes",
+            "default": 2500.0
+          }
+        },
+        "type": "object",
+        "required": [
+          "nome",
+          "client_id",
+          "finalidades"
+        ],
+        "title": "CriarClienteIn"
+      },
+      "DocumentoIn": {
+        "properties": {
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "CPF",
+              "CNPJ"
+            ],
+            "title": "Tipo"
+          },
+          "valor": {
+            "type": "string",
+            "title": "Valor",
+            "description": "CPF (11 dígitos) ou CNPJ (14 caracteres, numérico ou alfanumérico), como texto."
+          }
+        },
+        "type": "object",
+        "required": [
+          "tipo",
+          "valor"
+        ],
+        "title": "DocumentoIn"
+      },
+      "ExecutarApiIn": {
+        "properties": {
+          "api_codigo": {
+            "type": "string",
+            "title": "Api Codigo"
+          },
+          "parametros": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Parametros",
+            "default": {}
+          },
+          "finalidade": {
+            "type": "string",
+            "title": "Finalidade",
+            "default": "protecao_credito"
+          },
+          "traduzir_para_canonico": {
+            "type": "boolean",
+            "title": "Traduzir Para Canonico",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "api_codigo"
+        ],
+        "title": "ExecutarApiIn"
+      },
+      "GatewayRiskFeaturesRequest": {
+        "properties": {
+          "documento": {
+            "$ref": "#/components/schemas/DocumentoIn"
+          },
+          "finalidade": {
+            "type": "string",
+            "title": "Finalidade",
+            "default": "protecao_credito"
+          },
+          "politica": {
+            "type": "string",
+            "enum": [
+              "somente_base",
+              "auto",
+              "forcar_externo"
+            ],
+            "title": "Politica",
+            "default": "auto"
+          },
+          "coletar_sinais_datahub": {
+            "type": "boolean",
+            "title": "Coletar Sinais Datahub",
+            "description": "Quando true, coleta sinais de rede móvel e compliance via Data Hub Intelligence.",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "documento"
+        ],
+        "title": "GatewayRiskFeaturesRequest",
+        "description": "Gera o pacote `risk-features-1.0` para o motor de risco e crédito."
+      },
+      "GatewayTranslateRequest": {
+        "properties": {
+          "api_codigo": {
+            "type": "string",
+            "title": "Api Codigo",
+            "examples": [
+              "pf_dados"
+            ]
+          },
+          "payload": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Payload"
+          },
+          "documento": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Documento",
+            "description": "Opcional; se ausente usa payload.cpf/cnpj."
+          }
+        },
+        "type": "object",
+        "required": [
+          "api_codigo",
+          "payload"
+        ],
+        "title": "GatewayTranslateRequest",
+        "description": "Tradução de payload bruto Salesbox → modelo canônico DataGenesis."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "QuotaFinalidadesIn": {
+        "properties": {
+          "consultas_dia": {
+            "type": "integer",
+            "title": "Consultas Dia"
+          },
+          "externas_dia": {
+            "type": "integer",
+            "title": "Externas Dia"
+          },
+          "orcamento_mes": {
+            "type": "number",
+            "title": "Orcamento Mes"
+          },
+          "finalidades": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Finalidades"
+          }
+        },
+        "type": "object",
+        "required": [
+          "consultas_dia",
+          "externas_dia",
+          "orcamento_mes",
+          "finalidades"
+        ],
+        "title": "QuotaFinalidadesIn"
+      },
+      "RegistroDemoIn": {
+        "properties": {
+          "nome": {
+            "type": "string",
+            "title": "Nome"
+          },
+          "client_id": {
+            "type": "string",
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "type": "string",
+            "title": "Client Secret"
+          }
+        },
+        "type": "object",
+        "required": [
+          "nome",
+          "client_id",
+          "client_secret"
+        ],
+        "title": "RegistroDemoIn"
+      },
+      "RestricaoIn": {
+        "properties": {
+          "tipo_doc": {
+            "type": "string",
+            "title": "Tipo Doc",
+            "examples": [
+              "CPF"
+            ]
+          },
+          "valor_documento": {
+            "type": "string",
+            "title": "Valor Documento",
+            "description": "Documento como texto; será normalizado antes do HMAC."
+          }
+        },
+        "type": "object",
+        "required": [
+          "tipo_doc",
+          "valor_documento"
+        ],
+        "title": "RestricaoIn"
+      },
+      "StatusClienteIn": {
+        "properties": {
+          "ativo": {
+            "type": "boolean",
+            "title": "Ativo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ativo"
+        ],
+        "title": "StatusClienteIn"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBasic": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "saude",
+      "description": "Vida e prontidão do serviço"
+    },
+    {
+      "name": "autenticacao",
+      "description": "OAuth2 client_credentials, 30 min, revogação imediata"
+    },
+    {
+      "name": "consultas",
+      "description": "Consulta CPF/CNPJ com qualidade e evidências"
+    },
+    {
+      "name": "capacidades",
+      "description": "Recursos, campos e limites em vigor"
+    },
+    {
+      "name": "uso",
+      "description": "Consumo, quota e custo estimado"
+    },
+    {
+      "name": "administracao",
+      "description": "Clientes, credenciais, quotas, auditoria e restrições"
+    },
+    {
+      "name": "datahub-intelligence",
+      "description": "26 APIs do portfólio Salesbox"
+    },
+    {
+      "name": "ai-gateway",
+      "description": "Tradução de formatos para o motor de risco e crédito"
+    }
+  ]
+}
