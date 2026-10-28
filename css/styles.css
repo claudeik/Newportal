@@ -1606,6 +1606,7 @@ section {
 
 .case-details-inner {
   min-height: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 14px;

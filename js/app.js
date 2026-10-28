@@ -159,7 +159,7 @@ const translations = {
     "cases.link.explore": "Explorar Arquitetura",
     "cases.link.pos1": "Acessar Console POS1 ao Vivo",
     "cases.link.datagenesis": "Inspecionar Arquitetura DataGenesis",
-    "cases.link.orchestrator": "Explorar Repositório & Swagger Orchestrator",
+    "cases.link.orchestrator": "Acessar Swagger API Orchestrator",
     "contact.subtitle": "Inicie Sua Evolução Tecnológica",
     "contact.title": "Construa ou Refatore Sua Plataforma com Nossa Squad",
     "contact.desc": "Agende uma sessão técnica com nossos arquitetos de IA Soberana, Blockchain e Engenharia de Sistemas. Estruturamos a especificação completa do seu projeto com confidencialidade absoluta.",
@@ -423,7 +423,7 @@ const translations = {
     "cases.link.explore": "Explorar Arquitectura",
     "cases.link.pos1": "Acceder a Consola POS1 en Vivo",
     "cases.link.datagenesis": "Inspeccionar Arquitectura DataGenesis",
-    "cases.link.orchestrator": "Explorar Repositorio & Swagger Orchestrator",
+    "cases.link.orchestrator": "Acceder a Swagger API Orchestrator",
     "contact.subtitle": "Inicie Su Evolución Tecnológica",
     "contact.title": "Construya o Refactorice Su Plataforma con Nuestra Squad",
     "contact.desc": "Agende una sesión técnica con nuestros arquitectos de IA Soberana, Blockchain e Ingeniería de Sistemas. Estructuramos la especificación completa de su proyecto con confidencialidad absoluta.",
@@ -687,7 +687,7 @@ const translations = {
     "cases.link.explore": "Explore Architecture",
     "cases.link.pos1": "Access Live POS1 Console",
     "cases.link.datagenesis": "Inspect DataGenesis Architecture",
-    "cases.link.orchestrator": "Explore Orchestrator Repo & Swagger",
+    "cases.link.orchestrator": "Access Orchestrator Swagger API",
     "contact.subtitle": "Begin Your Technological Evolution",
     "contact.title": "Build or Refactor Your Platform with Our Squad",
     "contact.desc": "Schedule a technical session with our Sovereign AI, Blockchain, and Systems Engineering architects. We structure the complete specification for your project with strict confidentiality.",
@@ -1529,6 +1529,7 @@ function setLanguage(lang) {
   }
 
   updateArchitectureEstimator();
+  updateAccordionButtonLabels(lang);
   localStorage.setItem('epyx_wangari_lang', lang);
 }
 
@@ -1944,6 +1945,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
   setupEfficientBackgroundProcessing();
 
+  // 7. Platform Technical Specifications Accordions
+  initCaseAccordions();
+
   // Run initial simulation preview automatically after short delay
   setTimeout(() => {
     runSimulation(selectedProject);
@@ -1953,35 +1957,43 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ==========================================================================
    Inline Expandable Case Accordion Controller
    ========================================================================== */
+function toggleCaseAccordion(btn) {
+  if (!btn) return;
+  const card = btn.closest('.case-card');
+  if (!card) return;
+
+  const panelId = btn.getAttribute('aria-controls');
+  const panel = panelId ? document.getElementById(panelId) : card.querySelector('.case-details-panel');
+  const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+  const nextExpanded = !isExpanded;
+  btn.setAttribute('aria-expanded', String(nextExpanded));
+  card.classList.toggle('is-expanded', nextExpanded);
+
+  if (panel) {
+    panel.setAttribute('aria-hidden', String(!nextExpanded));
+  }
+
+  // Update button text smoothly
+  const textSpan = btn.querySelector('.expand-text');
+  if (textSpan) {
+    const lang = currentLanguage || 'pt';
+    const key = nextExpanded ? 'cases.btn.less' : 'cases.btn.more';
+    textSpan.textContent = translations[lang] && translations[lang][key]
+      ? translations[lang][key]
+      : (nextExpanded ? 'Recolher Especificações' : 'Ver Especificações Técnicas');
+    textSpan.setAttribute('data-i18n', key);
+  }
+}
+
 function initCaseAccordions() {
   const expandButtons = document.querySelectorAll('.case-expand-btn');
 
   expandButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
+      e.preventDefault();
       e.stopPropagation();
-      const card = btn.closest('.case-card');
-      if (!card) return;
-
-      const panelId = btn.getAttribute('aria-controls');
-      const panel = panelId ? document.getElementById(panelId) : card.querySelector('.case-details-panel');
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-
-      const nextExpanded = !isExpanded;
-      btn.setAttribute('aria-expanded', String(nextExpanded));
-      card.classList.toggle('is-expanded', nextExpanded);
-
-      if (panel) {
-        panel.setAttribute('aria-hidden', String(!nextExpanded));
-      }
-
-      // Update button text smoothly
-      const textSpan = btn.querySelector('.expand-text');
-      if (textSpan) {
-        const lang = currentLanguage || 'pt';
-        const key = nextExpanded ? 'cases.btn.less' : 'cases.btn.more';
-        textSpan.textContent = translations[lang] ? translations[lang][key] : (nextExpanded ? 'Recolher Especificações' : 'Ver Especificações Técnicas');
-        textSpan.setAttribute('data-i18n', key);
-      }
+      toggleCaseAccordion(btn);
     });
   });
 }
@@ -1993,7 +2005,9 @@ function updateAccordionButtonLabels(lang) {
     const textSpan = btn.querySelector('.expand-text');
     if (textSpan) {
       const key = isExpanded ? 'cases.btn.less' : 'cases.btn.more';
-      textSpan.textContent = translations[lang] ? translations[lang][key] : (isExpanded ? 'Recolher Especificações' : 'Ver Especificações Técnicas');
+      textSpan.textContent = translations[lang] && translations[lang][key]
+        ? translations[lang][key]
+        : (isExpanded ? 'Recolher Especificações' : 'Ver Especificações Técnicas');
       textSpan.setAttribute('data-i18n', key);
     }
   });

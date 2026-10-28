@@ -1,0 +1,2216 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Orchestrator · Wangari Carbon (EPYX)",
+    "description": "\nOrchestrator — a plataforma da Wangari Carbon (EPYX) que conduz, de ponta a\nponta, os processos de crédito e risco da WaveHub Capital.\n\n**Três papéis, fronteiras separadas**\n\n| Papel | Quem | Regra |\n| --- | --- | --- |\n| Fonte de dados | DataGenesis (26 APIs, via MCP) | entrega dado com origem, data e qualidade. Não decide |\n| Execução do relacionamento | ERA CRM / OMNI (via MCP) | executa contato e atendimento. Não decide |\n| Decisão e orquestração | **Orchestrator** (BPMN + motor de risco) | decide próximo passo, canal e concessão |\n\n**Destaques da API**\n\n- `POST /v1/processos/{definicao}/instancias` — inicia processo BPMN versionado;\n- `GET /v1/instancias/{id}/trilha` — trilha do ledger encadeado (auditoria);\n- `POST /v1/risco/degrau` — chave de degrau (sombra → teste → produção parcial → produção);\n- `POST /mcp` — servidor MCP (DataGenesis `dg_*`, ERA `era_*`, motor `motor_decidir`, `orch_*`);\n- `POST /v1/erp/{erp}/lotes` — integrador de arquivos dos ERPs (Net OS, MK Solutions, Voalle, Hubsoft).\n\nAutenticação: `POST /auth/token` (OAuth2 client_credentials). Escopos por rota.\n",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/auth/token": {
+      "post": {
+        "tags": [
+          "Autenticação"
+        ],
+        "summary": "Emite token OAuth2 client_credentials (TTL 30 min)",
+        "operationId": "emitir_token_auth_token_post",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_emitir_token_auth_token_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/processos/{definicao}/instancias": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Inicia instância de processo",
+        "operationId": "iniciar_instancia_v1_processos__definicao__instancias_post",
+        "parameters": [
+          {
+            "name": "definicao",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Definicao"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IniciarInstanciaIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Iniciar Instancia V1 Processos  Definicao  Instancias Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias": {
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Lista instâncias",
+        "operationId": "listar_instancias_v1_instancias_get",
+        "parameters": [
+          {
+            "name": "estado",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Estado"
+            }
+          },
+          {
+            "name": "processo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Processo"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "title": "Response Listar Instancias V1 Instancias Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}": {
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Estado da instância",
+        "operationId": "obter_instancia_v1_instancias__iid__get",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Obter Instancia V1 Instancias  Iid  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}/decisao": {
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Decisão da instância (motivos e versões)",
+        "operationId": "decisao_instancia_v1_instancias__iid__decisao_get",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Decisao Instancia V1 Instancias  Iid  Decisao Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}/trilha": {
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Trilha do ledger da instância (auditoria)",
+        "operationId": "trilha_instancia_v1_instancias__iid__trilha_get",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Trilha Instancia V1 Instancias  Iid  Trilha Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}/eventos": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Entrega mensagem aguardada pela instância",
+        "operationId": "entregar_evento_v1_instancias__iid__eventos_post",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "title": "Corpo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Entregar Evento V1 Instancias  Iid  Eventos Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}/tempo": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Avança o tempo (dispara prazos em simulação)",
+        "operationId": "avancar_tempo_v1_instancias__iid__tempo_post",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "title": "Corpo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Avancar Tempo V1 Instancias  Iid  Tempo Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tarefas": {
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Tarefas de usuário pendentes (análise manual e alçadas)",
+        "operationId": "tarefas_pendentes_v1_tarefas_get",
+        "parameters": [
+          {
+            "name": "papel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Papel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "title": "Response Tarefas Pendentes V1 Tarefas Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}/tarefas": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Resolve tarefa de usuário",
+        "operationId": "resolver_tarefa_v1_instancias__iid__tarefas_post",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResolverTarefaIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Resolver Tarefa V1 Instancias  Iid  Tarefas Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/revisoes": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Registra pedido de revisão de decisão automatizada (LGPD art. 20)",
+        "operationId": "abrir_revisao_v1_revisoes_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisaoIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Abrir Revisao V1 Revisoes Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Lista revisões",
+        "operationId": "listar_revisoes_v1_revisoes_get",
+        "parameters": [
+          {
+            "name": "id_instancia",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Id Instancia"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "title": "Response Listar Revisoes V1 Revisoes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/revisoes/{rid}/resolver": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Resolve revisão com analista e resultado",
+        "operationId": "resolver_revisao_v1_revisoes__rid__resolver_post",
+        "parameters": [
+          {
+            "name": "rid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Rid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisaoResolverIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Resolver Revisao V1 Revisoes  Rid  Resolver Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/definicoes": {
+      "get": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Definições de processo e regras (BPMN/DMN versionadas)",
+        "operationId": "listar_definicoes_v1_definicoes_get",
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Tipo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "title": "Response Listar Definicoes V1 Definicoes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Envia rascunho de BPMN ou DMN para validação",
+        "operationId": "enviar_definicao_v1_definicoes_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnviarDefinicaoIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Enviar Definicao V1 Definicoes Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/definicoes/{did}/aprovar": {
+      "post": {
+        "tags": [
+          "Processos e instâncias"
+        ],
+        "summary": "Aprova e publica versão (quem edita não aprova)",
+        "operationId": "aprovar_definicao_v1_definicoes__did__aprovar_post",
+        "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Did"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Aprovar Definicao V1 Definicoes  Did  Aprovar Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ledger/verificacao": {
+      "get": {
+        "tags": [
+          "Auditoria e ledger"
+        ],
+        "summary": "Resultado da última verificação de integridade",
+        "operationId": "ultima_verificacao_v1_ledger_verificacao_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ultima Verificacao V1 Ledger Verificacao Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ledger/verificar": {
+      "post": {
+        "tags": [
+          "Auditoria e ledger"
+        ],
+        "summary": "Força verificação da cadeia (global ou por instância)",
+        "operationId": "verificar_v1_ledger_verificar_post",
+        "parameters": [
+          {
+            "name": "id_instancia",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Id Instancia"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Verificar V1 Ledger Verificar Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ledger/ancorar": {
+      "post": {
+        "tags": [
+          "Auditoria e ledger"
+        ],
+        "summary": "Ancora o hash final fora do ambiente de execução",
+        "operationId": "ancorar_v1_ledger_ancorar_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ancorar V1 Ledger Ancorar Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ledger/blocos": {
+      "get": {
+        "tags": [
+          "Auditoria e ledger"
+        ],
+        "summary": "Blocos do ledger (identificadores e hashes, sem dado pessoal)",
+        "operationId": "blocos_v1_ledger_blocos_get",
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 200,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Blocos V1 Ledger Blocos Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/ledger/recuperar": {
+      "post": {
+        "tags": [
+          "Auditoria e ledger"
+        ],
+        "summary": "Rotina de recuperação: intenção sem resultado",
+        "operationId": "recuperar_v1_ledger_recuperar_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Recuperar V1 Ledger Recuperar Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/painel": {
+      "get": {
+        "tags": [
+          "Auditoria e ledger"
+        ],
+        "summary": "Painel: instâncias por estado, degrau, decisões e uso",
+        "operationId": "painel_v1_painel_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Painel V1 Painel Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/risco/degrau": {
+      "get": {
+        "tags": [
+          "Risco e degrau"
+        ],
+        "summary": "Degrau vigente do Motor de risco",
+        "operationId": "degrau_vigente_v1_risco_degrau_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Degrau Vigente V1 Risco Degrau Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Risco e degrau"
+        ],
+        "summary": "Altera o degrau (gravado no ledger; só instâncias novas)",
+        "operationId": "alterar_degrau_v1_risco_degrau_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DegrauIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Alterar Degrau V1 Risco Degrau Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/risco/modelos": {
+      "get": {
+        "tags": [
+          "Risco e degrau"
+        ],
+        "summary": "Modelos de risco versionados (champion/challenger)",
+        "operationId": "listar_modelos_v1_risco_modelos_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Listar Modelos V1 Risco Modelos Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Risco e degrau"
+        ],
+        "summary": "Registra nova versão challenger do modelo",
+        "operationId": "registrar_modelo_v1_risco_modelos_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModeloIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Registrar Modelo V1 Risco Modelos Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/risco/modelos/{versao}/promover": {
+      "post": {
+        "tags": [
+          "Risco e degrau"
+        ],
+        "summary": "Promove challenger a champion",
+        "operationId": "promover_modelo_v1_risco_modelos__versao__promover_post",
+        "parameters": [
+          {
+            "name": "versao",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Versao"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Promover Modelo V1 Risco Modelos  Versao  Promover Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/instancias/{iid}/dossie/descartar": {
+      "post": {
+        "tags": [
+          "Risco e degrau"
+        ],
+        "summary": "Crypto-shredding do dossiê (LGPD art. 16)",
+        "operationId": "descartar_dossie_v1_instancias__iid__dossie_descartar_post",
+        "parameters": [
+          {
+            "name": "iid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Iid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Descartar Dossie V1 Instancias  Iid  Dossie Descartar Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/layouts": {
+      "get": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Layouts de arquivo suportados por ERP",
+        "operationId": "layouts_v1_erp_layouts_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "type": "array",
+                  "title": "Response Layouts V1 Erp Layouts Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/{erp}/lotes": {
+      "post": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Injeta arquivo do ERP (idempotente por hash)",
+        "operationId": "ingerir_arquivo_v1_erp__erp__lotes_post",
+        "parameters": [
+          {
+            "name": "erp",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Erp"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_ingerir_arquivo_v1_erp__erp__lotes_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Ingerir Arquivo V1 Erp  Erp  Lotes Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/{erp}/conteudo": {
+      "post": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Injeta conteúdo inline (JSON/CSV/XML) do ERP",
+        "operationId": "ingerir_conteudo_v1_erp__erp__conteudo_post",
+        "parameters": [
+          {
+            "name": "erp",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Erp"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "title": "Corpo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Ingerir Conteudo V1 Erp  Erp  Conteudo Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/lotes": {
+      "get": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Lotes ingeridos",
+        "operationId": "listar_lotes_v1_erp_lotes_get",
+        "parameters": [
+          {
+            "name": "erp",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Erp"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "title": "Response Listar Lotes V1 Erp Lotes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/lotes/{lid}": {
+      "get": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Relatório do lote (aceitos, rejeitados, erros por linha)",
+        "operationId": "obter_lote_v1_erp_lotes__lid__get",
+        "parameters": [
+          {
+            "name": "lid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Lid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Obter Lote V1 Erp Lotes  Lid  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/{erp}/carteira/resumo": {
+      "get": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Resumo da carteira canônica (features de crédito)",
+        "operationId": "resumo_carteira_v1_erp__erp__carteira_resumo_get",
+        "parameters": [
+          {
+            "name": "erp",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Erp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Resumo Carteira V1 Erp  Erp  Carteira Resumo Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/erp/{erp}/exportar": {
+      "post": {
+        "tags": [
+          "Integração ERP"
+        ],
+        "summary": "Exporta a carteira canônica no formato do ERP",
+        "operationId": "exportar_v1_erp__erp__exportar_post",
+        "parameters": [
+          {
+            "name": "erp",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Erp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Exportar V1 Erp  Erp  Exportar Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/era/mensagens": {
+      "get": {
+        "tags": [
+          "ERA CRM e OMNI"
+        ],
+        "summary": "Mensagens registradas (sem dado pessoal — destino HMAC)",
+        "operationId": "listar_mensagens_v1_era_mensagens_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "type": "array",
+                  "title": "Response Listar Mensagens V1 Era Mensagens Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ERA CRM e OMNI"
+        ],
+        "summary": "Dispara mensagem pelo ERA (idempotente por id_correlacao)",
+        "operationId": "enviar_mensagem_v1_era_mensagens_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": true,
+                "type": "object",
+                "title": "Corpo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Enviar Mensagem V1 Era Mensagens Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/era/mensagens/{id_correlacao}/status": {
+      "get": {
+        "tags": [
+          "ERA CRM e OMNI"
+        ],
+        "summary": "Status de uma mensagem",
+        "operationId": "status_mensagem_v1_era_mensagens__id_correlacao__status_get",
+        "parameters": [
+          {
+            "name": "id_correlacao",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id Correlacao"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Status Mensagem V1 Era Mensagens  Id Correlacao  Status Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/era/eventos": {
+      "post": {
+        "tags": [
+          "ERA CRM e OMNI"
+        ],
+        "summary": "Callback do ERA: entrega, leitura, resposta, encerramento",
+        "operationId": "registrar_evento_v1_era_eventos_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": true,
+                "type": "object",
+                "title": "Corpo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Registrar Evento V1 Era Eventos Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mcp": {
+      "post": {
+        "tags": [
+          "MCP"
+        ],
+        "summary": "Servidor MCP (initialize | tools/list | tools/call)",
+        "operationId": "endpoint_mcp_mcp_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mcp/ferramentas": {
+      "get": {
+        "tags": [
+          "MCP"
+        ],
+        "summary": "Lista as ferramentas MCP registradas (inspeção)",
+        "operationId": "ferramentas_mcp_ferramentas_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ferramentas Mcp Ferramentas Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/estudio/sugerir": {
+      "post": {
+        "tags": [
+          "Estúdio de fluxos"
+        ],
+        "summary": "Sugere rascunho de processo (LLM/assistente, somente leitura)",
+        "operationId": "sugerir_v1_estudio_sugerir_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SugerirIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Sugerir V1 Estudio Sugerir Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/estudio/simular": {
+      "post": {
+        "tags": [
+          "Estúdio de fluxos"
+        ],
+        "summary": "Simula definição com dados sintéticos (RF-13)",
+        "operationId": "simular_v1_estudio_simular_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": true,
+                "type": "object",
+                "title": "Corpo"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Simular V1 Estudio Simular Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "Saúde"
+        ],
+        "summary": "Liveness/readiness",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_emitir_token_auth_token_post": {
+        "properties": {
+          "grant_type": {
+            "type": "string",
+            "title": "Grant Type"
+          },
+          "client_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Secret"
+          },
+          "scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scope"
+          }
+        },
+        "type": "object",
+        "required": [
+          "grant_type"
+        ],
+        "title": "Body_emitir_token_auth_token_post"
+      },
+      "Body_ingerir_arquivo_v1_erp__erp__lotes_post": {
+        "properties": {
+          "arquivo": {
+            "type": "string",
+            "format": "binary",
+            "title": "Arquivo"
+          },
+          "forcar": {
+            "type": "boolean",
+            "title": "Forcar",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "arquivo"
+        ],
+        "title": "Body_ingerir_arquivo_v1_erp__erp__lotes_post"
+      },
+      "DegrauIn": {
+        "properties": {
+          "valor": {
+            "type": "string",
+            "title": "Valor",
+            "description": "sombra | teste | producao_parcial | producao"
+          },
+          "fatia": {
+            "type": "number",
+            "title": "Fatia",
+            "description": "fatia de instâncias novas no degrau parcial (0..1)",
+            "default": 0.0
+          },
+          "aprovado_por": {
+            "type": "string",
+            "title": "Aprovado Por"
+          }
+        },
+        "type": "object",
+        "required": [
+          "valor",
+          "aprovado_por"
+        ],
+        "title": "DegrauIn"
+      },
+      "EnviarDefinicaoIn": {
+        "properties": {
+          "conteudo": {
+            "type": "string",
+            "title": "Conteudo",
+            "description": "BPMN XML, IR JSON ou tabela DMN JSON"
+          },
+          "tipo": {
+            "type": "string",
+            "title": "Tipo",
+            "description": "bpmn | dmn",
+            "default": "bpmn"
+          }
+        },
+        "type": "object",
+        "required": [
+          "conteudo"
+        ],
+        "title": "EnviarDefinicaoIn"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "IniciarInstanciaIn": {
+        "properties": {
+          "finalidade": {
+            "type": "string",
+            "title": "Finalidade",
+            "default": "concessao_credito"
+          },
+          "proponente": {
+            "$ref": "#/components/schemas/ProponenteIn"
+          },
+          "id_correlacao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id Correlacao"
+          },
+          "parametros": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Parametros"
+          }
+        },
+        "type": "object",
+        "required": [
+          "proponente"
+        ],
+        "title": "IniciarInstanciaIn"
+      },
+      "ModeloIn": {
+        "properties": {
+          "versao": {
+            "type": "string",
+            "title": "Versao"
+          },
+          "card": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Card"
+          },
+          "responsavel": {
+            "type": "string",
+            "title": "Responsavel"
+          }
+        },
+        "type": "object",
+        "required": [
+          "versao",
+          "card",
+          "responsavel"
+        ],
+        "title": "ModeloIn"
+      },
+      "ProponenteIn": {
+        "properties": {
+          "tipo": {
+            "type": "string",
+            "title": "Tipo",
+            "description": "CPF ou CNPJ",
+            "default": "CNPJ"
+          },
+          "valor": {
+            "type": "string",
+            "title": "Valor",
+            "description": "documento como texto"
+          }
+        },
+        "type": "object",
+        "required": [
+          "valor"
+        ],
+        "title": "ProponenteIn"
+      },
+      "ResolverTarefaIn": {
+        "properties": {
+          "no": {
+            "type": "string",
+            "title": "No"
+          },
+          "resolucao": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Resolucao"
+          }
+        },
+        "type": "object",
+        "required": [
+          "no"
+        ],
+        "title": "ResolverTarefaIn"
+      },
+      "RevisaoIn": {
+        "properties": {
+          "id_instancia": {
+            "type": "string",
+            "title": "Id Instancia"
+          },
+          "motivo": {
+            "type": "string",
+            "title": "Motivo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id_instancia",
+          "motivo"
+        ],
+        "title": "RevisaoIn"
+      },
+      "RevisaoResolverIn": {
+        "properties": {
+          "analista": {
+            "type": "string",
+            "title": "Analista"
+          },
+          "resultado": {
+            "type": "string",
+            "title": "Resultado"
+          }
+        },
+        "type": "object",
+        "required": [
+          "analista",
+          "resultado"
+        ],
+        "title": "RevisaoResolverIn"
+      },
+      "SugerirIn": {
+        "properties": {
+          "objetivo": {
+            "type": "string",
+            "title": "Objetivo",
+            "description": "objetivo do processo em linguagem natural (sem dado pessoal)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "objetivo"
+        ],
+        "title": "SugerirIn"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Autenticação",
+      "description": "OAuth2 client_credentials, escopos mínimos"
+    },
+    {
+      "name": "Processos e instâncias",
+      "description": "BPMN versionado, instâncias, tarefas e revisões"
+    },
+    {
+      "name": "Auditoria e ledger",
+      "description": "Cadeia encadeada, verificação, âncora e recuperação"
+    },
+    {
+      "name": "Risco e degrau",
+      "description": "Motor de risco B12, degrau e modelos champion/challenger"
+    },
+    {
+      "name": "Integração ERP",
+      "description": "Net OS, MK Solutions, Voalle, Hubsoft — modelo canônico"
+    },
+    {
+      "name": "ERA CRM e OMNI",
+      "description": "Canal de relacionamento com minimização de dados"
+    },
+    {
+      "name": "MCP",
+      "description": "Servidor MCP (JSON-RPC 2.0) com todas as ferramentas"
+    },
+    {
+      "name": "Estúdio de fluxos",
+      "description": "Assistente de desenho com guardrails"
+    }
+  ]
+}

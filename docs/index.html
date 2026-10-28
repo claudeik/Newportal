@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orchestrator API · Swagger UI &amp; OpenAPI 3.1 · Wangari Carbon</title>
+  <meta name="description" content="Documentação técnica interativa Swagger / OpenAPI 3.1 da API do Orchestrator (Backend SaaS para Construção de Fintechs, WaveHub Capital)." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #050b18;
+      --bg-surface: #0a1329;
+      --gold: #c5a059;
+      --gold-light: #e8c988;
+      --cyan: #00f0ff;
+      --text-primary: #e6edf8;
+      --text-muted: #8899b5;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+    .topbar {
+      display: none !important;
+    }
+    .header-banner {
+      background: linear-gradient(180deg, rgba(10, 19, 41, 0.98) 0%, rgba(5, 11, 24, 0.95) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-logo span {
+      color: var(--gold);
+    }
+    .tag-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      color: var(--cyan);
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+    }
+    .inpi-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      color: var(--gold-light);
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .btn-back {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-primary);
+    }
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+    .btn-json {
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: #22d3ee;
+    }
+    .btn-json:hover {
+      background: rgba(0, 240, 255, 0.2);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+    }
+    /* Swagger UI Container Tweaks */
+    #swagger-ui {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 20px 24px 60px;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    @media (max-width: 768px) {
+      .header-banner {
+        padding: 12px 16px;
+      }
+      #swagger-ui {
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-banner">
+    <div class="brand-group">
+      <a href="../#cases" class="brand-logo">
+        EPYX <span>by Wangari</span>
+      </a>
+      <span class="tag-pill">Swagger API · OpenAPI 3.1</span>
+      <span class="inpi-pill">Registro INPI</span>
+    </div>
+    <div class="header-actions">
+      <a href="./openapi.json" target="_blank" rel="noopener noreferrer" class="btn-action btn-json">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>openapi.json</span>
+      </a>
+      <a href="../#cases" class="btn-action btn-back">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Voltar ao Portal</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div id="swagger-ui"></div>
+  </main>
+
+  <script src="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-bundle.js" crossorigin></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui-standalone-preset.js" crossorigin></script>
+  <script>
+    window.onload = () => {
+      window.ui = SwaggerUIBundle({
+        url: "./openapi.json",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "BaseLayout",
+        persistAuthorization: true,
+        tryItOutEnabled: true,
+        displayRequestDuration: true,
+        filter: true,
+        docExpansion: "list"
+      });
+    };
+  </script>
+</body>
+</html>
